@@ -1,0 +1,1004 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahendra Kumar Sijapati | Civil Engineering Portfolio</title>
+    <meta name="description" content="Mahendra Kumar Sijapati is a civil engineering professional from Nepal specializing in structural design, hydrology modeling, and climate-resilient infrastructure. Explore academic achievements, projects, certificates, and contact information.">
+    <meta name="keywords" content="Civil Engineering, Mahendra Kumar Sijapati, IOE Thapathali Campus, hydrology modeling, structural design, ArcGIS, ETABS, SWAT, Nepal engineer">
+    <meta name="author" content="Mahendra Kumar Sijapati">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mahendra1064.github.io/portfolio/">
+    <meta property="og:title" content="Mahendra Kumar Sijapati | Civil Engineering Portfolio">
+    <meta property="og:description" content="Explore the civil engineering portfolio of Mahendra Kumar Sijapati, featuring academic excellence, climate-resilient project work, and verified certificate previews.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahendra1064.github.io/portfolio/">
+    <meta property="og:image" content="https://mahendra1064.github.io/portfolio/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papnXyu3dV5T1zQ3l4qd8yczFTv4nE5H1gJt6R/+voO6QeI3wASU1vHeKwn3QcWZfABF5Yq9I4kyy1w0YGyh1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #eab308;
+            --accent-light: #fef08a;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            padding-top: 75px;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 16px 10%;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(16px);
+            z-index: 1000;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            color: var(--accent);
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 12px;
+        }
+
+        .nav-links li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 10px 14px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a:focus {
+            color: var(--accent);
+        }
+
+        .nav-socials {
+            display: flex;
+            gap: 18px;
+            margin-left: 24px;
+            border-left: 1px solid #334155;
+            padding-left: 22px;
+        }
+
+        .nav-socials a {
+            color: #cbd5e1;
+            font-size: 19px;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .nav-socials a:hover,
+        .nav-socials a:focus {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .nav-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            color: #cbd5e1;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .hero-section {
+            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
+            color: var(--white);
+            padding: 100px 10%;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 52px;
+            line-height: 1.05;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .hero-section h2 {
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .hero-section p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 36px;
+            max-width: 720px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 999px;
+            padding: 12px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            color: #f8fafc;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px rgba(234, 179, 8, 0.18);
+        }
+
+        .hero-image-container {
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .profile-frame {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            padding: 8px;
+            background: linear-gradient(135deg, var(--accent) 0%, #ca8a04 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 50px rgba(234, 179, 8, 0.16);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #1e293b;
+            border: 4px solid #0f172a;
+        }
+
+        .profile-frame:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 35px;
+            font-size: 15px;
+            color: #cbd5e1;
+        }
+
+        .contact-info span,
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-tags span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(234, 179, 8, 0.12);
+            color: var(--accent);
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(234, 179, 8, 0.28);
+            transition: all 0.25s ease;
+        }
+
+        .skills-tags span:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(234, 179, 8, 0.18);
+        }
+
+        main {
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 100px 10%;
+        }
+
+        .alternate-bg {
+            background-color: #f1f5f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 60px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 14px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .reveal-node {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-node.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-copy p {
+            margin-bottom: 24px;
+            color: #475569;
+            line-height: 1.75;
+            font-size: 16px;
+        }
+
+        .highlight-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            color: #334155;
+            font-size: 15px;
+        }
+
+        .highlight-item i {
+            color: var(--accent);
+            margin-top: 3px;
+        }
+
+        .edu-grid,
+        .grid-container,
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .edu-card,
+        .card,
+        .certificate-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+        }
+
+        .edu-card h3,
+        .card h3,
+        .cert-info h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .edu-card .inst,
+        .card p,
+        .cert-info p,
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.72;
+        }
+
+        .edu-card .inst {
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .edu-card .gpa,
+        .cert-badge-text {
+            display: inline-flex;
+            align-items: center;
+            background: #e2e8f0;
+            padding: 6px 12px;
+            font-size: 13px;
+            border-radius: 999px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .card {
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 42px rgba(15, 23, 42, 0.12);
+        }
+
+        .card-icon {
+            font-size: 42px;
+            color: var(--accent);
+            margin-bottom: 22px;
+        }
+
+        .timeline {
+            max-width: 860px;
+            margin: 0 auto;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 42px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -44px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid #f1f5f9;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.4);
+        }
+
+        .timeline-content h4 {
+            font-size: 19px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .certificate-card {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 30px rgba(15, 23, 42, 0.12);
+        }
+
+        .cert-thumbnail-box {
+            height: 170px;
+            background: linear-gradient(135deg, #fef08a 0%, #fef3c7 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .cert-thumbnail-box::before {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            border: 1.5px dashed rgba(202, 138, 4, 0.35);
+            border-radius: 8px;
+        }
+
+        .cert-thumbnail-box i {
+            font-size: 38px;
+            color: #a16207;
+            margin-bottom: 12px;
+            z-index: 1;
+        }
+
+        .cert-badge-text {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.1px;
+            color: #a16207;
+            z-index: 1;
+            border: 1px solid rgba(202, 138, 4, 0.25);
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .cert-info {
+            padding: 24px;
+            background: var(--white);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cert-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.95);
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 82%;
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            border: 4px solid var(--white);
+            object-fit: contain;
+            animation: modalScaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalScaleUp {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #modalCaption {
+            color: var(--white);
+            margin-top: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #94a3b8;
+            font-size: 46px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .close-btn:hover {
+            color: var(--white);
+        }
+
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 10%;
+            font-size: 14px;
+            border-top: 1px solid #1e293b;
+        }
+
+        @media (max-width: 992px) {
+            .hero-container { flex-direction: column-reverse; text-align: center; gap: 40px; }
+            .contact-info { grid-template-columns: 1fr 1fr; text-align: left; }
+            .section { padding: 70px 6%; }
+            .about-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 860px) {
+            .navbar { padding: 16px 6%; }
+            .nav-links,
+            .nav-socials { display: none; }
+            .nav-toggle { display: inline-flex; }
+            .nav-links.open {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                padding: 18px 0 22px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+            .nav-links.open li a {
+                padding: 14px 16px;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-socials.open {
+                display: flex;
+                justify-content: center;
+                margin-top: 16px;
+                padding-top: 14px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-section { padding: 90px 5%; }
+            .hero-section h1 { font-size: 36px; }
+            .hero-section h2 { font-size: 20px; }
+            .profile-frame { width: 220px; height: 220px; }
+            .contact-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MKS | Civil Engineer</div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-socials">
+            <a href="https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182" target="_blank" rel="noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Mahendra-Sijapati" target="_blank" rel="noreferrer" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p style="color:#94a3b8; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px; font-size:13px;">Civil Engineering Portfolio</p>
+                    <h1>Mahendra Kumar Sijapati</h1>
+                    <h2>Civil Engineering Professional & Project Scholar</h2>
+                    <p>Final semester civil engineering student at IOE Thapathali Campus, blending structural design, hydrology simulation and climate-sensitive infrastructure planning. Golden Jubilee scholar and consistent academic top performer with practical experience in AutoCAD, ETABS, ArcGIS and SWAT.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="mailto:masijapati79@gmail.com"><i class="fa-solid fa-envelope"></i>Contact Me</a>
+                        <a class="btn-secondary" href="#certificates"><i class="fa-solid fa-certificate"></i>View Certificates</a>
+                    </div>
+                    <div class="contact-info">
+                        <span><i class="fa-solid fa-envelope"></i><a href="mailto:masijapati79@gmail.com">masijapati79@gmail.com</a></span>
+                        <span><i class="fa-solid fa-phone"></i>+977 9845171064</span>
+                        <span><i class="fa-solid fa-location-dot"></i>Aathabis-9, Dailekh, Nepal</span>
+                        <span><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182" target="_blank" rel="noreferrer">LinkedIn Profile</a></span>
+                        <span><i class="fa-brands fa-researchgate"></i><a href="https://www.researchgate.net/profile/Mahendra-Sijapati" target="_blank" rel="noreferrer">ResearchGate Profile</a></span>
+                    </div>
+                    <div class="skills-tags">
+                        <span><i class="fa-solid fa-compass-drafting"></i>AutoCAD</span>
+                        <span><i class="fa-solid fa-cubes"></i>ETABS</span>
+                        <span><i class="fa-solid fa-map-location-dot"></i>ArcGIS</span>
+                        <span><i class="fa-solid fa-droplet"></i>SWAT</span>
+                        <span><i class="fa-solid fa-file-excel"></i>Advanced Excel</span>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Mahendra Kumar Sijapati" class="profile-img" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=MS&backgroundColor=1e293b&textColor=eab308'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section alternate-bg reveal-node">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p>As a civil engineering professional, I specialize in structural analysis, hydrologic modeling, and sustainable infrastructure design. I deliver resilient solutions for academic research and practical engineering challenges while maintaining strong academic performance and leadership in technical competitions.</p>
+                    <div class="highlight-list">
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Golden Jubilee Scholarship recipient with strong academic ranking</div>
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Experienced in climate-sensitive hydropower and watershed assessments</div>
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Skilled in AutoCAD, ETABS, ArcGIS, SWAT and Advanced Excel</div>
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Proven success in engineering competitions and research publications</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <i class="fa-solid fa-chart-line card-icon"></i>
+                        <h3>Academic Honors</h3>
+                        <p>Conferred scholarship awards and top semester rankings while pursuing a Bachelor of Civil Engineering at IOE Thapathali Campus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section reveal-node">
+            <h2 class="section-title">Academic Foundation</h2>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <h3>Bachelor of Civil Engineering</h3>
+                    <p class="inst">Institute of Engineering, Thapathali Campus, Kathmandu</p>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:10px;">Final Semester • Semester Topper (First Year Second Part)</p>
+                    <span class="gpa">Score: 88.43%</span>
+                </div>
+                <div class="edu-card">
+                    <h3>+2 Science</h3>
+                    <p class="inst">Khwopa Secondary School, Dekocha, Bhaktapur</p>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:10px;">Batch 2077-78</p>
+                    <span class="gpa">GPA: 3.78 / 4.00</span>
+                </div>
+                <div class="edu-card">
+                    <h3>Secondary Education Examination (SEE)</h3>
+                    <p class="inst">Bagiswori Secondary School, Chyamhasingh, Bhaktapur</p>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:10px;">Distinction Profile</p>
+                    <span class="gpa">GPA: 3.90 / 4.00</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="section alternate-bg reveal-node">
+            <h2 class="section-title">Engineering Sectors & Core Projects</h2>
+            <div class="grid-container">
+                <div class="card" style="border-top-color: var(--accent);">
+                    <i class="fa-solid fa-cloud-showers-water card-icon"></i>
+                    <h3>Climate & Hydrology Modeling</h3>
+                    <p>Advanced hydrology tracking using SWAT and ArcGIS frameworks. Developed simulations assessing the <strong>Hydropower Potential of the Arun River Basin under Climate Change Scenarios</strong>, analyzing runoffs and discharge trends.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-building-shield card-icon"></i>
+                    <h3>Structural Design & Analysis</h3>
+                    <p>Trained in structural detailing using ETABS to evaluate concrete stresses, frame distribution forces, and load limits. Experienced in high-precision structural optimization and configuration of structural models.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-map-location card-icon"></i>
+                    <h3>Topographical & Road Surveying</h3>
+                    <p>Proficient in surveying methodologies and alignment mappings. Expert in plotting detailed geographic site parameters, contour tracking charts, and structural cross-sections using AutoCAD.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section reveal-node">
+            <h2 class="section-title">Honors & Competition Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Golden Jubilee Scholarship Award</h4>
+                        <p>Prestigious merit framework awarded by the Embassy of India, Kathmandu for exceptional engineering studies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>1st Position — BE Intra-College Model Competition</h4>
+                        <p>Secured top honors for technical excellence at the Yathartha 2082 Engineering Symposium.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>1st Position — Paper Bridge Engineering Challenge</h4>
+                        <p>Engineered an optimal weight-bearing truss configuration during the Yathartha 2081 structural event.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2nd Position — Concrete Mix Design Competition</h4>
+                        <p>Achieved target compression metrics through exact structural mix designs at Yathartha 2082.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Rank 3rd — Civil Engineering Loksewa Mock Examination</h4>
+                        <p>Ranked third nationwide in public sector civil service mock evaluations conducted in 2082.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="section alternate-bg reveal-node">
+            <h2 class="section-title">Verified Certificates</h2>
+            <div class="certificate-grid">
+                <div class="certificate-card" onclick="openModal('CamScanner 05-06-2026 19.14.jpg', 'Arun River Basin Hydropower Project Certificate')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        <span class="cert-badge-text">Project Verification</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Arun River Basin Project Award</h3>
+                        <p>Thapathali Graduate Conference • Climate Scenario Modeling</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('20240312_145829.jpg', 'Outstanding Academic Performance Certificate (88.43%)')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-award"></i>
+                        <span class="cert-badge-text">Academic Merit</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Academic Topper Certificate</h3>
+                        <p>IOE Thapathali Campus • 1st Year Part II (88.43%)</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('20230318_210603.jpg', 'Embassy of India - Golden Jubilee Scholarship Certificate')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="cert-badge-text">Scholarship Award</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Golden Jubilee Scholarship</h3>
+                        <p>Issued by the Embassy of India, Kathmandu</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('20240628_200746.jpg', 'CESS 10-Day Advanced Excel Course Completion')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-file-excel"></i>
+                        <span class="cert-badge-text">Technical Course</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Advanced Excel Certification</h3>
+                        <p>Organized by Civil Engineering Students' Society (CESS)</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('CamScanner 22-02-2026 16.44_2.jpg', '1st Position: Intra-College Model Competition Certificate')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span class="cert-badge-text">1st Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>1st Place: Model Competition</h3>
+                        <p>Yathartha 2082 Engineering Festival</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('IMG_20250130_160836.jpg', '1st Position: Paper Bridge Competition Award')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-bridge"></i>
+                        <span class="cert-badge-text">1st Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>1st Place: Paper Bridge Challenge</h3>
+                        <p>Yathartha 2081 Symposium Exhibition</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('CamScanner 22-02-2026 16.44_4.jpg', '2nd Position: Concrete Mix Design Challenge')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                        <span class="cert-badge-text">2nd Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>2nd Place: Mix Design Challenge</h3>
+                        <p>Yathartha 2082 Technical Evaluation</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('CamScanner 22-02-2026 16.44_3.jpg', '3rd Position: Inter-College Model Competition Certificate')">
+                    <div class="cert-thumbnail-box">
+                        <i class="fa-solid fa-medal"></i>
+                        <span class="cert-badge-text">3rd Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>3rd Place: Inter-College Model</h3>
+                        <p>Yathartha 2082 Engineering Platform</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section reveal-node">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="edu-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="card" style="padding: 32px;">
+                    <h3>Contact Form</h3>
+                    <p style="color: var(--text-muted);">Send a direct message for collaboration, project inquiries, or academic references. The form will open your email client so you can send your inquiry right away.</p>
+                    <form id="contactForm">
+                        <label for="contactName" style="display:block; margin-bottom:12px; font-weight:600; color:#334155;">Name</label>
+                        <input id="contactName" name="name" type="text" placeholder="Your full name" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:18px;">
+                        <label for="contactEmail" style="display:block; margin-bottom:12px; font-weight:600; color:#334155;">Email</label>
+                        <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:18px;">
+                        <label for="contactMessage" style="display:block; margin-bottom:12px; font-weight:600; color:#334155;">Message</label>
+                        <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or inquiry" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:20px;"></textarea>
+                        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+                    </form>
+                </div>
+                <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:center; gap:16px;">
+                    <div>
+                        <h3>Direct Contact</h3>
+                        <p style="color: var(--text-muted);">Prefer email? Reach out directly using the details below.</p>
+                        <p><strong>Email:</strong> <a href="mailto:masijapati79@gmail.com" style="color: var(--accent);">masijapati79@gmail.com</a></p>
+                        <p><strong>Phone:</strong> +977 9845171064</p>
+                        <p><strong>Location:</strong> Aathabis-9, Dailekh, Nepal</p>
+                    </div>
+                    <div style="background: #f8fafc; border-radius:16px; padding:22px; box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);">
+                        <h4 style="margin-bottom:12px; color: var(--primary);">Why connect?</h4>
+                        <ul style="color: #475569; line-height:1.8; list-style: disc; padding-left: 18px;">
+                            <li>Engineering consultancy and collaboration</li>
+                            <li>Academic research and project support</li>
+                            <li>Internship or employment discussions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="certModal" class="modal" onclick="closeModal(event)">
+        <span class="close-btn" role="button" aria-label="Close modal" onclick="closeModal(event)">&times;</span>
+        <img class="modal-content" id="modalImg" alt="Enlarged document preview">
+        <div id="modalCaption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahendra Kumar Sijapati. Optimized Civil Engineering Portfolio Hub.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navSocials = document.querySelector('.nav-socials');
+
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navLinks.classList.toggle('open');
+            navSocials.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navSocials.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        function openModal(imageSrc, captionText) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('modalImg');
+            const caption = document.getElementById('modalCaption');
+
+            modal.style.display = 'flex';
+            modalImg.src = imageSrc;
+            caption.textContent = captionText;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event.target.id === 'certModal' || event.target.classList.contains('close-btn')) {
+                const modal = document.getElementById('certModal');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const observedNodes = document.querySelectorAll('.reveal-node');
+            const observerOptions = {
+                root: null,
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            };
+
+            const entranceObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            observedNodes.forEach(node => entranceObserver.observe(node));
+        });
+    </script>
+</body>
+</html>
