@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://mahendra1064.github.io/portfolio/sitemap.xml
+
+Sitemap: https://www.mahendrakumarsijapati.com.np/sitemap.xml
