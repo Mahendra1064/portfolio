@@ -819,7 +819,7 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#activities">Activities</a></li>
             <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#gk-model-test"><i class="fa-solid fa-clipboard-question"></i>Model Test</a></li>
+            <li><a href="model-test.html"><i class="fa-solid fa-clipboard-question"></i>Model Test</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -969,14 +969,6 @@
                         <p>Ranked third nationwide in public sector civil service mock evaluations conducted in 2082.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="gk-model-test" class="section reveal-node">
-            <h2 class="section-title">GK Model Test</h2>
-            <div class="gk-model-box">
-                <div id="gkTabBar" class="gk-tab-bar"></div>
-                <div id="gkTestArea"></div>
             </div>
         </section>
 
@@ -1446,9 +1438,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            renderGkTabs();
-            renderGkQuestion();
-
             const observedNodes = document.querySelectorAll('.reveal-node');
             const observerOptions = {
                 root: null,
