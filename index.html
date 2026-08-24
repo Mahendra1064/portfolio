@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,22 +19,6 @@
     <meta name="twitter:title" content="Mahendra Kumar Sijapati | Civil Engineering Portfolio">
     <meta name="twitter:description" content="Civil engineering portfolio, academic achievements, projects, and certificates from Nepal.">
     <meta name="twitter:image" content="https://www.mahendrakumarsijapati.com.np/profile.jpg">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mahendra Kumar Sijapati",
-        "url": "https://www.mahendrakumarsijapati.com.np/",
-        "image": "https://www.mahendrakumarsijapati.com.np/profile.jpg",
-        "jobTitle": "Civil Engineering Professional",
-        "description": "Civil engineering professional from Nepal specializing in structural design, hydrology modeling, and climate-resilient infrastructure.",
-        "email": "mailto:masijapati79@gmail.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182",
-            "https://www.researchgate.net/profile/Mahendra-Sijapati"
-        ]
-    }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papnXyu3dV5T1zQ3l4qd8yczFTv4nE5H1gJt6R/+voO6QeI3wASU1vHeKwn3QcWZfABF5Yq9I4kyy1w0YGyh1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
@@ -198,6 +182,8 @@
             font-weight: 600;
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-primary {
@@ -313,10 +299,11 @@
 
         .section {
             padding: 100px 10%;
+            position: relative;
         }
 
         .alternate-bg {
-            background-color: #f1f5f9;
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
         }
 
         .section-title {
@@ -324,7 +311,8 @@
             font-size: 34px;
             margin-bottom: 60px;
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 800;
+            letter-spacing: -0.03em;
         }
 
         .section-title::after {
@@ -390,12 +378,26 @@
         }
 
         .edu-card,
-        .card,
-        .certificate-card {
+        .card {
             background: var(--white);
             padding: 30px;
-            border-radius: 16px;
+            border-radius: 18px;
             box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+        }
+
+        .certificate-card {
+            background: var(--white);
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 40px rgba(15, 23, 42, 0.14);
         }
 
         .edu-card h3,
@@ -483,62 +485,48 @@
             margin-bottom: 8px;
         }
 
-        .certificate-card {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 30px rgba(15, 23, 42, 0.12);
-        }
-
-        .cert-thumbnail-box {
-            height: 170px;
-            background: linear-gradient(135deg, #fef08a 0%, #fef3c7 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .cert-image-wrap {
             position: relative;
-            padding: 22px;
-            text-align: center;
+            height: 220px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8fafc 0%, #fef3c7 100%);
         }
 
-        .cert-thumbnail-box::before {
+        .cert-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .certificate-card:hover .cert-image-wrap img {
+            transform: scale(1.04);
+        }
+
+        .cert-image-wrap::after {
             content: '';
             position: absolute;
-            top: 14px;
-            left: 14px;
-            right: 14px;
-            bottom: 14px;
-            border: 1.5px dashed rgba(202, 138, 4, 0.35);
-            border-radius: 8px;
-        }
-
-        .cert-thumbnail-box i {
-            font-size: 38px;
-            color: #a16207;
-            margin-bottom: 12px;
-            z-index: 1;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0) 35%, rgba(15, 23, 42, 0.35) 100%);
         }
 
         .cert-badge-text {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            z-index: 1;
             font-size: 11px;
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 1.1px;
             color: #a16207;
-            z-index: 1;
             border: 1px solid rgba(202, 138, 4, 0.25);
             padding: 6px 14px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.72);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
         .cert-info {
@@ -556,6 +544,161 @@
             line-height: 1.65;
         }
 
+        .gk-model-box {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+
+        .gk-tab-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 26px;
+        }
+
+        .gk-tab {
+            background: #e2e8f0;
+            color: var(--primary);
+            border: 1px solid transparent;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .gk-tab.active {
+            background: linear-gradient(135deg, var(--accent) 0%, #fbbf24 100%);
+            color: #111827;
+            box-shadow: 0 10px 24px rgba(234, 179, 8, 0.2);
+        }
+
+        .gk-question-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .gk-q-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .gk-question-card h3 {
+            font-size: 1.12rem;
+            line-height: 1.7;
+            color: var(--primary);
+            margin-bottom: 22px;
+        }
+
+        .gk-option-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .gk-option {
+            width: 100%;
+            text-align: left;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            background: #ffffff;
+            color: var(--text-main);
+            padding: 14px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .gk-option:hover:not(:disabled) {
+            border-color: var(--accent);
+            background: #fefce8;
+        }
+
+        .gk-option.correct {
+            background: #dcfce7;
+            border-color: #22c55e;
+            color: #166534;
+        }
+
+        .gk-option.incorrect {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+
+        .gk-option:disabled {
+            cursor: default;
+        }
+
+        .gk-answer-panel {
+            display: none;
+            margin-top: 22px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 14px;
+            padding: 18px 20px;
+            color: #1e3a8a;
+        }
+
+        .gk-answer-panel.visible {
+            display: block;
+        }
+
+        .gk-answer-panel strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .gk-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .gk-nav button {
+            border: none;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .gk-nav .secondary {
+            background: #e2e8f0;
+            color: var(--primary);
+        }
+
+        .gk-nav .primary {
+            background: linear-gradient(135deg, var(--accent) 0%, #fbbf24 100%);
+            color: #111827;
+        }
+
+        .gk-score-box {
+            margin-top: 16px;
+            background: linear-gradient(135deg, #fefce8 0%, #f8fafc 100%);
+            border: 1px solid #facc15;
+            border-radius: 14px;
+            padding: 16px 18px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- Modal Styling --- */
         .modal {
             display: none;
             position: fixed;
@@ -828,12 +971,20 @@
             </div>
         </section>
 
+        <section id="gk-model-test" class="section reveal-node">
+            <h2 class="section-title">GK Model Test</h2>
+            <div class="gk-model-box">
+                <div id="gkTabBar" class="gk-tab-bar"></div>
+                <div id="gkTestArea"></div>
+            </div>
+        </section>
+
         <section id="certificates" class="section alternate-bg reveal-node">
             <h2 class="section-title">Verified Certificates</h2>
             <div class="certificate-grid">
-                <div class="certificate-card" onclick="openModal('CamScanner 05-06-2026 19.14.jpg', 'Arun River Basin Hydropower Project Certificate')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-file-invoice"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 05-06-2026 19.14.jpg', 'Arun River Basin Hydropower Project Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 05-06-2026 19.14.jpg" alt="Arun River Basin Hydropower Project Certificate">
                         <span class="cert-badge-text">Project Verification</span>
                     </div>
                     <div class="cert-info">
@@ -841,9 +992,9 @@
                         <p>Thapathali Graduate Conference • Climate Scenario Modeling</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('20240312_145829.jpg', 'Outstanding Academic Performance Certificate (88.43%)')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-award"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/20240312_145829.jpg', 'Outstanding Academic Performance Certificate (88.43%)')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/20240312_145829.jpg" alt="Academic Topper Certificate">
                         <span class="cert-badge-text">Academic Merit</span>
                     </div>
                     <div class="cert-info">
@@ -851,9 +1002,9 @@
                         <p>IOE Thapathali Campus • 1st Year Part II (88.43%)</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('20230318_210603.jpg', 'Embassy of India - Golden Jubilee Scholarship Certificate')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/20230318_210603.jpg', 'Embassy of India - Golden Jubilee Scholarship Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/20230318_210603.jpg" alt="Golden Jubilee Scholarship Certificate">
                         <span class="cert-badge-text">Scholarship Award</span>
                     </div>
                     <div class="cert-info">
@@ -861,9 +1012,9 @@
                         <p>Issued by the Embassy of India, Kathmandu</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('20240628_200746.jpg', 'CESS 10-Day Advanced Excel Course Completion')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-file-excel"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/20240628_200746.jpg', 'CESS 10-Day Advanced Excel Course Completion')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/20240628_200746.jpg" alt="Advanced Excel Certification">
                         <span class="cert-badge-text">Technical Course</span>
                     </div>
                     <div class="cert-info">
@@ -871,9 +1022,9 @@
                         <p>Organized by Civil Engineering Students' Society (CESS)</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('CamScanner 22-02-2026 16.44_2.jpg', '1st Position: Intra-College Model Competition Certificate')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-trophy"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_2.jpg', '1st Position: Intra-College Model Competition Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_2.jpg" alt="Model Competition Certificate">
                         <span class="cert-badge-text">1st Place Winner</span>
                     </div>
                     <div class="cert-info">
@@ -881,9 +1032,9 @@
                         <p>Yathartha 2082 Engineering Festival</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('IMG_20250130_160836.jpg', '1st Position: Paper Bridge Competition Award')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-bridge"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/IMG_20250130_160836.jpg', '1st Position: Paper Bridge Competition Award')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/IMG_20250130_160836.jpg" alt="Paper Bridge Challenge Award">
                         <span class="cert-badge-text">1st Place Winner</span>
                     </div>
                     <div class="cert-info">
@@ -891,9 +1042,9 @@
                         <p>Yathartha 2081 Symposium Exhibition</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('CamScanner 22-02-2026 16.44_4.jpg', '2nd Position: Concrete Mix Design Challenge')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-trowel-bricks"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_4.jpg', '2nd Position: Concrete Mix Design Challenge')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_4.jpg" alt="Concrete Mix Design Challenge certificate">
                         <span class="cert-badge-text">2nd Place Winner</span>
                     </div>
                     <div class="cert-info">
@@ -901,14 +1052,54 @@
                         <p>Yathartha 2082 Technical Evaluation</p>
                     </div>
                 </div>
-                <div class="certificate-card" onclick="openModal('CamScanner 22-02-2026 16.44_3.jpg', '3rd Position: Inter-College Model Competition Certificate')">
-                    <div class="cert-thumbnail-box">
-                        <i class="fa-solid fa-medal"></i>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_3.jpg', '3rd Position: Inter-College Model Competition Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_3.jpg" alt="Inter-College Model Competition Certificate">
                         <span class="cert-badge-text">3rd Place Winner</span>
                     </div>
                     <div class="cert-info">
                         <h3>3rd Place: Inter-College Model</h3>
                         <p>Yathartha 2082 Engineering Platform</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_1.jpg', 'Additional Engineering Competition Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_1.jpg" alt="Engineering competition certificate">
+                        <span class="cert-badge-text">Competition Award</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Engineering Competition Award</h3>
+                        <p>Certificate from the engineering festival collection</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/IMG_20260315_075739.jpg', 'Additional Academic Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/IMG_20260315_075739.jpg" alt="Academic certificate">
+                        <span class="cert-badge-text">Academic Certificate</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Academic Certificate</h3>
+                        <p>Academic achievement from the certificate collection</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/Screenshot_2026_0430_163037.jpg', 'Additional Certificate Record')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/Screenshot_2026_0430_163037.jpg" alt="Certificate record screenshot">
+                        <span class="cert-badge-text">Certificate Record</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Certificate Record</h3>
+                        <p>Supporting certificate record from the portfolio archive</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/watsat.jpeg', 'Additional Certificate Record')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/watsat.jpeg" alt="Certificate record">
+                        <span class="cert-badge-text">Certificate Record</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Additional Certificate Record</h3>
+                        <p>Supporting certificate from the portfolio archive</p>
                     </div>
                 </div>
             </div>
@@ -1000,7 +1191,263 @@
             }
         }
 
+        const gkQuestionBank = {
+            geography: {
+                title: 'Geography, Demography & Environment',
+                questions: [
+                    { q: 'What is the total area of Nepal?', options: ['147,181 sq. km', '140,800 sq. km', '150,000 sq. km', '142,500 sq. km'], answer: '147,181 sq. km', explanation: 'Nepal covers an area of 147,181 square kilometers, extending across the Himalayas, hills, and plains.' },
+                    { q: 'Which is the highest peak in Nepal?', options: ['K2', 'Makalu', 'Lhotse', 'Mount Everest'], answer: 'Mount Everest', explanation: 'Mount Everest (8,848.86 m) is the highest peak in the world and lies on the Nepal-China border.' },
+                    { q: 'The Terai region of Nepal is mainly known for?', options: ['Dense forests only', 'Major agricultural plains', 'Permanent snow cover', 'High-altitude pastures'], answer: 'Major agricultural plains', explanation: 'The Terai is the fertile lowland belt and is the agricultural heartland of Nepal.' },
+                    { q: 'How many provinces are there in Nepal?', options: ['5', '6', '7', '8'], answer: '7', explanation: 'Nepal has seven provinces under the federal structure established by the 2015 Constitution.' },
+                    { q: 'Which is the largest river in Nepal by volume?', options: ['Koshi', 'Narayani', 'Gandaki', 'Karnali'], answer: 'Koshi', explanation: 'The Koshi River is one of the largest and most important river systems in Nepal.' },
+                    { q: 'Nepal lies in which continent?', options: ['Europe', 'Asia', 'Africa', 'South America'], answer: 'Asia', explanation: 'Nepal is a landlocked country in South Asia, located in the Himalayan region of Asia.' },
+                    { q: 'The Hilly region of Nepal is characterized by?', options: ['Flat alluvial plains', 'Steep slopes and valleys', 'Deserts', 'Ice-covered highlands'], answer: 'Steep slopes and valleys', explanation: 'The hill region includes mountains, valleys, ridges, and slopes with diverse ecological conditions.' },
+                    { q: 'What is the capital city of Nepal?', options: ['Pokhara', 'Lalitpur', 'Kathmandu', 'Biratnagar'], answer: 'Kathmandu', explanation: 'Kathmandu is the capital and largest metropolitan city of Nepal.' },
+                    { q: 'Which of the following is a major Himalayan mountain range in Nepal?', options: ['Andes', 'Alps', 'Himalaya', 'Atlas'], answer: 'Himalaya', explanation: 'Nepal is part of the Himalayan mountain system, which includes the world’s highest peaks.' },
+                    { q: 'The lowest point in Nepal is near?', options: ['Darchula', 'Jiri', 'Keoladeo', 'Kechana'], answer: 'Kechana', explanation: 'The lowest elevation in Nepal is around the Terai region, including areas like Kechana near the Indian border.' },
+                    { q: 'Which of the following is the major source of hydroelectric potential in Nepal?', options: ['Solar energy', 'Rivers and streams', 'Oil fields', 'Coal mines'], answer: 'Rivers and streams', explanation: 'Nepal’s steep terrain and rivers are key sources for hydropower generation.' },
+                    { q: 'Which season is generally associated with monsoon in Nepal?', options: ['Winter', 'Summer', 'Autumn', 'Spring'], answer: 'Summer', explanation: 'The monsoon brings heavy rainfall to Nepal mainly from June to September.' },
+                    { q: 'Which zone is known for alpine conditions and glaciers?', options: ['Terai', 'Hilly', 'Mountain', 'Urban'], answer: 'Mountain', explanation: 'The mountain region has cold temperatures, snow, and glacial systems.' },
+                    { q: 'Which natural resource is most abundant in Nepal?', options: ['Petroleum', 'Natural gas', 'Hydropower potential', 'Coal'], answer: 'Hydropower potential', explanation: 'Nepal has huge hydropower potential because of its rivers and steep topography.' },
+                    { q: 'What type of climate is typical in the Terai?', options: ['Very cold and snowy', 'Humid subtropical', 'Arctic', 'Temperate alpine'], answer: 'Humid subtropical', explanation: 'The Terai has relatively warm and humid climatic conditions suitable for agriculture.' },
+                    { q: 'Which factor most affects Nepal’s rainfall pattern?', options: ['Monsoon winds', 'Volcanic eruptions', 'Desertification', 'Tectonic drift'], answer: 'Monsoon winds', explanation: 'The southwest monsoon is the main driver of rainfall in Nepal.' },
+                    { q: 'Which district is known as the gateway to the Himalayas?', options: ['Kathmandu', 'Pokhara', 'Darchula', 'Bhaktapur'], answer: 'Darchula', explanation: 'Darchula lies in the far western Himalayan region and is associated with mountain access.' },
+                    { q: 'What is the main cause of landslides in hilly Nepal?', options: ['Lack of roads', 'Heavy monsoon rain and slope instability', 'Low population', 'Metals mining'], answer: 'Heavy monsoon rain and slope instability', explanation: 'Slope instability during heavy rainfall often triggers landslides and soil erosion.' },
+                    { q: 'What is demography mainly concerned with?', options: ['Study of weather', 'Study of population', 'Study of rocks', 'Study of ships'], answer: 'Study of population', explanation: 'Demography is the statistical study of populations, including birth, death, migration, and structure.' },
+                    { q: 'Which language is widely spoken as a lingua franca in Nepal?', options: ['English', 'Nepali', 'Hindi', 'French'], answer: 'Nepali', explanation: 'Nepali is the national language and is widely used as a common language across Nepal.' },
+                    { q: 'Which is the largest urban area in Nepal?', options: ['Pokhara', 'Biratnagar', 'Kathmandu Valley', 'Janakpur'], answer: 'Kathmandu Valley', explanation: 'The Kathmandu Valley is Nepal’s largest urban and administrative center.' },
+                    { q: 'What is biodiversity?', options: ['Study of the atmosphere', 'Variety of life in an ecosystem', 'Measurement of rainfall', 'Study of roads'], answer: 'Variety of life in an ecosystem', explanation: 'Biodiversity refers to the variety of living organisms and ecosystems.' },
+                    { q: 'Which ecological zone is richest in species diversity in Nepal?', options: ['Mountain zone', 'Terai plain', 'High alpine', 'Desert'], answer: 'Terai plain', explanation: 'The Terai plains have warm climate, fertile soil, and high biodiversity compared to higher altitudes.' },
+                    { q: 'Which of the following is a major forest type in Nepal?', options: ['Mangrove forests', 'Saal forests', 'Savanna forests', 'Tundra'], answer: 'Saal forests', explanation: 'Sal forests are one of the major natural forest types in Nepal, especially in the Terai.' },
+                    { q: 'The Ganga plain is adjacent to which region of Nepal?', options: ['Mountain', 'Hilly', 'Terai', 'Trans Himalayan'], answer: 'Terai', explanation: 'The Terai is the southern lowland adjacent to the Indo-Gangetic belt.' },
+                    { q: 'Which mountain pass is famous in Nepal?', options: ['Lumbini Pass', 'Kora La', 'Karakoram', 'Siachen'], answer: 'Kora La', explanation: 'Mountain passes like Kora La are important in high-altitude geography and trade routes.' },
+                    { q: 'The Himalayas are formed mainly by?', options: ['Volcanic action', 'Sedimentation in rivers', 'Plate tectonic collision', 'Delta growth'], answer: 'Plate tectonic collision', explanation: 'The Himalayas were formed by the collision of the Indian and Eurasian plates.' },
+                    { q: 'Which region is the highest in altitude in Nepal?', options: ['Terai', 'Hilly region', 'Mountain region', 'Inner plains'], answer: 'Mountain region', explanation: 'The mountain region has the highest altitude and includes snow-covered peaks.' },
+                    { q: 'What is the climate of most of the Himalayas?', options: ['Hot and dry', 'Cold and alpine', 'Humid tropical', 'Dense desert'], answer: 'Cold and alpine', explanation: 'High Himalayan elevations are cold, with alpine and nival climate.' },
+                    { q: 'Which is the main agricultural crop of the Terai?', options: ['Wheat and rice', 'Olive', 'Tea', 'Coconut'], answer: 'Wheat and rice', explanation: 'Rice and wheat are staple crops widely cultivated in Nepal’s fertile Terai.' },
+                    { q: 'What is the average elevation of Nepal?', options: ['1,000 m', '2,000 m', '3,000 m', '4,000 m'], answer: '2,000 m', explanation: 'Nepal has an average elevation of about 2,000 meters because of the Himalayan terrain.' },
+                    { q: 'Which is the main reason for Nepal’s rich biodiversity?', options: ['Only one climate zone', 'Diverse altitudes and climates', 'Flat topography', 'Absence of rivers'], answer: 'Diverse altitudes and climates', explanation: 'Nepal’s varied topography and climate support rich biodiversity.' },
+                    { q: 'The Mahabharat range lies in which region?', options: ['Terai', 'Himalayas', 'Hill region', 'Desert'], answer: 'Hill region', explanation: 'The Mahabharat range forms part of the middle hills of Nepal.' },
+                    { q: 'Which of the following is a trans-Himalayan region?', options: ['Kathmandu', 'Dolpa', 'Sindhuli', 'Bharatpur'], answer: 'Dolpa', explanation: 'Dolpa lies in the trans-Himalayan zone with cold, dry conditions.' },
+                    { q: 'What does climate change mainly cause?', options: ['Stable weather', 'Increased glacier melt', 'Same rainfall everywhere', 'No impact on agriculture'], answer: 'Increased glacier melt', explanation: 'Climate change accelerates glacier retreat and affects rainfall and water availability.' },
+                    { q: 'Which river forms the boundary with India in the south?', options: ['Karnali', 'Gandaki', 'Mechi', 'Trishuli'], answer: 'Mechi', explanation: 'The Mechi River is one of the eastern border rivers between Nepal and India.' },
+                    { q: 'Which soil type is most fertile in Nepal?', options: ['Sandy soil', 'Alluvial soil', 'Red soil', 'Black soil'], answer: 'Alluvial soil', explanation: 'Alluvial soils in the Terai are highly productive and suitable for agriculture.' },
+                    { q: 'The central region of Nepal is known as?', options: ['Terai', 'Himalayas', 'Hills', 'Plateau'], answer: 'Hills', explanation: 'The middle hills are central to Nepal’s topography and settlement patterns.' },
+                    { q: 'Which is the major cause of air pollution in cities?', options: ['Forest cover', 'Vehicle emissions', 'Rainwater', 'Low temperature'], answer: 'Vehicle emissions', explanation: 'Urban air pollution is often linked to smoke, dust, and vehicle emissions.' },
+                    { q: 'Which is the largest lake in Nepal?', options: ['Rara Lake', 'Phewa Lake', 'Begnas Lake', 'Tilicho Lake'], answer: 'Rara Lake', explanation: 'Rara Lake is Nepal’s largest lake by area.' },
+                    { q: 'What is the major economic activity in the Terai?', options: ['Mining only', 'Agriculture', 'Ice tourism', 'Glacier export'], answer: 'Agriculture', explanation: 'Agriculture is the dominant economic activity in the fertile southern plains.' },
+                    { q: 'What is the major reason Nepal is called a mountainous country?', options: ['It has no plain land', 'It has high Himalayas and hills', 'It is close to the sea', 'It is in Europe'], answer: 'It has high Himalayas and hills', explanation: 'Most of Nepal’s land is mountainous or hilly, with limited lowland area.' },
+                    { q: 'Which natural disaster is common in the Kathmandu Valley?', options: ['Earthquake', 'Volcanic eruption', 'Desert storm', 'Tsunami'], answer: 'Earthquake', explanation: 'The Kathmandu Valley lies in an active seismic zone, making earthquakes a major risk.' },
+                    { q: 'The main source of drinking water in many Nepalese communities is?', options: ['Snowfall', 'Groundwater and rivers', 'Ocean water', 'Desert wells'], answer: 'Groundwater and rivers', explanation: 'Groundwater, springs, and rivers are the primary sources of freshwater in Nepal.' },
+                    { q: 'Which part of Nepal is most suitable for tea cultivation?', options: ['High Himalayan belt', 'Middle hills and eastern slopes', 'Desert plain', 'Highlands only'], answer: 'Middle hills and eastern slopes', explanation: 'Tea cultivation is common in humid mid-hill regions, especially eastern Nepal.' },
+                    { q: 'Which of these is not a natural resource?', options: ['Forest', 'Mineral', 'Solar energy', 'A road network'], answer: 'A road network', explanation: 'Road networks are built infrastructure, not natural resources.' },
+                    { q: 'What is the meaning of sustainable development?', options: ['Development without planning', 'Meeting present needs without harming future generations', 'Only industrial growth', 'No population growth'], answer: 'Meeting present needs without harming future generations', explanation: 'Sustainable development balances economic progress with environmental and social responsibility.' },
+                    { q: 'Which one is a renewable resource?', options: ['Coal', 'Petroleum', 'Hydroelectricity from rivers', 'Natural gas'], answer: 'Hydroelectricity from rivers', explanation: 'Hydroelectric power from rivers is renewable when water is managed sustainably.' },
+                    { q: 'Which is the major National Park in Nepal?', options: ['Sagarmatha National Park', 'Serengeti', 'Yellowstone', 'Kruger'], answer: 'Sagarmatha National Park', explanation: 'Sagarmatha National Park is one of Nepal’s most famous protected areas and a UNESCO site.' }
+                ]
+            },
+            history: {
+                title: 'History, Culture, Current Affairs & International Relations',
+                questions: [
+                    { q: 'Who was the first king of the Shah dynasty in Nepal?', options: ['Prithvi Narayan Shah', 'Mahendra Shah', 'Gyanendra Shah', 'Birendra Shah'], answer: 'Prithvi Narayan Shah', explanation: 'Prithvi Narayan Shah founded modern Nepal by unifying small principalities.' },
+                    { q: 'In which year did Nepal become a republic?', options: ['2005', '2008', '2011', '2015'], answer: '2008', explanation: 'Nepal was declared a republic on 28 May 2008 after the monarchy was abolished.' },
+                    { q: 'What is the full form of SAARC?', options: ['South Asian Association for Regional Cooperation', 'South Asian Alliance for Regional Commerce', 'South Asian Agricultural Association', 'South Asian Agreement for Regional Cooperation'], answer: 'South Asian Association for Regional Cooperation', explanation: 'SAARC is a regional organization of South Asian nations established in 1985.' },
+                    { q: 'Which country is not a member of BIMSTEC?', options: ['Nepal', 'India', 'China', 'Thailand'], answer: 'China', explanation: 'BIMSTEC includes Bangladesh, India, Myanmar, Sri Lanka, Thailand, Bhutan, and Nepal.' },
+                    { q: 'Who is known as the “Father of Nepal” in the unification movement?', options: ['King Mahendra', 'Prithvi Narayan Shah', 'Ram Shah', 'Jaya Prakash Malla'], answer: 'Prithvi Narayan Shah', explanation: 'Prithvi Narayan Shah is remembered for unifying Nepal into a single state.' },
+                    { q: 'Which was the last Rana Prime Minister before democracy in Nepal?', options: ['B.P. Koirala', 'Mohan Shamsher', 'Tulsi Giri', 'K.P. Bhattarai'], answer: 'Mohan Shamsher', explanation: 'The Rana regime ended in 1951, and Mohan Shamsher was one of the prominent last Rana prime ministers.' },
+                    { q: 'Which festival is most widely celebrated in Nepal?', options: ['Christmas', 'Dashain', 'Eid', 'Pongal'], answer: 'Dashain', explanation: 'Dashain is one of the biggest festivals in Nepal, celebrated with ritual and family gatherings.' },
+                    { q: 'What is the national flower of Nepal?', options: ['Rhododendron', 'Rose', 'Lotus', 'Sunflower'], answer: 'Rhododendron', explanation: 'Rhododendron is the national flower of Nepal, known for its beauty and diverse species.' },
+                    { q: 'What is the national animal of Nepal?', options: ['Tiger', 'Snow Leopard', 'Cow', 'Yak'], answer: 'Cow', explanation: 'The cow is the national animal of Nepal, honoring sacred and cultural significance.' },
+                    { q: 'Who wrote the book “Mundhum”?', options: ['B.P. Koirala', 'Laxmi Prasad Devkota', 'Rishis and elders of Kirat tradition', 'Mahadev Yadav'], answer: 'Rishis and elders of Kirat tradition', explanation: 'Mundhum is part of the oral spiritual tradition of many indigenous communities in Nepal.' },
+                    { q: 'Which city is known as the cultural capital of Nepal?', options: ['Pokhara', 'Kathmandu', 'Janakpur', 'Bharatpur'], answer: 'Kathmandu', explanation: 'Kathmandu is the cultural, artistic, and historical center of Nepal.' },
+                    { q: 'Which famous temple is in Kathmandu Valley?', options: ['Pashupatinath', 'Taj Mahal', 'Swayambhunath factory', 'Kailash'], answer: 'Pashupatinath', explanation: 'Pashupatinath Temple is one of Nepal’s most revered Hindu temples.' },
+                    { q: 'Which language is widely used in the parliament of Nepal?', options: ['English only', 'Nepali', 'Hindi', 'French'], answer: 'Nepali', explanation: 'Nepali is the official language and widely used in governance and parliamentary proceedings.' },
+                    { q: 'The Constitution of Nepal was promulgated in which year?', options: ['2007', '2015', '2018', '2020'], answer: '2015', explanation: 'The Constitution of Nepal was promulgated on 20 September 2015.' },
+                    { q: 'Which international organization is headquartered in New York?', options: ['UN', 'SAARC', 'BIMSTEC', 'ASEAN'], answer: 'UN', explanation: 'The United Nations has headquarters in New York and carries out global diplomacy and cooperation.' },
+                    { q: 'Which organization is headquartered in Kathmandu?', options: ['UNESCO', 'SAARC Secretariat', 'IMF', 'WB'], answer: 'SAARC Secretariat', explanation: 'The SAARC Secretariat is headquartered in Kathmandu, Nepal.' },
+                    { q: 'Which is the largest religion in Nepal?', options: ['Christianity', 'Hinduism', 'Islam', 'Buddhism'], answer: 'Hinduism', explanation: 'Hinduism is the largest religion in Nepal, while Buddhism is also widely practiced.' },
+                    { q: 'Who is the current UN Secretary-General?', options: ['Ban Ki-moon', 'Antonio Guterres', 'Kofi Annan', 'Boutros Boutros-Ghali'], answer: 'Antonio Guterres', explanation: 'Antonio Guterres has served as the UN Secretary-General since 2017.' },
+                    { q: 'Which historical event happened in 1951 in Nepal?', options: ['Republic declared', 'Rana regime ended', 'Constitution written', 'Monarchy restored'], answer: 'Rana regime ended', explanation: 'The end of the Rana regime in 1951 opened the way for modern democracy in Nepal.' },
+                    { q: 'Which is Nepal’s national day?', options: ['Republic Day', 'Independence Day', 'Constitution Day', 'Labour Day'], answer: 'Constitution Day', explanation: 'The promulgation of the Constitution is marked in Nepal, while Republic Day is also nationally important.' },
+                    { q: 'Which festival celebrates the victory of good over evil?', options: ['Holi', 'Tihar', 'Dashain', 'Buddha Jayanti'], answer: 'Dashain', explanation: 'Dashain symbolizes the victory of good over evil and is widely celebrated across Nepal.' },
+                    { q: 'Which is the largest ethnic group in Nepal?', options: ['Brahmin', 'Chhetri', 'Janajati', 'Madhesi'], answer: 'Chhetri', explanation: 'Chhetri is one of the largest caste/ethnic groups in Nepal, with a large population.' },
+                    { q: 'What is the national bird of Nepal?', options: ['Pheasant', 'Himalayan monal', 'Peacock', 'Eagle'], answer: 'Himalayan monal', explanation: 'The Himalayan monal is Nepal’s national bird, also known as Danphe.' },
+                    { q: 'Which country shares the longest border with Nepal?', options: ['China', 'India', 'Bangladesh', 'Bhutan'], answer: 'India', explanation: 'Nepal shares a long open border with India, which is a major trade and social link.' },
+                    { q: 'What is the official name of Nepal’s army?', options: ['Nepal Armed Police', 'Nepal Army', 'Royal Guard', 'National Security Force'], answer: 'Nepal Army', explanation: 'The Nepal Army is the national military institution of Nepal.' },
+                    { q: 'Which festival is called the festival of colors?', options: ['Dashain', 'Holi', 'Tihar', 'Bisket Jatra'], answer: 'Holi', explanation: 'Holi is celebrated with colors and is known as the festival of colors.' },
+                    { q: 'Which of the following is a UNESCO World Heritage Site in Nepal?', options: ['Pashupatinath Temple', 'Lumbini', 'Bhaktapur Durbar Square', 'All of the above'], answer: 'All of the above', explanation: 'Many heritage sites in Nepal including Kathmandu Valley and Lumbini are UNESCO-listed.' },
+                    { q: 'Which international organization focuses on world peace and security?', options: ['UNESCO', 'WHO', 'UN', 'IMF'], answer: 'UN', explanation: 'The United Nations is dedicated to peace, diplomacy, development, and security.' },
+                    { q: 'Which is the first constitution in Nepal called after 2015?', options: ['Interim Constitution', 'Constitution of 1990', 'Constitution of 2015', 'Rana Constitution'], answer: 'Constitution of 2015', explanation: 'The Constitution of Nepal, 2015 is the current governing charter.' },
+                    { q: 'Nepal is divided into how many development regions?', options: ['5', '6', '7', '8'], answer: '5', explanation: 'Nepal had five development regions prior to federal restructuring.' },
+                    { q: 'Which region is famous for the birthplace of Buddha?', options: ['Kathmandu', 'Lumbini', 'Bhojpur', 'Dharan'], answer: 'Lumbini', explanation: 'Lumbini in Nepal is the birthplace of Gautam Buddha.' },
+                    { q: 'Which of these is a major national park in Nepal?', options: ['Chitwan National Park', 'Kruger National Park', 'Banff National Park', 'Yellowstone'], answer: 'Chitwan National Park', explanation: 'Chitwan National Park is a major protected area of Nepal known for rhinos and tigers.' },
+                    { q: 'Which is the northern neighbor of Nepal?', options: ['India', 'China', 'Bangladesh', 'Bhutan'], answer: 'China', explanation: 'China lies to the north of Nepal and shares the Himalayan border.' },
+                    { q: 'Which movement is associated with democratic change in Nepal?', options: ['Rana Movement', 'People’s Movement', 'Green Revolution', 'Industrial Revolution'], answer: 'People’s Movement', explanation: 'People’s Movements in Nepal played a major role in democratization and political change.' },
+                    { q: 'Who was the first female President of the UN General Assembly?', options: ['Hillary Clinton', 'Vijaya Lakshmi Pandit', 'Amina Mohammed', 'Kiran Bedi'], answer: 'Vijaya Lakshmi Pandit', explanation: 'Vijaya Lakshmi Pandit was the first woman to serve as President of the UN General Assembly.' },
+                    { q: 'Which of the following is a major Nepali newspaper?', options: ['The Guardian', 'The Himalayan Times', 'The Times of India', 'The National'], answer: 'The Himalayan Times', explanation: 'The Himalayan Times is a well-known English-language daily newspaper in Nepal.' },
+                    { q: 'Nepal’s national anthem is called?', options: ['Sayaun Thunga Phool Ka', 'Aama', 'Mero Nepal', 'Sundar Nepal'], answer: 'Sayaun Thunga Phool Ka', explanation: '“Sayaun Thunga Phool Ka” is Nepal’s national anthem.' },
+                    { q: 'Which is the famous festival of lights in Nepal?', options: ['Holi', 'Dashain', 'Tihar', 'Bisket Jatra'], answer: 'Tihar', explanation: 'Tihar is the festival of lights and is celebrated widely in Nepal.' },
+                    { q: 'Which country hosted the 2022 FIFA World Cup?', options: ['Brazil', 'Qatar', 'France', 'Japan'], answer: 'Qatar', explanation: 'Qatar hosted the 2022 FIFA World Cup, the first Arab nation to do so.' },
+                    { q: 'Which world organization deals with health?', options: ['WHO', 'UNESCO', 'IMF', 'WTO'], answer: 'WHO', explanation: 'The World Health Organization (WHO) is the specialized agency for international public health.' },
+                    { q: 'What is the “Earth Summit” known for?', options: ['Technology innovation', 'Environment and sustainable development', 'Space missions', 'Agricultural reform'], answer: 'Environment and sustainable development', explanation: 'The Earth Summit focused on environment, climate, and sustainable development issues.' },
+                    { q: 'Which is the largest country in South Asia by area?', options: ['Nepal', 'Bangladesh', 'India', 'Pakistan'], answer: 'India', explanation: 'India is the largest country in South Asia by area and population.' },
+                    { q: 'Which is one of Nepal’s major trade routes with Tibet?', options: ['Lukla route', 'Kodari route', 'Karnali route', 'Bardi route'], answer: 'Kodari route', explanation: 'The Kodari route is a key Himalayan route connecting Nepal to Tibet.' },
+                    { q: 'Which one is not a fundamental principle of democracy?', options: ['Rule of law', 'Equality', 'Monarchy privileges', 'Participation'], answer: 'Monarchy privileges', explanation: 'Democracy is based on equality, citizenship, participation, and rule of law rather than hereditary privileges.' },
+                    { q: 'Who is the patron deity of Kathmandu Valley?', options: ['Buddha', 'Shiva', 'Hanuman', 'Ganesh'], answer: 'Shiva', explanation: 'Lord Shiva is widely worshipped in Kathmandu Valley, especially at Pashupatinath.' },
+                    { q: 'Which event marks the beginning of democracy in Nepal?', options: ['1951 political change', '2015 constitution', '2008 republic', '1960 Panchayat'], answer: '1951 political change', explanation: 'The 1951 political change ended the Rana regime and opened the democratic era.' },
+                    { q: 'Which country is located to the west of Nepal?', options: ['China', 'India', 'Bhutan', 'Bangladesh'], answer: 'India', explanation: 'India lies to the east, west, and south of Nepal, while China is to the north.' }
+                ]
+            },
+            governance: {
+                title: 'Constitution, Governance, Public Service & Management',
+                questions: [
+                    { q: 'What is the nature of the Nepalese state according to the Constitution?', options: ['Unitary state', 'Federal democratic republic', 'Monarchy', 'Autocratic state'], answer: 'Federal democratic republic', explanation: 'Nepal is a federal democratic republic under the Constitution of Nepal, 2015.' },
+                    { q: 'How many levels of government are recognized in Nepal?', options: ['One', 'Two', 'Three', 'Four'], answer: 'Three', explanation: 'Nepal has three levels of government: federal, provincial, and local.' },
+                    { q: 'Who is the head of the state in Nepal?', options: ['Prime Minister', 'President', 'Chief Justice', 'Speaker'], answer: 'President', explanation: 'The President is the head of state in the federal democratic republic of Nepal.' },
+                    { q: 'Who leads the Council of Ministers in Nepal?', options: ['President', 'Prime Minister', 'Chief Justice', 'Speaker'], answer: 'Prime Minister', explanation: 'The Prime Minister leads the Council of Ministers and exercises executive authority.' },
+                    { q: 'How many provinces are there in Nepal?', options: ['5', '6', '7', '8'], answer: '7', explanation: 'The Constitution of Nepal recognizes seven provinces.' },
+                    { q: 'What is the highest court in Nepal?', options: ['High Court', 'District Court', 'Supreme Court', 'Appellate Court'], answer: 'Supreme Court', explanation: 'The Supreme Court is the apex court of Nepal.' },
+                    { q: 'Which article of the Constitution defines the basic features of the state?', options: ['Article 1', 'Article 50', 'Article 100', 'Article 276'], answer: 'Article 1', explanation: 'Article 1 of the Constitution states Nepal as a federal democratic republic.' },
+                    { q: 'Which of the following is a constitutional body?', options: ['Ministry', 'Commission', 'Police station', 'Municipality office'], answer: 'Commission', explanation: 'Constitutional bodies such as the Election Commission and Public Service Commission are established by the constitution.' },
+                    { q: 'Which body conducts elections in Nepal?', options: ['Supreme Court', 'Election Commission', 'Auditor General', 'Parliament'], answer: 'Election Commission', explanation: 'The Election Commission organizes and supervises elections in Nepal.' },
+                    { q: 'The public service is guided by which principle?', options: ['Nepotism', 'Political favoritism', 'Merit and impartiality', 'Personal interest'], answer: 'Merit and impartiality', explanation: 'Public service should be based on merit, fairness, and impartiality.' },
+                    { q: 'What is the purpose of a Public Service Commission?', options: ['To trade goods', 'To conduct recruitment and selection', 'To collect taxes', 'To build roads'], answer: 'To conduct recruitment and selection', explanation: 'Public Service Commissions recruit civil servants based on merit and competitive examination.' },
+                    { q: 'Which is the key function of planning?', options: ['Only creating rules', 'Setting goals and preparing for action', 'Firing employees', 'Fixing market prices'], answer: 'Setting goals and preparing for action', explanation: 'Planning means deciding objectives and selecting courses of action to achieve them.' },
+                    { q: 'What is the main purpose of organizing in management?', options: ['To ignore tasks', 'To arrange duties and resources', 'To increase violence', 'To privatize everything'], answer: 'To arrange duties and resources', explanation: 'Organizing includes assigning responsibilities and coordinating activities to achieve goals.' },
+                    { q: 'What does directing in management involve?', options: ['Only filing papers', 'Guiding and motivating people', 'Collecting taxes', 'Buying vehicles'], answer: 'Guiding and motivating people', explanation: 'Directing includes leadership, supervision, communication, and motivation.' },
+                    { q: 'What is controlling in management?', options: ['Ignoring performance', 'Monitoring results and correcting deviations', 'Increasing costs', 'Posting advertisements'], answer: 'Monitoring results and correcting deviations', explanation: 'Controlling compares actual performance with standards and takes corrective action.' },
+                    { q: 'Which function of management coordinates all activities?', options: ['Controlling', 'Coordinating', 'Planning', 'Budgeting'], answer: 'Coordinating', explanation: 'Coordination ensures unity of effort among different departments and activities.' },
+                    { q: 'What is the core meaning of decision making?', options: ['Ignoring options', 'Choosing the best alternative', 'Doing nothing', 'Posting notices'], answer: 'Choosing the best alternative', explanation: 'Decision making is the process of selecting the best option from alternatives.' },
+                    { q: 'What is a policy?', options: ['A daily schedule', 'A guideline for action', 'A market product', 'A road sign'], answer: 'A guideline for action', explanation: 'Public policy is a deliberate set of principles guiding government action.' },
+                    { q: 'Which of the following is a source of public revenue?', options: ['Tax', 'Donation from a friend', 'Personal savings', 'Private loan'], answer: 'Tax', explanation: 'Taxes are a major source of government revenue.' },
+                    { q: 'What is the role of the Auditor General?', options: ['To audit government accounts', 'To recruit police', 'To write curriculum', 'To design laws'], answer: 'To audit government accounts', explanation: 'The Auditor General checks and audits public financial management.' },
+                    { q: 'Federalism means?', options: ['Centralized system only', 'Division of power between levels of government', 'Only local administration', 'No constitution'], answer: 'Division of power between levels of government', explanation: 'Federalism distributes authority between the national and subnational governments.' },
+                    { q: 'Which is a local level government in Nepal?', options: ['Municipality', 'Supreme Court', 'Election Commission', 'Parliament'], answer: 'Municipality', explanation: 'Municipalities are local government units under Nepal’s federal system.' },
+                    { q: 'What is the main objective of public administration?', options: ['To maximize profit', 'To deliver public services efficiently', 'To export goods', 'To build private property'], answer: 'To deliver public services efficiently', explanation: 'Public administration ensures effective implementation of state functions and citizen services.' },
+                    { q: 'What is the purpose of budgeting?', options: ['To ignore expenditure', 'To allocate resources and plan spending', 'To reduce staff', 'To stop projects'], answer: 'To allocate resources and plan spending', explanation: 'Budgeting allocates resources according to priorities and estimated income.' },
+                    { q: 'Who is the head of a municipality?', options: ['President', 'Mayor', 'Chief Justice', 'Home Minister'], answer: 'Mayor', explanation: 'A mayor leads the executive body of a municipality.' },
+                    { q: 'What is leadership?', options: ['Following all instructions blindly', 'Influencing and guiding others toward goals', 'Avoiding responsibility', 'Only issuing orders'], answer: 'Influencing and guiding others toward goals', explanation: 'Leadership is the ability to guide individuals and teams toward common objectives.' },
+                    { q: 'Which document describes the duties, rights, and responsibilities of citizens?', options: ['Income tax file', 'Constitution', 'Budget statement', 'Traffic rulebook'], answer: 'Constitution', explanation: 'The Constitution outlines the rights, duties, and political framework of the state and citizens.' },
+                    { q: 'What is the main role of Parliament?', options: ['Only to make roads', 'To legislate and oversee the government', 'To collect donations', 'To propose sports events'], answer: 'To legislate and oversee the government', explanation: 'Parliament makes laws, approves budgets, and checks government performance.' },
+                    { q: 'What is a civil servant expected to be?', options: ['Party worker only', 'Neutral and impartial', 'Private businessman', 'Only a politician'], answer: 'Neutral and impartial', explanation: 'Civil servants are expected to be professional, neutral, and fair in service delivery.' },
+                    { q: 'The Code of Conduct for civil servants is meant to ensure?', options: ['Political advantage', 'Ethical behavior', 'Corruption', 'No accountability'], answer: 'Ethical behavior', explanation: 'The civil service code ensures ethics, discipline, and integrity in governance.' },
+                    { q: 'Which is not a function of a public service provider?', options: ['Service delivery', 'Public welfare', 'Patronage', 'Policy implementation'], answer: 'Patronage', explanation: 'Public service agencies are expected to serve the public, not favor individuals or groups unfairly.' },
+                    { q: 'What is accountability in governance?', options: ['Being answerable for actions and outcomes', 'Making no decisions', 'Avoiding duties', 'Ignoring law'], answer: 'Being answerable for actions and outcomes', explanation: 'Accountability ensures public officials answer for their performance and conduct.' },
+                    { q: 'What does decentralization mean?', options: ['Concentrating power in one office', 'Distributing authority to local levels', 'Closing local offices', 'Reducing services'], answer: 'Distributing authority to local levels', explanation: 'Decentralization transfers powers and responsibilities to lower levels of government.' },
+                    { q: 'Which is an example of a provincial body?', options: ['Province Assembly', 'School', 'Private company', 'Shopping center'], answer: 'Province Assembly', explanation: 'Province Assemblies are the legislative bodies at the provincial level.' },
+                    { q: 'What is the role of the judiciary?', options: ['To enforce taxes', 'To interpret the law and settle disputes', 'To make the budget', 'To supervise markets'], answer: 'To interpret the law and settle disputes', explanation: 'The judiciary interprets laws and adjudicates disputes in a fair and independent manner.' },
+                    { q: 'What is a public policy charter?', options: ['A public record of commitments', 'A railway ticket', 'A permit', 'A court verdict'], answer: 'A public record of commitments', explanation: 'A public service charter outlines the commitments and responsibilities of service providers to the public.' },
+                    { q: 'The term “rule of law” means?', options: ['Law is above everyone', 'People can ignore legal norms', 'Only judges rule', 'Only police make law'], answer: 'Law is above everyone', explanation: 'Rule of law means that everyone, including the government, is subject to the law.' },
+                    { q: 'What is the purpose of the Civil Service Act and Regulations?', options: ['To define service rules and conduct', 'To build roads', 'To open banks', 'To collect donations'], answer: 'To define service rules and conduct', explanation: 'Civil service laws define recruitment, duties, service conditions, and conduct standards.' },
+                    { q: 'What is the basic role of the executive?', options: ['To implement laws and policies', 'To write poetry', 'To judge cases', 'To print currency'], answer: 'To implement laws and policies', explanation: 'The executive implements laws, runs administration, and delivers services.' },
+                    { q: 'What does a budget estimate show?', options: ['Only salaries', 'Expected income and planned expenditure', 'Number of roads only', 'Only tax rates'], answer: 'Expected income and planned expenditure', explanation: 'A budget shows projected revenue and expenditure for a defined period.' },
+                    { q: 'Which principle is most important in public service ethics?', options: ['Profit only', 'Integrity', 'Political party loyalty', 'Ignoring rules'], answer: 'Integrity', explanation: 'Integrity ensures responsible, ethical, and trustworthy public service.' },
+                    { q: 'What does “impartiality” mean in public administration?', options: ['Acting without bias', 'Favoring one group', 'Ignoring complaints', 'Working alone'], answer: 'Acting without bias', explanation: 'Impartiality means fairness and neutrality without favoritism or personal prejudice.' },
+                    { q: 'Which of the following is a key government planning instrument?', options: ['Strategy', 'Tax book', 'Private contract', 'Parking plan'], answer: 'Strategy', explanation: 'Planning involves strategies, programs, and resource allocation to achieve stated objectives.' },
+                    { q: 'The concept of “motivation” in management refers to?', options: ['Punishing staff', 'Encouraging effort and performance', 'Reducing work', 'Stopping communication'], answer: 'Encouraging effort and performance', explanation: 'Motivation drives people to work effectively and achieve goals.' },
+                    { q: 'What is a ministry?', options: ['A central public administrative department', 'A court', 'A school', 'A private company'], answer: 'A central public administrative department', explanation: 'A ministry is a government department responsible for a specific policy area.' },
+                    { q: 'Which body keeps the national accounts and financial statements?', options: ['Ministry of Education', 'Office of the Auditor General', 'Municipality', 'Commercial bank'], answer: 'Office of the Auditor General', explanation: 'The Auditor General audits government finances and ensures financial accountability.' },
+                    { q: 'Which of the following is a democratic value?', options: ['Suppression', 'Participatory governance', 'Autocracy', 'Arbitrary rule'], answer: 'Participatory governance', explanation: 'Democratic values emphasize participation, accountability, equality, and rights.' },
+                    { q: 'Which section of the Constitution provides human rights protections?', options: ['Preamble', 'Fundamental rights provisions', 'Budget section', 'Tax section'], answer: 'Fundamental rights provisions', explanation: 'Fundamental rights provisions guarantee protection of civil and political rights.' },
+                    { q: 'What is the key role of local government?', options: ['Only national defense', 'Service delivery and local development', 'Only criminal law', 'Only tax collection'], answer: 'Service delivery and local development', explanation: 'Local governments manage community services, local infrastructure, and development priorities.' },
+                    { q: 'What is the meaning of “public service charter” in governance?', options: ['A statement of citizen service commitments', 'A private contract', 'A police order', 'A budget book'], answer: 'A statement of citizen service commitments', explanation: 'A public service charter sets commitments to standards, quality, and accountability.' },
+                    { q: 'Which concept deals with fairness in public management?', options: ['Nepotism', 'Impartiality', 'Discrimination', 'Favoritism'], answer: 'Impartiality', explanation: 'Impartiality is essential for fairness, neutrality, and principle-based governance.' }
+                ]
+            }
+        };
+
+        const gkState = {
+            section: 'geography',
+            index: 0
+        };
+
+        function renderGkTabs() {
+            const tabBar = document.getElementById('gkTabBar');
+            Object.entries(gkQuestionBank).forEach(([key, section]) => {
+                const btn = document.createElement('button');
+                btn.className = `gk-tab ${key === gkState.section ? 'active' : ''}`;
+                btn.textContent = section.title;
+                btn.type = 'button';
+                btn.addEventListener('click', () => {
+                    gkState.section = key;
+                    gkState.index = 0;
+                    renderGkTabs();
+                    renderGkQuestion();
+                });
+                tabBar.appendChild(btn);
+            });
+        }
+
+        function renderGkQuestion() {
+            const section = gkQuestionBank[gkState.section];
+            const question = section.questions[gkState.index];
+            const container = document.getElementById('gkTestArea');
+            const total = section.questions.length;
+
+            container.innerHTML = `
+                <div class="gk-question-card">
+                    <div class="gk-q-meta">
+                        <span>${section.title}</span>
+                        <span>Question ${gkState.index + 1} / ${total}</span>
+                    </div>
+                    <h3>Q${gkState.index + 1}. ${question.q}</h3>
+                    <div class="gk-option-list">
+                        ${question.options.map((option) => `
+                            <button class="gk-option" type="button" data-option="${option}">${option}</button>
+                        `).join('')}
+                    </div>
+                    <div class="gk-answer-panel" id="gkAnswerPanel">
+                        <strong>Correct answer: ${question.answer}</strong>
+                        <div>${question.explanation}</div>
+                    </div>
+                    <div class="gk-nav">
+                        <button class="secondary" type="button" ${gkState.index === 0 ? 'disabled' : ''} id="gkPrevBtn">Previous</button>
+                        <button class="primary" type="button" id="gkNextBtn">${gkState.index === total - 1 ? 'Finish' : 'Next'}</button>
+                    </div>
+                    <div class="gk-score-box" id="gkScoreBox">Score: ${gkState.index + 1} / ${total}</div>
+                </div>
+            `;
+
+            const options = container.querySelectorAll('.gk-option');
+            options.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const chosen = button.dataset.option;
+                    const correct = question.answer;
+                    options.forEach((btn) => {
+                        btn.disabled = true;
+                        if (btn.dataset.option === correct) {
+                            btn.classList.add('correct');
+                        }
+                        if (btn.dataset.option === chosen && chosen !== correct) {
+                            btn.classList.add('incorrect');
+                        }
+                    });
+                    const answerPanel = document.getElementById('gkAnswerPanel');
+                    answerPanel.classList.add('visible');
+                    const scoreBox = document.getElementById('gkScoreBox');
+                    scoreBox.textContent = `Score: ${chosen === correct ? '1 correct' : '1 review'} · ${gkState.index + 1}/${total}`;
+                });
+            });
+
+            document.getElementById('gkPrevBtn').addEventListener('click', () => {
+                if (gkState.index > 0) {
+                    gkState.index -= 1;
+                    renderGkQuestion();
+                }
+            });
+
+            document.getElementById('gkNextBtn').addEventListener('click', () => {
+                if (gkState.index < total - 1) {
+                    gkState.index += 1;
+                    renderGkQuestion();
+                }
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
+            renderGkTabs();
+            renderGkQuestion();
+
             const observedNodes = document.querySelectorAll('.reveal-node');
             const observerOptions = {
                 root: null,
