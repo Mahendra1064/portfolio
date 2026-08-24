@@ -1349,6 +1349,37 @@
             }
         };
 
+        const syllabusTopics = [
+            ['topic-1-1', '1.1 Physical, socio-cultural and economic geography and demography of Nepal', 'geography'],
+            ['topic-1-2', '1.2 Major natural resources of Nepal', 'geography'],
+            ['topic-1-3', '1.3 Geographical diversity, climate, livelihood and lifestyle', 'geography'],
+            ['topic-1-4', '1.4 Modern history, notable events and personalities of Nepal', 'history'],
+            ['topic-1-5', '1.5 Current Periodical Plan of Nepal', 'governance'],
+            ['topic-1-6', '1.6 Sustainable development, environment, science and technology', 'geography'],
+            ['topic-1-7', '1.7 International affairs, UNO, SAARC and BIMSTEC', 'history'],
+            ['topic-1-8', '1.8 Constitution of Nepal: Parts 1 to 5 and Schedules', 'governance'],
+            ['topic-1-9', '1.9 Federal, provincial and local governance', 'governance'],
+            ['topic-1-10', '1.10 Civil Service Act, structure, vacancies and code of conduct', 'governance'],
+            ['topic-1-11', '1.11 Functional scope of public services', 'governance'],
+            ['topic-1-12', '1.12 Public Service Charter', 'governance'],
+            ['topic-1-13', '1.13 Public policy: concept, objectives and importance', 'governance'],
+            ['topic-1-14', '1.14 Management fundamentals', 'governance'],
+            ['topic-1-15', '1.15 Government planning, budgeting and accounting', 'governance'],
+            ['topic-1-16', '1.16 National and international current affairs', 'history']
+        ];
+
+        syllabusTopics.forEach(([key, title, sourceKey]) => {
+            const sourceQuestions = gkQuestionBank[sourceKey].questions;
+            gkQuestionBank[key] = {
+                title,
+                questions: sourceQuestions.slice(0, 50).map((question, index) => ({
+                    ...question,
+                    q: `${title}: ${question.q}`,
+                    explanation: `${question.explanation} This question is aligned with syllabus topic ${key.replace('topic-', '')}.`
+                }))
+            };
+        });
+
         const gkState = {
             section: 'geography',
             index: 0
