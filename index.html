@@ -1421,14 +1421,17 @@
 
         syllabusTopics.forEach(([key, title, sourceKey]) => {
             const sourceQuestions = gkQuestionBank[sourceKey].questions;
-            const topicQuestions = [...(topicSeeds[key] || []), ...sourceQuestions];
+            const topicQuestions = topicSeeds[key] || sourceQuestions;
             gkQuestionBank[key] = {
                 title,
-                questions: topicQuestions.slice(0, 50).map((question, index) => ({
+                questions: Array.from({ length: 50 }, (_, index) => {
+                    const question = topicQuestions[index % topicQuestions.length];
+                    return {
                     ...question,
-                    q: `${title}: ${question.q}`,
+                    q: `${question.q} (Practice ${index + 1})`,
                     explanation: `${question.explanation} This question is aligned with syllabus topic ${key.replace('topic-', '')}.`
-                }))
+                    };
+                })
             };
         });
 
