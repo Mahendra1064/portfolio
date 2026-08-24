@@ -1368,11 +1368,63 @@
             ['topic-1-16', '1.16 National and international current affairs', 'history']
         ];
 
+        const topicSeeds = {
+            'topic-1-5': [
+                { q: 'What is the main purpose of a national periodic plan?', options: ['To set medium-term development priorities', 'To replace the Constitution', 'To conduct elections', 'To issue passports'], answer: 'To set medium-term development priorities', explanation: 'A periodic plan sets medium-term objectives, strategies, programs, and resource priorities for national development.' },
+                { q: 'Which is essential for implementing a periodic plan?', options: ['Unplanned spending', 'Clear targets and monitoring', 'Abolishing local government', 'Stopping public services'], answer: 'Clear targets and monitoring', explanation: 'Targets, indicators, budgets, and monitoring help convert a periodic plan into measurable results.' }
+            ],
+            'topic-1-6': [
+                { q: 'Which principle connects development with protection of future generations?', options: ['Sustainable development', 'Rapid consumption', 'Uncontrolled extraction', 'Urban expansion'], answer: 'Sustainable development', explanation: 'Sustainable development meets present needs while protecting the ability of future generations to meet theirs.' },
+                { q: 'Which technology helps monitor land cover and environmental change?', options: ['Remote sensing and GIS', 'Typewriter', 'Mechanical clock', 'Cash register'], answer: 'Remote sensing and GIS', explanation: 'Remote sensing and GIS support mapping, monitoring, planning, and environmental analysis.' }
+            ],
+            'topic-1-7': [
+                { q: 'What is the principal purpose of the United Nations?', options: ['International peace and cooperation', 'Controlling national elections', 'Operating private banks', 'Managing local roads'], answer: 'International peace and cooperation', explanation: 'The United Nations promotes peace, cooperation, human rights, and collective action among states.' },
+                { q: 'BIMSTEC connects countries around which two regions?', options: ['Bay of Bengal and South/Southeast Asia', 'North Atlantic and Europe', 'West Africa and South America', 'Arctic and Pacific islands'], answer: 'Bay of Bengal and South/Southeast Asia', explanation: 'BIMSTEC promotes cooperation among countries around the Bay of Bengal and in South and Southeast Asia.' }
+            ],
+            'topic-1-8': [
+                { q: 'What is the supreme law of Nepal?', options: ['The Constitution', 'A ministerial directive', 'A municipal notice', 'A private contract'], answer: 'The Constitution', explanation: 'The Constitution is the fundamental and supreme law that structures the state and protects rights.' },
+                { q: 'Which part of a constitution commonly states the guiding values of the state?', options: ['Preamble', 'Receipt book', 'Staff register', 'Travel order'], answer: 'Preamble', explanation: 'The preamble expresses the political ideals, aspirations, and guiding principles of a constitution.' }
+            ],
+            'topic-1-9': [
+                { q: 'Which three levels form Nepal’s federal structure?', options: ['Federal, provincial and local', 'National, military and private', 'District, ward and village only', 'Judicial, commercial and family'], answer: 'Federal, provincial and local', explanation: 'Nepal’s Constitution distributes state power among federal, provincial, and local levels.' },
+                { q: 'What is a key responsibility of local government?', options: ['Local service delivery and development', 'International treaty ratification', 'National monetary policy', 'Foreign embassy management'], answer: 'Local service delivery and development', explanation: 'Local governments manage community services, local infrastructure, and local development activities.' }
+            ],
+            'topic-1-10': [
+                { q: 'What should guide recruitment in the civil service?', options: ['Merit and fair competition', 'Personal favoritism', 'Unannounced selection', 'Family inheritance'], answer: 'Merit and fair competition', explanation: 'Civil service recruitment should use lawful, transparent, and competitive merit-based procedures.' },
+                { q: 'Why is a code of conduct required for civil servants?', options: ['To promote integrity and impartial service', 'To give officials private ownership', 'To remove accountability', 'To stop record keeping'], answer: 'To promote integrity and impartial service', explanation: 'A code of conduct establishes ethical standards, impartiality, discipline, and public accountability.' }
+            ],
+            'topic-1-11': [
+                { q: 'What is the central purpose of public service?', options: ['Serving citizens and implementing public decisions', 'Maximizing private profit', 'Promoting one family', 'Avoiding lawful duties'], answer: 'Serving citizens and implementing public decisions', explanation: 'Public services translate laws and policies into services and benefits for citizens.' },
+                { q: 'Which quality improves public service delivery?', options: ['Accessibility and responsiveness', 'Secrecy and delay', 'Discrimination', 'Unclear responsibility'], answer: 'Accessibility and responsiveness', explanation: 'Services should be accessible, timely, inclusive, responsive, and accountable to citizens.' }
+            ],
+            'topic-1-12': [
+                { q: 'What does a Public Service Charter normally state?', options: ['Service standards and commitments', 'Private investment returns', 'Military battle plans', 'Personal family history'], answer: 'Service standards and commitments', explanation: 'A service charter tells citizens what service to expect, within what time, and where to complain.' },
+                { q: 'Which feature makes a service charter useful?', options: ['A complaint and remedy process', 'No contact information', 'Hidden service standards', 'Unlimited delay'], answer: 'A complaint and remedy process', explanation: 'A clear grievance mechanism makes service providers answerable for missed commitments.' }
+            ],
+            'topic-1-13': [
+                { q: 'What is public policy?', options: ['A deliberate course of government action', 'A private shopping list', 'A court building', 'A personal hobby'], answer: 'A deliberate course of government action', explanation: 'Public policy is an intentional decision or course of action adopted to address public concerns.' },
+                { q: 'What should policy evaluation examine?', options: ['Results and effects of the policy', 'Only the color of documents', 'Officials’ hobbies', 'The number of office chairs'], answer: 'Results and effects of the policy', explanation: 'Evaluation examines implementation, outcomes, efficiency, equity, and unintended effects.' }
+            ],
+            'topic-1-14': [
+                { q: 'Which management function sets objectives and chooses actions?', options: ['Planning', 'Controlling', 'Staff leave', 'Filing'], answer: 'Planning', explanation: 'Planning establishes objectives and selects strategies and actions for achieving them.' },
+                { q: 'What does motivation help an organization improve?', options: ['Employee effort and performance', 'Office rent only', 'Road width', 'Weather patterns'], answer: 'Employee effort and performance', explanation: 'Motivation encourages people to contribute effort and pursue organizational goals.' }
+            ],
+            'topic-1-15': [
+                { q: 'What is a government budget?', options: ['An estimate of revenue and expenditure', 'A court judgment', 'A population census only', 'A private diary'], answer: 'An estimate of revenue and expenditure', explanation: 'A budget presents planned public income and expenditure for a specified fiscal period.' },
+                { q: 'What is the basic purpose of accounting in government?', options: ['Recording and reporting financial transactions', 'Selecting political candidates', 'Forecasting rainfall', 'Issuing identity cards'], answer: 'Recording and reporting financial transactions', explanation: 'Accounting records public transactions and supports financial reporting, control, and accountability.' }
+            ],
+            'topic-1-16': [
+                { q: 'Why should current affairs be studied in general awareness?', options: ['They explain important recent national and global developments', 'They replace all historical knowledge', 'They remove the need for laws', 'They only concern entertainment'], answer: 'They explain important recent national and global developments', explanation: 'Current affairs connect citizens with significant political, economic, social, scientific, and international events.' },
+                { q: 'Which source is most suitable for checking a current official announcement?', options: ['The responsible government or organization website', 'An anonymous rumor', 'An undated message', 'An unverified comment'], answer: 'The responsible government or organization website', explanation: 'Primary official sources are the most reliable place to verify current announcements and statistics.' }
+            ]
+        };
+
         syllabusTopics.forEach(([key, title, sourceKey]) => {
             const sourceQuestions = gkQuestionBank[sourceKey].questions;
+            const topicQuestions = [...(topicSeeds[key] || []), ...sourceQuestions];
             gkQuestionBank[key] = {
                 title,
-                questions: sourceQuestions.slice(0, 50).map((question, index) => ({
+                questions: topicQuestions.slice(0, 50).map((question, index) => ({
                     ...question,
                     q: `${title}: ${question.q}`,
                     explanation: `${question.explanation} This question is aligned with syllabus topic ${key.replace('topic-', '')}.`
