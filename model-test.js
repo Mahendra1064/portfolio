@@ -34,7 +34,7 @@ function renderModelTestQuestion(bank) {
     const total = section.questions.length;
     document.getElementById('testArea').innerHTML = `
         <article class="question-card">
-            <div class="meta"><span>${section.title}</span><span>Question ${modelTestState.index + 1} / ${total}</span></div>
+            <div class="meta"><span>${section.title}</span><span>${question.level || 'PSC competitive'} | Question ${modelTestState.index + 1} / ${total}</span></div>
             <h2>Q${modelTestState.index + 1}. ${question.q}</h2>
             <div class="options">${question.options.map((option) => `<button class="option" type="button" data-option="${option}">${option}</button>`).join('')}</div>
             <div class="answer" id="answer"><strong>Correct answer: ${question.answer}</strong><span>${question.explanation}</span></div>
