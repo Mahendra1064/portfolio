@@ -3,7 +3,6 @@
     const sources = [
         'Public Service Commission Nepal, Civil Engineer syllabus (2080/07/20)',
         'Civil Engineer Rajpatrankit Tritiya Shredi (Sangh) official syllabus, Paper I Part II',
-        'PSC Exam Express for Civil Engineers, Fast Track Engineering Institute, supplied PDF',
         'Nepal Engineering Council Act, 2055 and Regulation, 2056',
         'Nepal National Building Code (NBC 105, NBC 201, NBC 202 and NBC 206)',
         'IS 456:2000, IS 875, IS 800 and standard civil engineering texts',
