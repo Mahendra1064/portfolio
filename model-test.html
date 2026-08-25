@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GK Model Test | Mahendra Kumar Sijapati</title>
-    <meta name="description" content="General knowledge model test with multiple-choice questions, answers, and explanations.">
+    <title>PSC Civil Engineering 7th Level Model Test | Mahendra Kumar Sijapati</title>
+    <meta name="description" content="PSC Civil Engineering 7th Level model test menu with separate GK and technical objective practice pages.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -99,87 +99,47 @@
         .test-nav button:disabled { cursor: default; opacity: 0.45; }
         .score { margin-top: 14px; padding: 13px 15px; border: 1px solid #facc15; border-radius: 10px; color: #713f12; background: #fefce8; font: 700 14px Arial, sans-serif; }
         .error { padding: 18px; color: #991b1b; background: #fee2e2; border-radius: 10px; font: 15px/1.5 Arial, sans-serif; }
+        .category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+        .category-card { display: block; padding: 30px; color: var(--ink); text-decoration: none; border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 14px; background: linear-gradient(145deg, #fff, #f8fafc); transition: transform .25s ease, box-shadow .25s ease; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 18px 32px rgba(15, 23, 42, .12); }
+        .technical-card { border-top-color: #0f766e; }
+        .category-icon { margin-bottom: 18px; color: #a16207; font-size: 34px; }
+        .technical-card .category-icon { color: #0f766e; }
+        .category-card h2 { margin: 0 0 10px; font-size: 25px; }
+        .category-card p { min-height: 78px; margin: 0 0 22px; color: var(--muted); font: 15px/1.65 Arial, sans-serif; }
+        .category-card span { color: #a16207; font: 700 14px Arial, sans-serif; }
+        .technical-card span { color: #0f766e; }
         @media (max-width: 600px) { .topbar { align-items: flex-start; flex-direction: column; } .meta { align-items: flex-start; flex-direction: column; } }
+        @media (max-width: 700px) { .category-grid { grid-template-columns: 1fr; } .category-card p { min-height: 0; } }
     </style>
 </head>
 <body>
     <header class="topbar">
-        <div class="brand"><i class="fa-solid fa-clipboard-question"></i> GK Model Test</div>
+        <div class="brand"><i class="fa-solid fa-clipboard-question"></i> PSC Civil Engineering 7th Level</div>
         <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i>Back to portfolio</a>
     </header>
     <main>
         <div class="intro">
-            <p class="eyebrow">Practice desk</p>
-            <h1>General Knowledge Model Test</h1>
-            <p>Choose one of the 16 syllabus topics, select an answer, and review the explanation before moving to the next question. Each topic contains 50 questions.</p>
+            <p class="eyebrow">PSC examination practice</p>
+            <h1>7th Level Civil Engineering Model Test</h1>
+            <p>Select a dedicated practice area for Paper I. The question banks follow the PSC Civil Engineering 7th Level syllabus and provide instant answers, explanations, and revision tricks.</p>
         </div>
-        <section class="test-box" aria-label="GK multiple-choice test">
-            <div id="tabBar" class="tab-bar"></div>
-            <div id="testArea"><p>Loading questions...</p></div>
+        <section class="test-box" aria-label="Model test categories">
+            <div class="category-grid">
+                <a class="category-card" href="gk-model-test.html">
+                    <i class="fa-solid fa-globe category-icon"></i>
+                    <h2>GK Model Test</h2>
+                    <p>General awareness, contemporary issues, reasoning, governance, public service, and management practice.</p>
+                    <span>Open GK practice <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="category-card technical-card" href="technical-model-test.html">
+                    <i class="fa-solid fa-hard-hat category-icon"></i>
+                    <h2>Technical Objectives</h2>
+                    <p>Ten technical subjects with 100 MCQs per subject, detailed explanations, and memory tricks.</p>
+                    <span>Open technical practice <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
         </section>
     </main>
-    <script>
-        const state = { section: 'geography', index: 0 };
-        let questionBank;
-
-        async function loadQuestionBank() {
-            const response = await fetch('index.html');
-            if (!response.ok) throw new Error('Question bank could not be loaded.');
-            const source = await response.text();
-            const start = source.indexOf('const gkQuestionBank = ');
-            const end = source.indexOf(';\n\n        const gkState', start);
-            if (start < 0 || end < 0) throw new Error('Question bank is missing from the portfolio source.');
-            const declaration = source.slice(start, end + 1);
-            questionBank = Function(`${declaration}; return gkQuestionBank;`)();
-            renderTabs();
-            renderQuestion();
-        }
-
-        function renderTabs() {
-            const tabs = document.getElementById('tabBar');
-            tabs.innerHTML = Object.entries(questionBank).map(([key, section]) => `
-                <button class="tab ${key === state.section ? 'active' : ''}" type="button" data-section="${key}">${section.title}</button>
-            `).join('');
-            tabs.querySelectorAll('.tab').forEach((button) => {
-                button.addEventListener('click', () => {
-                    state.section = button.dataset.section;
-                    state.index = 0;
-                    renderTabs();
-                    renderQuestion();
-                });
-            });
-        }
-
-        function renderQuestion() {
-            const section = questionBank[state.section];
-            const question = section.questions[state.index];
-            const total = section.questions.length;
-            document.getElementById('testArea').innerHTML = `
-                <article class="question-card">
-                    <div class="meta"><span>${section.title}</span><span>Question ${state.index + 1} / ${total}</span></div>
-                    <h2>Q${state.index + 1}. ${question.q}</h2>
-                    <div class="options">${question.options.map((option) => `<button class="option" type="button" data-option="${option}">${option}</button>`).join('')}</div>
-                    <div class="answer" id="answer"><strong>Correct answer: ${question.answer}</strong><span>${question.explanation}</span></div>
-                    <div class="test-nav"><button type="button" id="previous" ${state.index === 0 ? 'disabled' : ''}>Previous</button><button class="next" type="button" id="next">${state.index === total - 1 ? 'Finish' : 'Next'}</button></div>
-                    <div class="score" id="score">Choose an option to check your answer.</div>
-                </article>
-            `;
-            const options = document.querySelectorAll('.option');
-            options.forEach((button) => button.addEventListener('click', () => {
-                const chosen = button.dataset.option;
-                options.forEach((option) => {
-                    option.disabled = true;
-                    if (option.dataset.option === question.answer) option.classList.add('correct');
-                    if (option.dataset.option === chosen && chosen !== question.answer) option.classList.add('incorrect');
-                });
-                document.getElementById('answer').classList.add('visible');
-                document.getElementById('score').textContent = chosen === question.answer ? 'Correct answer.' : 'Review the explanation above.';
-            }));
-            document.getElementById('previous').addEventListener('click', () => { state.index--; renderQuestion(); });
-            document.getElementById('next').addEventListener('click', () => { if (state.index < total - 1) { state.index++; renderQuestion(); } });
-        }
-
-        loadQuestionBank().catch((error) => { document.getElementById('testArea').innerHTML = `<div class="error">${error.message} Please open this page through the published website rather than directly from a local file.</div>`; });
-    </script>
 </body>
 </html>
