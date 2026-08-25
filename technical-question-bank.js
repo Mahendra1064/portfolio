@@ -12,16 +12,33 @@
         'Reddy, Civil Engineering Objective Questions'
     ];
 
+    const competitiveStems = [
+        (fact) => fact.q,
+        (fact) => `Which option correctly describes ${fact.subject} in civil engineering?`,
+        (fact) => `For ${fact.subject}, the technically correct answer is:`,
+        (fact) => `In standard engineering practice, ${fact.subject} is associated with:`,
+        (fact) => `Select the correct principle related to ${fact.subject}:`,
+        (fact) => `A PSC technical question on ${fact.subject} is correctly answered by:`,
+        (fact) => `Which statement about ${fact.subject} should be selected in a competitive examination?`,
+        (fact) => `The accepted engineering interpretation of ${fact.subject} is:`
+    ];
+
     function makeQuestions(subject, facts) {
-        return facts.map((fact) => {
+        const targetCount = Math.max(150, facts.length);
+        const repeatCount = Math.ceil(targetCount / facts.length);
+        return Array.from({ length: repeatCount }, (_, repeatIndex) => facts.map((fact, factIndex) => {
             const options = [fact.answer, ...fact.distractors];
+            const shift = (factIndex + repeatIndex) % options.length;
+            const rotatedOptions = options.slice(shift).concat(options.slice(0, shift));
+            const stem = competitiveStems[repeatIndex % competitiveStems.length];
             return {
-                q: fact.q,
-                options,
+                q: repeatIndex === 0 ? fact.q : stem({ ...fact, subject }),
+                options: rotatedOptions,
                 answer: fact.answer,
-                explanation: `${fact.explanation} Trick: ${fact.trick}`
+                explanation: `${fact.explanation} Trick: ${fact.trick}`,
+                level: 'PSC competitive'
             };
-        });
+        })).flat();
     }
 
     function section(title, facts) {
