@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahendra Kumar Sijapati - Curriculum Vitae</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .cv-container {
+            max-width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+
+        /* Header Section */
+        .header {
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #0f172a;
+            margin-bottom: 6px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #10b981;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 11px;
+            color: #475569;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 900;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            border-bottom: 2px solid #10b981;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+        }
+
+        /* Professional Summary */
+        .summary-text {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #475569;
+            text-align: justify;
+            margin-bottom: 2px;
+        }
+
+        /* Entry Styles */
+        .entry {
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .entry-title {
+            font-weight: 800;
+            color: #0f172a;
+            font-size: 11px;
+        }
+
+        .entry-meta {
+            color: #10b981;
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .entry-subtitle {
+            font-style: italic;
+            color: #64748b;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        .entry-description {
+            color: #475569;
+            line-height: 1.4;
+            font-size: 10px;
+        }
+
+        /* Skill Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        .skill-tag {
+            background: #d1fae5;
+            color: #047857;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        /* Education Grid */
+        .edu-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .edu-item {
+            border-left: 3px solid #10b981;
+            padding-left: 8px;
+            font-size: 10px;
+        }
+
+        .edu-item .degree {
+            font-weight: 800;
+            color: #0f172a;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        .edu-item .institution {
+            color: #10b981;
+            font-weight: 700;
+            font-size: 9px;
+            margin-bottom: 1px;
+        }
+
+        .edu-item .details {
+            color: #64748b;
+            font-size: 9px;
+        }
+
+        /* Achievement List */
+        .achievement-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .achievement-list li {
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+            font-size: 10px;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        .achievement-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .two-column .section {
+            margin-bottom: 12px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0.5in;
+                width: 8.5in;
+                height: 11in;
+            }
+        }
+
+        @page {
+            margin: 0.5in;
+        }
+
+        .highlight {
+            color: #10b981;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Mahendra Kumar Sijapati</h1>
+            <p>Civil Engineering Professional & Hydrology Scholar</p>
+            <div class="contact-info">
+                <span>📧 masijapati79@gmail.com</span>
+                <span>📱 +977 9845171064</span>
+                <span>📍 Dailekh, Nepal</span>
+                <span>🔗 linkedin.com/in/mahendra-kumar-sijapati-695032182</span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p class="summary-text">
+                Accomplished Civil Engineering professional with a Bachelor's degree from Institute of Engineering (IOE) Thapathali Campus. Golden Jubilee Scholar recognized for excellence in structural design, hydrologic modeling, and climate-resilient infrastructure planning. Proven expertise in SWAT/GIS modeling, ETABS structural analysis, and AutoCAD design. Demonstrated leadership through multiple competition awards and published research in sustainable water resource management.
+            </p>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-container">
+                <div class="skill-tag">Structural Analysis (ETABS)</div>
+                <div class="skill-tag">Hydrology Modeling (SWAT)</div>
+                <div class="skill-tag">GIS & Mapping (ArcGIS)</div>
+                <div class="skill-tag">AutoCAD Design</div>
+                <div class="skill-tag">Advanced Excel</div>
+                <div class="skill-tag">Climate Change Assessment</div>
+                <div class="skill-tag">Surveying & Mapping</div>
+                <div class="skill-tag">Technical Writing</div>
+            </div>
+        </div>
+
+        <!-- Professional Experience & Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects & Specializations</div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">🌊 Hydropower Potential Assessment - Arun River Basin</div>
+                    <div class="entry-meta">2024-2025</div>
+                </div>
+                <div class="entry-description">
+                    Conducted comprehensive hydrologic modeling using SWAT framework combined with ArcGIS spatial analysis to assess hydropower potential under climate change scenarios. Analyzed discharge patterns, runoff simulations, and water availability. Generated climate-sensitive infrastructure recommendations.
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">🏗️ Structural Design & Analysis</div>
+                    <div class="entry-meta">2023-2025</div>
+                </div>
+                <div class="entry-description">
+                    Proficient in ETABS modeling for concrete and steel structures. Conducted load analysis, stress evaluation, and structural optimization. Experienced in frame distribution forces, reinforcement detailing, and building code compliance assessment.
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">🗺️ Topographical Surveying & CAD Design</div>
+                    <div class="entry-meta">Ongoing</div>
+                </div>
+                <div class="entry-description">
+                    Expert in surveying methodologies and AutoCAD-based design documentation. Proficient in plotting contour maps, cross-sections, alignment drawings, and site parameter documentation for engineering projects.
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-row">
+                <div class="edu-item">
+                    <div class="degree">Bachelor of Civil Engineering</div>
+                    <div class="institution">IOE Thapathali Campus, Kathmandu</div>
+                    <div class="details">Graduated with honors | Merit Scholarship</div>
+                </div>
+                <div class="edu-item">
+                    <div class="degree">+2 Science</div>
+                    <div class="institution">Khwopa Secondary School, Bhaktapur</div>
+                    <div class="details">GPA: 3.78/4.00 | Batch 2077-78</div>
+                </div>
+            </div>
+            <div class="edu-row">
+                <div class="edu-item">
+                    <div class="degree">Secondary Education (SEE)</div>
+                    <div class="institution">Bagiswori Secondary School, Bhaktapur</div>
+                    <div class="details">GPA: 3.90/4.00 | Distinction Profile</div>
+                </div>
+                <div class="edu-item">
+                    <div class="degree">Advanced Excel Certification</div>
+                    <div class="institution">Civil Engineering Students' Society (CESS)</div>
+                    <div class="details">10-Day Professional Training | 2024</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honors & Awards -->
+        <div class="section">
+            <div class="section-title">Honors & Awards</div>
+            <ul class="achievement-list">
+                <li><span class="highlight">Golden Jubilee Scholarship</span> - Embassy of India, Kathmandu (2023)</li>
+                <li><span class="highlight">1st Position - Model Competition</span> - Yathartha 2082 Engineering Festival</li>
+                <li><span class="highlight">1st Position - Paper Bridge Challenge</span> - Yathartha 2081 Structural Design Event</li>
+                <li><span class="highlight">2nd Position - Concrete Mix Design</span> - Yathartha 2082 Technical Competition</li>
+                <li><span class="highlight">3rd Position - Inter-College Model</span> - Yathartha 2082 Engineering Platform</li>
+                <li><span class="highlight">Academic Topper Certificate</span> - 1st Year Part II with 88.43% Score</li>
+                <li><span class="highlight">Rank 3rd - Civil Engineering Loksewa Mock</span> - Nationwide Public Service Examination (2082)</li>
+            </ul>
+        </div>
+
+        <!-- Technical Proficiencies -->
+        <div class="section">
+            <div class="section-title">Technical Proficiencies</div>
+            <div class="two-column">
+                <div>
+                    <div style="font-weight: 700; color: #0f172a; font-size: 10px; margin-bottom: 4px;">Software & Tools</div>
+                    <ul class="achievement-list" style="margin-bottom: 6px;">
+                        <li>ETABS (Structural Analysis)</li>
+                        <li>SWAT (Hydrologic Modeling)</li>
+                        <li>ArcGIS (GIS & Spatial Analysis)</li>
+                        <li>AutoCAD (Design & Drafting)</li>
+                        <li>MS Excel (Data Analysis)</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="font-weight: 700; color: #0f172a; font-size: 10px; margin-bottom: 4px;">Expertise Areas</div>
+                    <ul class="achievement-list">
+                        <li>Structural Design & Analysis</li>
+                        <li>Hydrology & Watershed Modeling</li>
+                        <li>Climate Change Assessment</li>
+                        <li>Surveying & Mapping</li>
+                        <li>Sustainable Infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research & Publications -->
+        <div class="section">
+            <div class="section-title">Research Focus</div>
+            <ul class="achievement-list">
+                <li><span class="highlight">Climate Change Impacts:</span> Assessment of hydropower potential under changing climate scenarios in Himalayan river basins</li>
+                <li><span class="highlight">Sustainable Infrastructure:</span> Design and planning of climate-resilient water resource management systems</li>
+                <li><span class="highlight">Watershed Management:</span> SWAT-based modeling for runoff prediction and discharge estimation</li>
+            </ul>
+        </div>
+
+        <!-- Professional Affiliations -->
+        <div class="section" style="margin-bottom: 0;">
+            <div class="section-title">Professional Links</div>
+            <div style="font-size: 10px; color: #475569; line-height: 1.5;">
+                <p>LinkedIn: linkedin.com/in/mahendra-kumar-sijapati-695032182</p>
+                <p>ResearchGate: researchgate.net/profile/Mahendra-Sijapati</p>
+                <p>Email: masijapati79@gmail.com | Phone: +977 9845171064 | Location: Dailekh, Nepal</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-print on load (optional)
+        // Uncomment to auto-print when opening
+        // window.onload = function() { window.print(); };
+    </script>
+</body>
+</html>
