@@ -364,7 +364,7 @@ async function loadModelTestBank() {
         return window.technicalQuestionBank;
     }
 
-    const response = await fetch('index.html');
+    const response = await fetch('../index.html');
     if (!response.ok) throw new Error('Question bank could not be loaded.');
 
     const source = await response.text();
