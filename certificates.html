@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Mahendra Kumar Sijapati</title>
+    <meta name="description" content="Verified certificates and awards of Mahendra Kumar Sijapati.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        :root { --primary:#0f172a; --accent:#10b981; --muted:#64748b; --bg:#f8fafc; --card:#fff; --border:#e2e8f0; }
+        * { box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; font-family:'Segoe UI',Tahoma,sans-serif; color:var(--primary); background:var(--bg); }
+        header { background:#0f172a; color:#fff; padding:22px 6%; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+        header a { color:#fff; text-decoration:none; }
+        .logo { color:#34d399; font-weight:800; font-size:1.2rem; }
+        .back-link { display:inline-flex; align-items:center; gap:8px; color:#d1fae5; font-weight:600; }
+        main { max-width:1200px; margin:0 auto; padding:64px 6%; }
+        .heading { margin-bottom:34px; }
+        h1 { margin:0 0 10px; font-size:clamp(2rem,5vw,3.5rem); }
+        .heading p { margin:0; color:var(--muted); font-size:1.05rem; }
+        .certificate-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px; }
+        .certificate-card { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; cursor:pointer; transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; }
+        .certificate-card:hover { transform:translateY(-8px); border-color:var(--accent); box-shadow:0 20px 38px rgba(15,23,42,.14); }
+        .cert-image-wrap { position:relative; aspect-ratio:4/3; background:#e2e8f0; overflow:hidden; }
+        .cert-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+        .certificate-card:hover img { transform:scale(1.06); }
+        .cert-badge-text { position:absolute; left:12px; bottom:12px; padding:5px 9px; border-radius:5px; color:#fff; background:rgba(15,23,42,.82); font-size:.75rem; font-weight:700; }
+        .cert-info { padding:18px; }
+        .cert-info h2 { margin:0 0 7px; font-size:1.1rem; }
+        .cert-info p { margin:0; color:var(--muted); font-size:.9rem; line-height:1.5; }
+        .modal { display:none; position:fixed; inset:0; z-index:10; background:rgba(15,23,42,.92); align-items:center; justify-content:center; flex-direction:column; padding:30px; }
+        .modal-content { max-width:min(92vw,1000px); max-height:78vh; object-fit:contain; border:4px solid #fff; border-radius:8px; }
+        #modalCaption { color:#fff; text-align:center; margin-top:14px; font-weight:600; }
+        .close-btn { position:absolute; top:18px; right:28px; color:#fff; font-size:42px; cursor:pointer; line-height:1; }
+        footer { padding:28px 6%; border-top:1px solid var(--border); text-align:center; color:var(--muted); }
+        @media (max-width:600px) { header { padding:18px 5%; } main { padding:42px 5%; } .modal { padding:16px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">MKS | Civil Engineer</a>
+        <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to portfolio</a>
+    </header>
+    <main>
+        <div class="heading">
+            <h1>Verified Certificates</h1>
+            <p>Academic awards, scholarships, technical courses, and engineering competition records.</p>
+        </div>
+        <div class="certificate-grid">
+            <article class="certificate-card" onclick="openModal('Certificate/CamScanner 05-06-2026 19.14.jpg','Arun River Basin Hydropower Project Certificate')"><div class="cert-image-wrap"><img src="Certificate/CamScanner 05-06-2026 19.14.jpg" alt="Arun River Basin Hydropower Project Certificate"><span class="cert-badge-text">Project Verification</span></div><div class="cert-info"><h2>Arun River Basin Project Award</h2><p>Thapathali Graduate Conference • Climate Scenario Modeling</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/20240312_145829.jpg','Outstanding Academic Performance Certificate (88.43%)')"><div class="cert-image-wrap"><img src="Certificate/20240312_145829.jpg" alt="Academic Topper Certificate"><span class="cert-badge-text">Academic Merit</span></div><div class="cert-info"><h2>Academic Topper Certificate</h2><p>IOE Thapathali Campus • 1st Year Part II (88.43%)</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/20230318_210603.jpg','Embassy of India - Golden Jubilee Scholarship Certificate')"><div class="cert-image-wrap"><img src="Certificate/20230318_210603.jpg" alt="Golden Jubilee Scholarship Certificate"><span class="cert-badge-text">Scholarship Award</span></div><div class="cert-info"><h2>Golden Jubilee Scholarship</h2><p>Issued by the Embassy of India, Kathmandu</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/20240628_200746.jpg','CESS 10-Day Advanced Excel Course Completion')"><div class="cert-image-wrap"><img src="Certificate/20240628_200746.jpg" alt="Advanced Excel Certification"><span class="cert-badge-text">Technical Course</span></div><div class="cert-info"><h2>Advanced Excel Certification</h2><p>Organized by Civil Engineering Students' Society (CESS)</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_2.jpg','1st Position: Intra-College Model Competition Certificate')"><div class="cert-image-wrap"><img src="Certificate/CamScanner 22-02-2026 16.44_2.jpg" alt="Model Competition Certificate"><span class="cert-badge-text">1st Place Winner</span></div><div class="cert-info"><h2>1st Place: Model Competition</h2><p>Yathartha 2082 Engineering Festival</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/IMG_20250130_160836.jpg','1st Position: Paper Bridge Competition Award')"><div class="cert-image-wrap"><img src="Certificate/IMG_20250130_160836.jpg" alt="Paper Bridge Challenge Award"><span class="cert-badge-text">1st Place Winner</span></div><div class="cert-info"><h2>1st Place: Paper Bridge Challenge</h2><p>Yathartha 2081 Symposium Exhibition</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_4.jpg','2nd Position: Concrete Mix Design Challenge')"><div class="cert-image-wrap"><img src="Certificate/CamScanner 22-02-2026 16.44_4.jpg" alt="Concrete Mix Design Challenge certificate"><span class="cert-badge-text">2nd Place Winner</span></div><div class="cert-info"><h2>2nd Place: Mix Design Challenge</h2><p>Yathartha 2082 Technical Evaluation</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_3.jpg','3rd Position: Inter-College Model Competition Certificate')"><div class="cert-image-wrap"><img src="Certificate/CamScanner 22-02-2026 16.44_3.jpg" alt="Inter-College Model Competition Certificate"><span class="cert-badge-text">3rd Place Winner</span></div><div class="cert-info"><h2>3rd Place: Inter-College Model</h2><p>Yathartha 2082 Engineering Platform</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_1.jpg','Additional Engineering Competition Certificate')"><div class="cert-image-wrap"><img src="Certificate/CamScanner 22-02-2026 16.44_1.jpg" alt="Engineering competition certificate"><span class="cert-badge-text">Competition Award</span></div><div class="cert-info"><h2>Engineering Competition Award</h2><p>Certificate from the engineering festival collection</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/IMG_20260315_075739.jpg','Additional Academic Certificate')"><div class="cert-image-wrap"><img src="Certificate/IMG_20260315_075739.jpg" alt="Academic certificate"><span class="cert-badge-text">Academic Certificate</span></div><div class="cert-info"><h2>Academic Certificate</h2><p>Academic achievement from the certificate collection</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/Screenshot_2026_0430_163037.jpg','Additional Certificate Record')"><div class="cert-image-wrap"><img src="Certificate/Screenshot_2026_0430_163037.jpg" alt="Certificate record screenshot"><span class="cert-badge-text">Certificate Record</span></div><div class="cert-info"><h2>Certificate Record</h2><p>Supporting certificate record from the portfolio archive</p></div></article>
+            <article class="certificate-card" onclick="openModal('Certificate/watsat.jpeg','Additional Certificate Record')"><div class="cert-image-wrap"><img src="Certificate/watsat.jpeg" alt="Certificate record"><span class="cert-badge-text">Certificate Record</span></div><div class="cert-info"><h2>Additional Certificate Record</h2><p>Supporting certificate from the portfolio archive</p></div></article>
+        </div>
+    </main>
+    <div id="certModal" class="modal" onclick="closeModal(event)"><button class="close-btn" aria-label="Close certificate preview" onclick="closeModal(event)">&times;</button><img class="modal-content" id="modalImg" alt="Enlarged certificate preview"><div id="modalCaption"></div></div>
+    <footer>&copy; 2026 Mahendra Kumar Sijapati. All Rights Reserved.</footer>
+    <script>
+        function openModal(imageSrc, captionText) { document.getElementById('modalImg').src=imageSrc; document.getElementById('modalCaption').textContent=captionText; document.getElementById('certModal').style.display='flex'; document.body.style.overflow='hidden'; }
+        function closeModal(event) { if (event.target.id==='certModal' || event.target.classList.contains('close-btn')) { document.getElementById('certModal').style.display='none'; document.body.style.overflow=''; } }
+    </script>
+</body>
+</html>

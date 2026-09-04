@@ -431,8 +431,8 @@
         .profile-frame {
             position: relative;
             width: 360px;
-            height: 380px;
-            border-radius: 20px;
+            height: 360px;
+            border-radius: 50%;
             padding: 6px;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             box-shadow: 0 30px 60px rgba(16, 185, 129, 0.25), 0 0 60px rgba(16, 185, 129, 0.12);
@@ -445,14 +445,14 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(16, 185, 129, 0.1) 100%);
-            border-radius: 18px;
+            border-radius: 50%;
             z-index: 1;
         }
 
         .profile-img {
             width: 100%;
             height: 100%;
-            border-radius: 18px;
+            border-radius: 50%;
             object-fit: cover;
             background: linear-gradient(135deg, #0f172a 0%, #1a2a4a 100%);
             border: 4px solid #0f172a;
@@ -463,6 +463,10 @@
         .profile-frame:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 40px 80px rgba(16, 185, 129, 0.3), 0 0 80px rgba(16, 185, 129, 0.15);
+        }
+
+        .profile-frame.pointer-active {
+            transition: transform 0.12s ease-out, box-shadow 0.3s ease;
         }
 
         .profile-stats {
@@ -1076,7 +1080,7 @@
             }
             .profile-frame { 
                 width: 260px; 
-                height: 280px; 
+                height: 260px;
             }
             .status-badge {
                 font-size: 12px;
@@ -1108,8 +1112,7 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#activities">Activities</a></li>
             <li><a href="#achievements">Achievements</a></li>
-            <li><a href="model-test/index.html"><i class="fa-solid fa-clipboard-question"></i> Model Test</a></li>
-            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="certificates.html"><i class="fa-solid fa-certificate"></i> Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-socials">
@@ -1319,7 +1322,7 @@
             </div>
         </section>
 
-        <section id="certificates" class="section alternate-bg reveal-node">
+        <section id="certificates" class="section alternate-bg reveal-node" hidden>
             <h2 class="section-title">Verified Certificates</h2>
             <div class="certificate-grid">
                 <div class="certificate-card" onclick="openModal('Certificate/CamScanner 05-06-2026 19.14.jpg', 'Arun River Basin Hydropower Project Certificate')">
@@ -1510,6 +1513,21 @@
                 navToggle.setAttribute('aria-expanded', 'false');
             });
         });
+
+        const profileFrame = document.querySelector('.profile-frame');
+        if (profileFrame) {
+            profileFrame.addEventListener('pointermove', (event) => {
+                const bounds = profileFrame.getBoundingClientRect();
+                const rotateX = ((event.clientY - bounds.top) / bounds.height - 0.5) * -10;
+                const rotateY = ((event.clientX - bounds.left) / bounds.width - 0.5) * 10;
+                profileFrame.classList.add('pointer-active');
+                profileFrame.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+            });
+            profileFrame.addEventListener('pointerleave', () => {
+                profileFrame.classList.remove('pointer-active');
+                profileFrame.style.transform = '';
+            });
+        }
 
         function openModal(imageSrc, captionText) {
             const modal = document.getElementById('certModal');
