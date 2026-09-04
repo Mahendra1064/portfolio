@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahendra Kumar Sijapati | Civil Engineering Portfolio</title>
-    <meta name="description" content="Civil Engineering Professional & Hydrology Scholar specializing in structural design, SWAT/GIS modeling, and climate-resilient infrastructure.">
-    <meta name="theme-color" content="#10b981">
+    <meta name="description" content="Mahendra Kumar Sijapati is a civil engineering professional from Nepal specializing in structural design, hydrology modeling, and climate-resilient infrastructure. Explore academic achievements, projects, certificates, and contact information.">
+    <meta name="keywords" content="Civil Engineering, Mahendra Kumar Sijapati, IOE Thapathali Campus, hydrology modeling, structural design, ArcGIS, ETABS, SWAT, Nepal engineer">
+    <meta name="author" content="Mahendra Kumar Sijapati">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://www.mahendrakumarsijapati.com.np/">
+    <meta property="og:title" content="Mahendra Kumar Sijapati | Civil Engineering Portfolio">
+    <meta property="og:description" content="Explore the civil engineering portfolio of Mahendra Kumar Sijapati, featuring academic excellence, climate-resilient project work, and verified certificate previews.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mahendrakumarsijapati.com.np/">
+    <meta property="og:site_name" content="Mahendra Kumar Sijapati">
+    <meta property="og:image" content="https://www.mahendrakumarsijapati.com.np/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mahendra Kumar Sijapati | Civil Engineering Portfolio">
+    <meta name="twitter:description" content="Civil engineering portfolio, academic achievements, projects, and certificates from Nepal.">
+    <meta name="twitter:image" content="https://www.mahendrakumarsijapati.com.np/profile.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mahendra Kumar Sijapati",
+        "url": "https://www.mahendrakumarsijapati.com.np/",
+        "jobTitle": "Civil Engineering Professional",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dailekh",
+            "addressCountry": "NP"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182",
+            "https://www.researchgate.net/profile/Mahendra-Sijapati"
+        ]
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papnXyu3dV5T1zQ3l4qd8yczFTv4nE5H1gJt6R/+voO6QeI3wASU1vHeKwn3QcWZfABF5Yq9I4kyy1w0YGyh1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
@@ -13,251 +45,424 @@
             --secondary: #1e293b;
             --accent: #10b981;
             --accent-light: #d1fae5;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-tertiary: #f1f5f9;
-            --border-color: #e2e8f0;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        html[data-theme="dark"] {
-            --primary: #ffffff;
-            --secondary: #e2e8f0;
-            --text-primary: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --bg-primary: #0f172a;
-            --bg-secondary: #1a2438;
-            --bg-tertiary: #1e293b;
-            --border-color: #334155;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.4);
+            --success-dark: #047857;
+            --warning: #eab308;
+            --warning-light: #fef08a;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.3s ease, color 0.3s ease;
-            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            padding-top: 75px;
+            overflow-x: hidden;
         }
 
-        /* --- Header & Navigation --- */
-        header {
-            background: var(--bg-primary);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
-        }
-
-        html[data-theme="dark"] header {
-            background: rgba(15, 23, 42, 0.8);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 16px 10%;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(16px);
+            z-index: 1000;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 900;
             color: var(--accent);
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 12px;
+        }
+
+        .nav-links li a {
+            color: #cbd5e1;
             text-decoration: none;
-            letter-spacing: -1px;
+            padding: 10px 14px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.25s ease;
         }
 
-        .nav-controls {
+        .nav-links li a:hover,
+        .nav-links li a:focus {
+            color: var(--accent);
+        }
+
+        .nav-socials {
             display: flex;
-            align-items: center;
-            gap: 1.5rem;
+            gap: 18px;
+            margin-left: 24px;
+            border-left: 1px solid #334155;
+            padding-left: 22px;
         }
 
-        /* --- Theme Toggle --- */
-        .theme-toggle {
-            display: flex;
-            align-items: center;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 999px;
-            padding: 0.4rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .nav-socials a {
+            color: #cbd5e1;
+            font-size: 19px;
+            transition: transform 0.25s ease, color 0.25s ease;
         }
 
-        .theme-toggle:hover {
-            border-color: var(--accent);
-            background: var(--bg-tertiary);
+        .nav-socials a:hover,
+        .nav-socials a:focus {
+            color: var(--accent);
+            transform: translateY(-2px);
         }
 
-        .theme-toggle button {
-            background: none;
+        .nav-toggle {
+            display: none;
             border: none;
-            color: var(--text-secondary);
+            background: transparent;
+            color: #cbd5e1;
+            font-size: 22px;
             cursor: pointer;
-            width: 32px;
-            height: 32px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1a2a4a 50%, #0a3d3a 100%);
+            color: var(--white);
+            padding: 80px 10%;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
             border-radius: 50%;
-            transition: all 0.3s ease;
-            font-size: 1rem;
+            animation: float 8s ease-in-out infinite;
         }
 
-        .theme-toggle button.active {
-            background: var(--accent);
-            color: white;
-            transform: scale(1.1);
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
         }
 
-        /* --- Hero Section --- */
-        .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
             align-items: center;
-            animation: fadeIn 0.8s ease;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        html[data-theme="dark"] .hero-content h1 {
-            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-greeting {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
+        .hero-content {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            animation: slideInLeft 0.8s ease 0.2s both;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            animation: slideInLeft 0.8s ease 0.4s both;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            animation: slideInLeft 0.8s ease 0.6s both;
-        }
-
-        .btn {
-            padding: 0.875rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .status-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
+            gap: 8px;
+            width: fit-content;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero-section h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #d1fae5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-section h2 {
+            font-size: 26px;
+            color: #34d399;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-intro-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin: 0;
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        .qualification-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 10px 0 20px 0;
+        }
+
+        .qualification-tags span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .qualification-tags span i {
+            font-size: 14px;
+        }
+
+        .hero-highlight-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0;
+            font-size: 15px;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .hero-highlight-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .hero-highlight-list li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 25px 0 30px 0;
+            align-items: center;
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-tertiary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 10px;
+            padding: 13px 28px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.25);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.35);
         }
 
         .btn-secondary {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            border: 2px solid var(--accent);
+            background: rgba(255, 255, 255, 0.12);
+            color: #f8fafc;
+            border: 2px solid rgba(16, 185, 129, 0.4);
         }
 
         .btn-secondary:hover {
-            background: var(--accent);
-            color: white;
+            background: rgba(16, 185, 129, 0.15);
+            border-color: #10b981;
             transform: translateY(-2px);
         }
 
-        .hero-image {
-            position: relative;
-            animation: floatIn 1s ease;
+        .btn-tertiary {
+            background: transparent;
+            color: #34d399;
+            border: 2px solid #34d399;
         }
 
-        @keyframes floatIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .btn-tertiary:hover {
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .skills-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .skill-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .skill-chip:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 20px 0 0 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: #34d399;
+        }
+
+        .contact-links i {
+            font-size: 16px;
+            color: #10b981;
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .profile-frame {
             position: relative;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
+            width: 360px;
+            height: 380px;
+            border-radius: 20px;
+            padding: 6px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 30px 60px rgba(16, 185, 129, 0.25), 0 0 60px rgba(16, 185, 129, 0.12);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
         }
 
-        .profile-frame img {
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(16, 185, 129, 0.1) 100%);
+            border-radius: 18px;
+            z-index: 1;
+        }
+
+        .profile-img {
             width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 1rem;
+            height: 100%;
+            border-radius: 18px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #0f172a 0%, #1a2a4a 100%);
+            border: 4px solid #0f172a;
+            position: relative;
+            z-index: 0;
         }
 
         .profile-frame:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 40px 80px rgba(16, 185, 129, 0.3), 0 0 80px rgba(16, 185, 129, 0.15);
         }
 
         .profile-stats {
@@ -267,781 +472,1421 @@
             right: 20px;
             background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(10px);
-            border-radius: 0.75rem;
-            padding: 1rem;
+            border-radius: 12px;
+            padding: 16px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 12px;
             border: 1px solid rgba(16, 185, 129, 0.2);
+            z-index: 2;
         }
 
-        html[data-theme="dark"] .profile-stats {
-            background: rgba(15, 23, 42, 0.95);
-        }
-
-        .stat {
+        .stat-item {
             text-align: center;
         }
 
         .stat-value {
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: 900;
-            color: var(--accent);
+            color: #34d399;
         }
 
         .stat-label {
-            font-size: 0.75rem;
+            font-size: 12px;
             color: #94a3b8;
+            margin-top: 4px;
+            font-weight: 600;
             text-transform: uppercase;
-            font-weight: 700;
-            margin-top: 0.25rem;
             letter-spacing: 0.05em;
         }
 
-        /* --- Cards Section --- */
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+        .contact-info {
+            display: none;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+        .skills-tags {
+            display: none;
         }
 
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 2rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            position: relative;
+        main {
             overflow: hidden;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
-            transition: left 0.6s ease;
+        .section {
+            padding: 100px 10%;
+            position: relative;
         }
 
-        .card:hover::before {
-            left: 100%;
+        .alternate-bg {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 60px;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 14px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .reveal-node {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-node.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-copy p {
+            margin-bottom: 24px;
+            color: #475569;
+            line-height: 1.75;
+            font-size: 16px;
+        }
+
+        .highlight-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            color: #334155;
+            font-size: 15px;
+        }
+
+        .highlight-item i {
+            color: var(--accent);
+            margin-top: 3px;
+        }
+
+        .edu-grid,
+        .grid-container,
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .edu-card,
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+        }
+
+        .certificate-card {
+            background: var(--white);
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 40px rgba(15, 23, 42, 0.14);
+        }
+
+        .edu-card h3,
+        .card h3,
+        .cert-info h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .edu-card .inst,
+        .card p,
+        .cert-info p,
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.72;
+        }
+
+        .edu-card .inst {
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .edu-card .gpa,
+        .cert-badge-text {
+            display: inline-flex;
+            align-items: center;
+            background: #e2e8f0;
+            padding: 6px 12px;
+            font-size: 13px;
+            border-radius: 999px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .card {
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent);
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            transform: translateY(-8px);
+            box-shadow: 0 22px 42px rgba(15, 23, 42, 0.12);
         }
 
         .card-icon {
-            font-size: 3rem;
+            font-size: 42px;
             color: var(--accent);
-            margin-bottom: 1rem;
+            margin-bottom: 22px;
+        }
+
+        .icon-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .icon-link:hover,
+        .icon-link:focus-visible {
+            color: var(--accent);
+            transform: translateY(-3px) scale(1.08);
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .timeline {
+            max-width: 860px;
+            margin: 0 auto;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 42px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -44px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid #f1f5f9;
             transition: transform 0.3s ease;
         }
 
-        .card:hover .card-icon {
-            transform: rotate(10deg) scale(1.2);
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.4);
         }
 
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
+        .timeline-content h4 {
+            font-size: 19px;
+            color: var(--primary);
+            margin-bottom: 8px;
         }
 
-        .card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            font-size: 0.95rem;
+        .cert-image-wrap {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8fafc 0%, #fef3c7 100%);
         }
 
-        .card-meta {
-            font-size: 0.85rem;
-            color: var(--accent);
+        .cert-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .certificate-card:hover .cert-image-wrap img {
+            transform: scale(1.04);
+        }
+
+        .cert-image-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0) 35%, rgba(15, 23, 42, 0.35) 100%);
+        }
+
+        .cert-badge-text {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            z-index: 1;
+            font-size: 11px;
+            text-transform: uppercase;
             font-weight: 700;
-            margin-top: 1rem;
+            letter-spacing: 1.1px;
+            color: #a16207;
+            border: 1px solid rgba(202, 138, 4, 0.25);
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .cert-info {
+            padding: 24px;
+            background: var(--white);
+            flex-grow: 1;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cert-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        .gk-model-box {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+
+        .gk-tab-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 26px;
+        }
+
+        .gk-tab {
+            background: #e2e8f0;
+            color: var(--primary);
+            border: 1px solid transparent;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .gk-tab.active {
+            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
+            color: #ffffff;
+            box-shadow: 0 10px 24px rgba(16, 185, 129, 0.2);
+        }
+
+        .gk-question-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .gk-q-meta {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* --- Stats Section --- */
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.4s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent);
-        }
-
-        .stat-card-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card-label {
-            color: var(--text-secondary);
+            gap: 12px;
+            margin-bottom: 18px;
+            color: var(--text-muted);
+            font-size: 14px;
             font-weight: 600;
         }
 
-        /* --- Footer --- */
-        footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 2rem;
-            text-align: center;
-            color: var(--text-secondary);
+        .gk-question-card h3 {
+            font-size: 1.12rem;
+            line-height: 1.7;
+            color: var(--primary);
+            margin-bottom: 22px;
         }
 
-        .social-links {
+        .gk-option-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .gk-option {
+            width: 100%;
+            text-align: left;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            background: #ffffff;
+            color: var(--text-main);
+            padding: 14px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .gk-option:hover:not(:disabled) {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .gk-option.correct {
+            background: #dcfce7;
+            border-color: #22c55e;
+            color: #166534;
+        }
+
+        .gk-option.incorrect {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+
+        .gk-option:disabled {
+            cursor: default;
+        }
+
+        .gk-answer-panel {
+            display: none;
+            margin-top: 22px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 14px;
+            padding: 18px 20px;
+            color: #1e3a8a;
+        }
+
+        .gk-answer-panel.visible {
+            display: block;
+        }
+
+        .gk-answer-panel strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .gk-nav {
             display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .gk-nav button {
+            border: none;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .gk-nav .secondary {
+            background: #e2e8f0;
+            color: var(--primary);
+        }
+
+        .gk-nav .primary {
+            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
+            color: #ffffff;
+        }
+
+        .gk-score-box {
+            margin-top: 16px;
+            background: linear-gradient(135deg, #fefce8 0%, #f8fafc 100%);
+            border: 1px solid #facc15;
+            border-radius: 14px;
+            padding: 16px 18px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- Modal Styling --- */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.95);
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            align-items: center;
+            padding: 24px;
+            backdrop-filter: blur(6px);
+            z-index: 2000;
         }
 
-        .social-links a {
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-            font-size: 1.5rem;
+        .modal-content {
+            max-width: 90%;
+            max-height: 82%;
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            border: 4px solid var(--white);
+            object-fit: contain;
+            animation: modalScaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        .social-links a:hover {
-            color: var(--accent);
-            transform: translateY(-3px) scale(1.2);
+        @keyframes modalScaleUp {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
-        footer p {
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
+        #modalCaption {
+            color: var(--white);
+            margin-top: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
         }
 
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
+        .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #94a3b8;
+            font-size: 46px;
+            cursor: pointer;
+            transition: color 0.2s ease;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .close-btn:hover {
+            color: var(--white);
         }
 
-        /* --- Responsive --- */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 2rem 1rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-greeting {
-                font-size: 1rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .section {
-                padding: 2rem 1rem;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-            }
-
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .header-content {
-                padding: 0.75rem 1rem;
-            }
-
-            .logo {
-                font-size: 1.25rem;
-            }
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 10%;
+            font-size: 14px;
+            border-top: 1px solid #1e293b;
         }
 
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 1.5rem;
+        @media (max-width: 992px) {
+            .hero-container { 
+                grid-template-columns: 1fr; 
+                text-align: center;
+                gap: 50px;
             }
-
-            .section-title {
-                font-size: 1.5rem;
+            .hero-content {
+                align-items: center;
             }
-
-            .btn {
-                width: 100%;
+            .hero-section h1 {
+                font-size: 48px;
+            }
+            .hero-section h2 {
+                font-size: 24px;
+            }
+            .hero-intro-text {
+                max-width: 100%;
+            }
+            .hero-actions {
                 justify-content: center;
             }
-
-            .hero-cta {
-                flex-direction: column;
+            .qualification-tags {
+                justify-content: center;
             }
+            .skills-bar {
+                justify-content: center;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+            .profile-frame {
+                width: 320px;
+                height: 340px;
+            }
+            .section { padding: 70px 6%; }
+            .about-grid { grid-template-columns: 1fr; }
+        }
 
-            .stats-container {
-                grid-template-columns: 1fr;
+        @media (max-width: 860px) {
+            .navbar { padding: 16px 6%; }
+            .nav-links,
+            .nav-socials { display: none; }
+            .nav-toggle { display: inline-flex; }
+            .nav-links.open {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                padding: 18px 0 22px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+            .nav-links.open li a {
+                padding: 14px 16px;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-socials.open {
+                display: flex;
+                justify-content: center;
+                margin-top: 16px;
+                padding-top: 14px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-section { 
+                padding: 70px 5%; 
+                min-height: auto;
+            }
+            .hero-section h1 { 
+                font-size: 36px; 
+            }
+            .hero-section h2 { 
+                font-size: 20px; 
+            }
+            .hero-intro-text {
+                font-size: 15px;
+            }
+            .profile-frame { 
+                width: 260px; 
+                height: 280px; 
+            }
+            .status-badge {
+                font-size: 12px;
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn-primary,
+            .btn-secondary,
+            .btn-tertiary {
+                width: 100%;
+            }
+            .contact-links {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <a href="#" class="logo">MKS</a>
-            <div class="nav-controls">
-                <div class="theme-toggle">
-                    <button id="lightMode" class="active" aria-label="Light mode" title="Light Mode">
-                        <i class="fas fa-sun"></i>
-                    </button>
-                    <button id="darkMode" aria-label="Dark mode" title="Dark Mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </div>
+    <nav class="navbar">
+        <div class="logo">MKS | Civil Engineer</div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="model-test/index.html"><i class="fa-solid fa-clipboard-question"></i> Model Test</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-socials">
+            <a href="https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182" target="_blank" rel="noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Mahendra-Sijapati" target="_blank" rel="noreferrer" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-greeting">
-                    <span id="greetingIcon">👋</span>
-                    <span id="greetingText">Good Morning</span>
-                </div>
-                <h1>Mahendra Kumar Sijapati</h1>
-                <p class="hero-description">Civil Engineering Professional & Hydrology Scholar specializing in structural design, SWAT/GIS modeling, and climate-resilient infrastructure. Golden Jubilee Scholar with expertise in AutoCAD, ETABS, ArcGIS, and advanced hydrology.</p>
-                <div class="hero-cta">
-                    <a href="CV_Mahendra_Professional.pdf" download class="btn btn-primary">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Get in Touch
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-frame">
-                    <img src="profile.jpg" alt="Mahendra Kumar Sijapati" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=MKS&backgroundColor=10b981&textColor=ffffff'">
-                    <div class="profile-stats">
-                        <div class="stat">
-                            <div class="stat-value">4+</div>
-                            <div class="stat-label">Years Study</div>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <i class="fa-solid fa-circle-dot"></i>Open for Opportunities
+                    </div>
+                    <h1>Mahendra Kumar Sijapati</h1>
+                    <h2>Civil Engineering Professional & Hydrology Scholar</h2>
+                    
+                    <div class="qualification-tags">
+                        <span><a class="icon-link" href="#education" aria-label="Go to education"><i class="fa-solid fa-graduation-cap"></i></a>IOE Thapathali</span>
+                        <span><a class="icon-link" href="#achievements" aria-label="Go to achievements"><i class="fa-solid fa-medal"></i></a>Golden Jubilee Scholar</span>
+                        <span><a class="icon-link" href="#activities" aria-label="Go to activities"><i class="fa-solid fa-water"></i></a>SWAT/GIS Expert</span>
+                    </div>
+
+                    <p class="hero-intro-text">
+                        Recently graduated from Institute of Engineering Thapathali Campus with specialization in structural design, hydrologic modeling, and climate-sensitive infrastructure. Recipient of the prestigious Golden Jubilee Scholarship. Expertise in AutoCAD, ETABS, ArcGIS, and SWAT modeling for sustainable water resource management.
+                    </p>
+
+                    <ul class="hero-highlight-list">
+                        <li><strong>Specializations:</strong> Structural Analysis, Watershed Modeling, Hydropower Assessment</li>
+                        <li><strong>Research Focus:</strong> Climate change impact on river basins and sustainable infrastructure</li>
+                        <li><strong>Recognition:</strong> Multiple competition awards and academic excellence honors</li>
+                    </ul>
+
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="CV_Mahendra_Professional.pdf" download="CV_Mahendra_Professional.pdf">
+                            <i class="fa-solid fa-download"></i>Download CV
+                        </a>
+                        <a class="btn-secondary" href="mailto:masijapati79@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>Contact Me
+                        </a>
+                        <a class="btn-tertiary" href="#activities">
+                            <i class="fa-solid fa-briefcase"></i>View Projects
+                        </a>
+                    </div>
+
+                    <div class="skills-bar">
+                        <div class="skill-chip">
+                            <a class="icon-link" href="#activities" aria-label="Go to projects"><i class="fa-solid fa-compass-drafting"></i></a>AutoCAD
                         </div>
-                        <div class="stat">
-                            <div class="stat-value">15+</div>
-                            <div class="stat-label">Projects</div>
+                        <div class="skill-chip">
+                            <a class="icon-link" href="#activities" aria-label="Go to projects"><i class="fa-solid fa-cubes"></i></a>ETABS
+                        </div>
+                        <div class="skill-chip">
+                            <a class="icon-link" href="#activities" aria-label="Go to projects"><i class="fa-solid fa-map-location-dot"></i></a>ArcGIS
+                        </div>
+                        <div class="skill-chip">
+                            <a class="icon-link" href="#activities" aria-label="Go to projects"><i class="fa-solid fa-droplet"></i></a>SWAT Modeling
+                        </div>
+                        <div class="skill-chip">
+                            <a class="icon-link" href="#about" aria-label="Go to about"><i class="fa-solid fa-chart-line"></i></a>Advanced Excel
+                        </div>
+                    </div>
+
+                    <div class="contact-links">
+                        <a href="mailto:masijapati79@gmail.com" title="Email me">
+                            <i class="fa-solid fa-envelope"></i>masijapati79@gmail.com
+                        </a>
+                        <a href="tel:+977-9845171064" title="Call me">
+                            <i class="fa-solid fa-phone"></i>+977 9845171064
+                        </a>
+                        <a href="#" title="Location">
+                            <i class="fa-solid fa-location-dot"></i>Dailekh, Nepal
+                        </a>
+                        <a href="https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182" target="_blank" rel="noreferrer" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>LinkedIn
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Mahendra-Sijapati" target="_blank" rel="noreferrer" title="ResearchGate">
+                            <i class="fa-brands fa-researchgate"></i>ResearchGate
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Mahendra Kumar Sijapati" class="profile-img" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=MKS&backgroundColor=0f172a&textColor=10b981'">
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">4+</div>
+                                <div class="stat-label">Yrs Study</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">15+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="section">
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-card-number">7</div>
-                    <div class="stat-card-label">Awards & Honors</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-number">5+</div>
-                    <div class="stat-card-label">Technical Skills</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-number">10+</div>
-                    <div class="stat-card-label">Certificates</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-number">1</div>
-                    <div class="stat-card-label">Golden Jubilee</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects -->
-        <section class="section">
-            <h2 class="section-title">Key Projects</h2>
-            <p class="section-subtitle">Specializations in structural design, hydrology modeling, and climate-sensitive infrastructure</p>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-water"></i></div>
-                    <h3>Hydropower Potential Assessment</h3>
-                    <p>Arun River Basin climate change impact analysis using SWAT modeling and ArcGIS spatial analysis for discharge prediction.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-tag"></i>
-                        <span>SWAT • GIS • Climate Modeling</span>
+        <section id="about" class="section alternate-bg reveal-node">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p>As a civil engineering professional, I specialize in structural analysis, hydrologic modeling, and sustainable infrastructure design. I deliver resilient solutions for academic research and practical engineering challenges while maintaining strong academic performance and leadership in technical competitions.</p>
+                    <div class="highlight-list">
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Golden Jubilee Scholarship recipient with strong academic ranking</div>
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Experienced in climate-sensitive hydropower and watershed assessments</div>
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Skilled in AutoCAD, ETABS, ArcGIS, SWAT and Advanced Excel</div>
+                        <div class="highlight-item"><i class="fa-solid fa-check"></i>Proven success in engineering competitions and research publications</div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-building"></i></div>
-                    <h3>Structural Design & Analysis</h3>
-                    <p>ETABS modeling for concrete and steel structures with load analysis, stress evaluation, and structural optimization.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-tag"></i>
-                        <span>ETABS • Analysis • Design</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-map"></i></div>
-                    <h3>Topographical Surveying</h3>
-                    <p>AutoCAD-based design documentation including contour maps, cross-sections, and alignment drawings for projects.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-tag"></i>
-                        <span>AutoCAD • Surveying • GIS</span>
+                <div>
+                    <div class="card">
+                        <a class="icon-link card-icon" href="#achievements" aria-label="Go to achievements"><i class="fa-solid fa-chart-line"></i></a>
+                        <h3>Academic Honors</h3>
+                        <p>Conferred scholarship awards and top semester rankings while pursuing a Bachelor of Civil Engineering at IOE Thapathali Campus.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Achievements -->
-        <section class="section">
-            <h2 class="section-title">Achievements</h2>
-            <p class="section-subtitle">Awards, competitions, and academic excellence</p>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-medal"></i></div>
-                    <h3>Golden Jubilee Scholarship</h3>
-                    <p>Prestigious merit award from Embassy of India for exceptional engineering studies and academic performance.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-calendar"></i>
-                        <span>2023</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-trophy"></i></div>
-                    <h3>1st Position - Model Competition</h3>
-                    <p>Secured top honors for technical excellence at Yathartha 2082 Engineering Symposium.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-calendar"></i>
-                        <span>2082</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                    <h3>Paper Bridge Challenge Winner</h3>
-                    <p>Engineered optimal weight-bearing truss configuration during Yathartha 2081 structural event.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-calendar"></i>
-                        <span>2081</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-star"></i></div>
-                    <h3>Academic Topper Certificate</h3>
-                    <p>IOE Thapathali Campus - 1st Year Part II with outstanding academic performance (88.43%).</p>
-                    <div class="card-meta">
-                        <i class="fas fa-calendar"></i>
-                        <span>2024</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Rank 3 - Loksewa Mock Exam</h3>
-                    <p>Ranked third nationwide in public sector civil service mock evaluations conducted in 2082.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-calendar"></i>
-                        <span>2082</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+        <section id="education" class="section reveal-node">
+            <h2 class="section-title">Academic Foundation</h2>
+            <div class="edu-grid">
+                <div class="edu-card">
                     <h3>Bachelor of Civil Engineering</h3>
-                    <p>Graduated with honors from IOE Thapathali Campus with specialization in structural and hydrology engineering.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-calendar"></i>
-                        <span>2025</span>
+                    <p class="inst">Institute of Engineering, Thapathali Campus, Kathmandu</p>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:10px;">Graduated • Institute of Engineering, Thapathali Campus</p>
+                    <span class="gpa">Bachelor's Degree Completed</span>
+                </div>
+                <div class="edu-card">
+                    <h3>+2 Science</h3>
+                    <p class="inst">Khwopa Secondary School, Dekocha, Bhaktapur</p>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:10px;">Batch 2077-78</p>
+                    <span class="gpa">GPA: 3.78 / 4.00</span>
+                </div>
+                <div class="edu-card">
+                    <h3>Secondary Education Examination (SEE)</h3>
+                    <p class="inst">Bagiswori Secondary School, Chyamhasingh, Bhaktapur</p>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:10px;">Distinction Profile</p>
+                    <span class="gpa">GPA: 3.90 / 4.00</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="section alternate-bg reveal-node">
+            <h2 class="section-title">Engineering Sectors & Core Projects</h2>
+            <div class="grid-container">
+                <div class="card" style="border-top-color: var(--accent);">
+                    <a class="icon-link card-icon" href="#certificates" aria-label="Go to certificates"><i class="fa-solid fa-cloud-showers-water"></i></a>
+                    <h3>Climate & Hydrology Modeling</h3>
+                    <p>Advanced hydrology tracking using SWAT and ArcGIS frameworks. Developed simulations assessing the <strong>Hydropower Potential of the Arun River Basin under Climate Change Scenarios</strong>, analyzing runoffs and discharge trends.</p>
+                </div>
+                <div class="card">
+                    <a class="icon-link card-icon" href="#education" aria-label="Go to education"><i class="fa-solid fa-building-shield"></i></a>
+                    <h3>Structural Design & Analysis</h3>
+                    <p>Trained in structural detailing using ETABS to evaluate concrete stresses, frame distribution forces, and load limits. Experienced in high-precision structural optimization and configuration of structural models.</p>
+                </div>
+                <div class="card">
+                    <a class="icon-link card-icon" href="#contact" aria-label="Go to contact"><i class="fa-solid fa-map-location"></i></a>
+                    <h3>Topographical & Road Surveying</h3>
+                    <p>Proficient in surveying methodologies and alignment mappings. Expert in plotting detailed geographic site parameters, contour tracking charts, and structural cross-sections using AutoCAD.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section reveal-node">
+            <h2 class="section-title">Honors & Competition Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Golden Jubilee Scholarship Award</h4>
+                        <p>Prestigious merit framework awarded by the Embassy of India, Kathmandu for exceptional engineering studies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>1st Position — BE Intra-College Model Competition</h4>
+                        <p>Secured top honors for technical excellence at the Yathartha 2082 Engineering Symposium.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>1st Position — Paper Bridge Engineering Challenge</h4>
+                        <p>Engineered an optimal weight-bearing truss configuration during the Yathartha 2081 structural event.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2nd Position — Concrete Mix Design Competition</h4>
+                        <p>Achieved target compression metrics through exact structural mix designs at Yathartha 2082.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Rank 3rd — Civil Engineering Loksewa Mock Examination</h4>
+                        <p>Ranked third nationwide in public sector civil service mock evaluations conducted in 2082.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Expertise in civil engineering software and methodologies</p>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-drafting-compass"></i></div>
-                    <h3>Design Software</h3>
-                    <p>Proficient in AutoCAD for detailed design documentation, ETABS for structural analysis, and ArcGIS for spatial modeling.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-code"></i>
-                        <span>AutoCAD • ETABS • ArcGIS</span>
+        <section id="certificates" class="section alternate-bg reveal-node">
+            <h2 class="section-title">Verified Certificates</h2>
+            <div class="certificate-grid">
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 05-06-2026 19.14.jpg', 'Arun River Basin Hydropower Project Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 05-06-2026 19.14.jpg" alt="Arun River Basin Hydropower Project Certificate">
+                        <span class="cert-badge-text">Project Verification</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Arun River Basin Project Award</h3>
+                        <p>Thapathali Graduate Conference • Climate Scenario Modeling</p>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-water-droplet"></i></div>
-                    <h3>Hydrology Modeling</h3>
-                    <p>SWAT framework expertise for watershed assessment, climate scenario modeling, and hydrologic simulations.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-code"></i>
-                        <span>SWAT • Watershed • Climate</span>
+                <div class="certificate-card" onclick="openModal('Certificate/20240312_145829.jpg', 'Outstanding Academic Performance Certificate (88.43%)')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/20240312_145829.jpg" alt="Academic Topper Certificate">
+                        <span class="cert-badge-text">Academic Merit</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Academic Topper Certificate</h3>
+                        <p>IOE Thapathali Campus • 1st Year Part II (88.43%)</p>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-calculator"></i></div>
-                    <h3>Advanced Excel</h3>
-                    <p>Advanced data analysis, statistical modeling, and visualization for engineering data management and reporting.</p>
-                    <div class="card-meta">
-                        <i class="fas fa-code"></i>
-                        <span>Excel • VBA • Analytics</span>
+                <div class="certificate-card" onclick="openModal('Certificate/20230318_210603.jpg', 'Embassy of India - Golden Jubilee Scholarship Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/20230318_210603.jpg" alt="Golden Jubilee Scholarship Certificate">
+                        <span class="cert-badge-text">Scholarship Award</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Golden Jubilee Scholarship</h3>
+                        <p>Issued by the Embassy of India, Kathmandu</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/20240628_200746.jpg', 'CESS 10-Day Advanced Excel Course Completion')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/20240628_200746.jpg" alt="Advanced Excel Certification">
+                        <span class="cert-badge-text">Technical Course</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Advanced Excel Certification</h3>
+                        <p>Organized by Civil Engineering Students' Society (CESS)</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_2.jpg', '1st Position: Intra-College Model Competition Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_2.jpg" alt="Model Competition Certificate">
+                        <span class="cert-badge-text">1st Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>1st Place: Model Competition</h3>
+                        <p>Yathartha 2082 Engineering Festival</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/IMG_20250130_160836.jpg', '1st Position: Paper Bridge Competition Award')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/IMG_20250130_160836.jpg" alt="Paper Bridge Challenge Award">
+                        <span class="cert-badge-text">1st Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>1st Place: Paper Bridge Challenge</h3>
+                        <p>Yathartha 2081 Symposium Exhibition</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_4.jpg', '2nd Position: Concrete Mix Design Challenge')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_4.jpg" alt="Concrete Mix Design Challenge certificate">
+                        <span class="cert-badge-text">2nd Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>2nd Place: Mix Design Challenge</h3>
+                        <p>Yathartha 2082 Technical Evaluation</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_3.jpg', '3rd Position: Inter-College Model Competition Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_3.jpg" alt="Inter-College Model Competition Certificate">
+                        <span class="cert-badge-text">3rd Place Winner</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>3rd Place: Inter-College Model</h3>
+                        <p>Yathartha 2082 Engineering Platform</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/CamScanner 22-02-2026 16.44_1.jpg', 'Additional Engineering Competition Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/CamScanner 22-02-2026 16.44_1.jpg" alt="Engineering competition certificate">
+                        <span class="cert-badge-text">Competition Award</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Engineering Competition Award</h3>
+                        <p>Certificate from the engineering festival collection</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/IMG_20260315_075739.jpg', 'Additional Academic Certificate')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/IMG_20260315_075739.jpg" alt="Academic certificate">
+                        <span class="cert-badge-text">Academic Certificate</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Academic Certificate</h3>
+                        <p>Academic achievement from the certificate collection</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/Screenshot_2026_0430_163037.jpg', 'Additional Certificate Record')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/Screenshot_2026_0430_163037.jpg" alt="Certificate record screenshot">
+                        <span class="cert-badge-text">Certificate Record</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Certificate Record</h3>
+                        <p>Supporting certificate record from the portfolio archive</p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('Certificate/watsat.jpeg', 'Additional Certificate Record')">
+                    <div class="cert-image-wrap">
+                        <img src="Certificate/watsat.jpeg" alt="Certificate record">
+                        <span class="cert-badge-text">Certificate Record</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Additional Certificate Record</h3>
+                        <p>Supporting certificate from the portfolio archive</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section" id="contact">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="section-subtitle">Interested in collaboration, consulting, or just want to chat?</p>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <p>masijapati79@gmail.com</p>
-                    <a href="mailto:masijapati79@gmail.com" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">
-                        Send Email
-                    </a>
+        <section id="contact" class="section reveal-node">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="edu-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="card" style="padding: 32px;">
+                    <h3>Contact Form</h3>
+                    <p style="color: var(--text-muted);">Send a direct message for collaboration, project inquiries, or academic references. The form will open your email client so you can send your inquiry right away.</p>
+                    <form id="contactForm">
+                        <label for="contactName" style="display:block; margin-bottom:12px; font-weight:600; color:#334155;">Name</label>
+                        <input id="contactName" name="name" type="text" placeholder="Your full name" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:18px;">
+                        <label for="contactEmail" style="display:block; margin-bottom:12px; font-weight:600; color:#334155;">Email</label>
+                        <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:18px;">
+                        <label for="contactMessage" style="display:block; margin-bottom:12px; font-weight:600; color:#334155;">Message</label>
+                        <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or inquiry" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:20px;"></textarea>
+                        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+                    </form>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-phone"></i></div>
-                    <h3>Phone</h3>
-                    <p>+977 9845171064</p>
-                    <a href="tel:+977-9845171064" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">
-                        Call Now
-                    </a>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-location-dot"></i></div>
-                    <h3>Location</h3>
-                    <p>Aathabis-9, Dailekh, Nepal</p>
-                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">
-                        View Map
-                    </a>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: var(--bg-secondary); border-radius: 1rem; border: 1px solid var(--border-color);">
-                <h3 style="margin-bottom: 1rem;">Connect on Social Media</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182" target="_blank" rel="noreferrer" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Mahendra-Sijapati" target="_blank" rel="noreferrer" title="ResearchGate">
-                        <i class="fab fa-researchgate"></i>
-                    </a>
-                    <a href="https://github.com" target="_blank" rel="noreferrer" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:center; gap:16px;">
+                    <div>
+                        <h3>Direct Contact</h3>
+                        <p style="color: var(--text-muted);">Prefer email? Reach out directly using the details below.</p>
+                        <p><strong>Email:</strong> <a href="mailto:masijapati79@gmail.com" style="color: var(--accent);">masijapati79@gmail.com</a></p>
+                        <p><strong>Phone:</strong> +977 9845171064</p>
+                        <p><strong>Location:</strong> Aathabis-9, Dailekh, Nepal</p>
+                    </div>
+                    <div style="background: #f8fafc; border-radius:16px; padding:22px; box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);">
+                        <h4 style="margin-bottom:12px; color: var(--primary);">Why connect?</h4>
+                        <ul style="color: #475569; line-height:1.8; list-style: disc; padding-left: 18px;">
+                            <li>Engineering consultancy and collaboration</li>
+                            <li>Academic research and project support</li>
+                            <li>Internship or employment discussions</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <div id="certModal" class="modal" onclick="closeModal(event)">
+        <span class="close-btn" role="button" aria-label="Close modal" onclick="closeModal(event)">&times;</span>
+        <img class="modal-content" id="modalImg" alt="Enlarged document preview">
+        <div id="modalCaption"></div>
+    </div>
+
     <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/mahendra-kumar-sijapati-695032182" target="_blank" rel="noreferrer">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.researchgate.net/profile/Mahendra-Sijapati" target="_blank" rel="noreferrer">
-                <i class="fab fa-researchgate"></i>
-            </a>
-            <a href="mailto:masijapati79@gmail.com">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-        <p>&copy; 2026 Mahendra Kumar Sijapati. Civil Engineering Professional.</p>
-        <p>All Rights Reserved | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2026 Mahendra Kumar Sijapati. Optimized Civil Engineering Portfolio Hub.</p>
     </footer>
 
     <script>
-        // ============================================
-        // DYNAMIC TIME-BASED GREETING
-        // ============================================
-        function updateGreeting() {
-            const hour = new Date().getHours();
-            const greetingText = document.getElementById('greetingText');
-            const greetingIcon = document.getElementById('greetingIcon');
-            let greeting, icon;
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navSocials = document.querySelector('.nav-socials');
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navLinks.classList.toggle('open');
+            navSocials.classList.toggle('open');
+        });
 
-            if (hour < 12) {
-                greeting = 'Good Morning';
-                icon = '🌅';
-            } else if (hour < 18) {
-                greeting = 'Good Afternoon';
-                icon = '☀️';
-            } else {
-                greeting = 'Good Evening';
-                icon = '🌙';
-            }
-
-            greetingText.textContent = greeting;
-            greetingIcon.textContent = icon;
-        }
-
-        // ============================================
-        // DARK MODE / LIGHT MODE TOGGLE
-        // ============================================
-        class ThemeManager {
-            constructor() {
-                this.lightModeBtn = document.getElementById('lightMode');
-                this.darkModeBtn = document.getElementById('darkMode');
-                this.init();
-            }
-
-            init() {
-                const savedTheme = localStorage.getItem('theme') || this.getSystemTheme();
-                this.setTheme(savedTheme);
-
-                this.lightModeBtn.addEventListener('click', () => this.setTheme('light'));
-                this.darkModeBtn.addEventListener('click', () => this.setTheme('dark'));
-
-                if (window.matchMedia) {
-                    window.matchMedia('(prefers-color-scheme: dark)').addListener(() => {
-                        if (!localStorage.getItem('theme')) {
-                            this.setTheme(this.getSystemTheme());
-                        }
-                    });
-                }
-            }
-
-            getSystemTheme() {
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            setTheme(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-
-                this.lightModeBtn.classList.toggle('active', theme === 'light');
-                this.darkModeBtn.classList.toggle('active', theme === 'dark');
-
-                const metaTheme = document.querySelector('meta[name="theme-color"]');
-                if (metaTheme) {
-                    metaTheme.setAttribute('content', theme === 'dark' ? '#1a2438' : '#10b981');
-                }
-            }
-        }
-
-        // ============================================
-        // CARD HOVER ANIMATIONS
-        // ============================================
-        class CardAnimations {
-            constructor() {
-                this.cards = document.querySelectorAll('.card');
-                this.init();
-            }
-
-            init() {
-                this.cards.forEach(card => {
-                    card.addEventListener('mouseenter', (e) => {
-                        this.createRipple(e, card);
-                        this.elevateCard(card);
-                    });
-
-                    card.addEventListener('mousemove', (e) => {
-                        this.parallaxEffect(e, card);
-                    });
-
-                    card.addEventListener('mouseleave', (e) => {
-                        this.resetCard(card);
-                    });
-
-                    card.addEventListener('click', (e) => {
-                        this.clickPulse(e, card);
-                    });
-                });
-            }
-
-            elevateCard(card) {
-                card.style.transform = 'translateY(-8px) scale(1.02) perspective(1000px)';
-            }
-
-            resetCard(card) {
-                card.style.transform = 'translateY(0) scale(1) perspective(1000px)';
-            }
-
-            parallaxEffect(e, card) {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const rotateX = (y - rect.height / 2) * 0.02;
-                const rotateY = (x - rect.width / 2) * -0.02;
-
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
-            }
-
-            createRipple(e, card) {
-                const ripple = document.createElement('span');
-                const rect = card.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-
-                ripple.style.cssText = `
-                    position: absolute;
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}px;
-                    top: ${y}px;
-                    background: rgba(16, 185, 129, 0.3);
-                    border-radius: 50%;
-                    animation: rippleAnimation 0.6s ease-out;
-                    pointer-events: none;
-                `;
-
-                const style = document.createElement('style');
-                if (!document.querySelector('style[data-ripple]')) {
-                    style.setAttribute('data-ripple', 'true');
-                    style.innerHTML = `
-                        @keyframes rippleAnimation {
-                            0% {
-                                transform: scale(0);
-                                opacity: 1;
-                            }
-                            100% {
-                                transform: scale(1);
-                                opacity: 0;
-                            }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-
-                card.appendChild(ripple);
-                setTimeout(() => ripple.remove(), 600);
-            }
-
-            clickPulse(e, card) {
-                const pulse = document.createElement('div');
-                pulse.style.cssText = `
-                    position: absolute;
-                    pointer-events: none;
-                    width: 20px;
-                    height: 20px;
-                    background: rgba(16, 185, 129, 0.5);
-                    border-radius: 50%;
-                    left: ${e.clientX - card.getBoundingClientRect().left - 10}px;
-                    top: ${e.clientY - card.getBoundingClientRect().top - 10}px;
-                    animation: pulsAnimation 0.6s ease-out;
-                `;
-
-                const style = document.createElement('style');
-                if (!document.querySelector('style[data-pulse]')) {
-                    style.setAttribute('data-pulse', 'true');
-                    style.innerHTML = `
-                        @keyframes pulsAnimation {
-                            0% {
-                                transform: scale(1);
-                                opacity: 1;
-                            }
-                            100% {
-                                transform: scale(2);
-                                opacity: 0;
-                            }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-
-                card.appendChild(pulse);
-                setTimeout(() => pulse.remove(), 600);
-            }
-        }
-
-        // ============================================
-        // SMOOTH SCROLL
-        // ============================================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navSocials.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // ============================================
-        // INTERSECTION OBSERVER FOR ANIMATIONS
-        // ============================================
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+        function openModal(imageSrc, captionText) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('modalImg');
+            const caption = document.getElementById('modalCaption');
+
+            modal.style.display = 'flex';
+            modalImg.src = imageSrc;
+            caption.textContent = captionText;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event.target.id === 'certModal' || event.target.classList.contains('close-btn')) {
+                const modal = document.getElementById('certModal');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+
+        const gkQuestionBank = {
+            geography: {
+                title: 'Geography, Demography & Environment',
+                questions: [
+                    { q: 'What is the total area of Nepal?', options: ['147,181 sq. km', '140,800 sq. km', '150,000 sq. km', '142,500 sq. km'], answer: '147,181 sq. km', explanation: 'Nepal covers an area of 147,181 square kilometers, extending across the Himalayas, hills, and plains.' },
+                    { q: 'Which is the highest peak in Nepal?', options: ['K2', 'Makalu', 'Lhotse', 'Mount Everest'], answer: 'Mount Everest', explanation: 'Mount Everest (8,848.86 m) is the highest peak in the world and lies on the Nepal-China border.' },
+                    { q: 'The Terai region of Nepal is mainly known for?', options: ['Dense forests only', 'Major agricultural plains', 'Permanent snow cover', 'High-altitude pastures'], answer: 'Major agricultural plains', explanation: 'The Terai is the fertile lowland belt and is the agricultural heartland of Nepal.' },
+                    { q: 'How many provinces are there in Nepal?', options: ['5', '6', '7', '8'], answer: '7', explanation: 'Nepal has seven provinces under the federal structure established by the 2015 Constitution.' },
+                    { q: 'Which is the largest river in Nepal by volume?', options: ['Koshi', 'Narayani', 'Gandaki', 'Karnali'], answer: 'Koshi', explanation: 'The Koshi River is one of the largest and most important river systems in Nepal.' },
+                    { q: 'Nepal lies in which continent?', options: ['Europe', 'Asia', 'Africa', 'South America'], answer: 'Asia', explanation: 'Nepal is a landlocked country in South Asia, located in the Himalayan region of Asia.' },
+                    { q: 'The Hilly region of Nepal is characterized by?', options: ['Flat alluvial plains', 'Steep slopes and valleys', 'Deserts', 'Ice-covered highlands'], answer: 'Steep slopes and valleys', explanation: 'The hill region includes mountains, valleys, ridges, and slopes with diverse ecological conditions.' },
+                    { q: 'What is the capital city of Nepal?', options: ['Pokhara', 'Lalitpur', 'Kathmandu', 'Biratnagar'], answer: 'Kathmandu', explanation: 'Kathmandu is the capital and largest metropolitan city of Nepal.' },
+                    { q: 'Which of the following is a major Himalayan mountain range in Nepal?', options: ['Andes', 'Alps', 'Himalaya', 'Atlas'], answer: 'Himalaya', explanation: 'Nepal is part of the Himalayan mountain system, which includes the world’s highest peaks.' },
+                    { q: 'The lowest point in Nepal is near?', options: ['Darchula', 'Jiri', 'Keoladeo', 'Kechana'], answer: 'Kechana', explanation: 'The lowest elevation in Nepal is around the Terai region, including areas like Kechana near the Indian border.' },
+                    { q: 'Which of the following is the major source of hydroelectric potential in Nepal?', options: ['Solar energy', 'Rivers and streams', 'Oil fields', 'Coal mines'], answer: 'Rivers and streams', explanation: 'Nepal’s steep terrain and rivers are key sources for hydropower generation.' },
+                    { q: 'Which season is generally associated with monsoon in Nepal?', options: ['Winter', 'Summer', 'Autumn', 'Spring'], answer: 'Summer', explanation: 'The monsoon brings heavy rainfall to Nepal mainly from June to September.' },
+                    { q: 'Which zone is known for alpine conditions and glaciers?', options: ['Terai', 'Hilly', 'Mountain', 'Urban'], answer: 'Mountain', explanation: 'The mountain region has cold temperatures, snow, and glacial systems.' },
+                    { q: 'Which natural resource is most abundant in Nepal?', options: ['Petroleum', 'Natural gas', 'Hydropower potential', 'Coal'], answer: 'Hydropower potential', explanation: 'Nepal has huge hydropower potential because of its rivers and steep topography.' },
+                    { q: 'What type of climate is typical in the Terai?', options: ['Very cold and snowy', 'Humid subtropical', 'Arctic', 'Temperate alpine'], answer: 'Humid subtropical', explanation: 'The Terai has relatively warm and humid climatic conditions suitable for agriculture.' },
+                    { q: 'Which factor most affects Nepal’s rainfall pattern?', options: ['Monsoon winds', 'Volcanic eruptions', 'Desertification', 'Tectonic drift'], answer: 'Monsoon winds', explanation: 'The southwest monsoon is the main driver of rainfall in Nepal.' },
+                    { q: 'Which district is known as the gateway to the Himalayas?', options: ['Kathmandu', 'Pokhara', 'Darchula', 'Bhaktapur'], answer: 'Darchula', explanation: 'Darchula lies in the far western Himalayan region and is associated with mountain access.' },
+                    { q: 'What is the main cause of landslides in hilly Nepal?', options: ['Lack of roads', 'Heavy monsoon rain and slope instability', 'Low population', 'Metals mining'], answer: 'Heavy monsoon rain and slope instability', explanation: 'Slope instability during heavy rainfall often triggers landslides and soil erosion.' },
+                    { q: 'What is demography mainly concerned with?', options: ['Study of weather', 'Study of population', 'Study of rocks', 'Study of ships'], answer: 'Study of population', explanation: 'Demography is the statistical study of populations, including birth, death, migration, and structure.' },
+                    { q: 'Which language is widely spoken as a lingua franca in Nepal?', options: ['English', 'Nepali', 'Hindi', 'French'], answer: 'Nepali', explanation: 'Nepali is the national language and is widely used as a common language across Nepal.' },
+                    { q: 'Which is the largest urban area in Nepal?', options: ['Pokhara', 'Biratnagar', 'Kathmandu Valley', 'Janakpur'], answer: 'Kathmandu Valley', explanation: 'The Kathmandu Valley is Nepal’s largest urban and administrative center.' },
+                    { q: 'What is biodiversity?', options: ['Study of the atmosphere', 'Variety of life in an ecosystem', 'Measurement of rainfall', 'Study of roads'], answer: 'Variety of life in an ecosystem', explanation: 'Biodiversity refers to the variety of living organisms and ecosystems.' },
+                    { q: 'Which ecological zone is richest in species diversity in Nepal?', options: ['Mountain zone', 'Terai plain', 'High alpine', 'Desert'], answer: 'Terai plain', explanation: 'The Terai plains have warm climate, fertile soil, and high biodiversity compared to higher altitudes.' },
+                    { q: 'Which of the following is a major forest type in Nepal?', options: ['Mangrove forests', 'Saal forests', 'Savanna forests', 'Tundra'], answer: 'Saal forests', explanation: 'Sal forests are one of the major natural forest types in Nepal, especially in the Terai.' },
+                    { q: 'The Ganga plain is adjacent to which region of Nepal?', options: ['Mountain', 'Hilly', 'Terai', 'Trans Himalayan'], answer: 'Terai', explanation: 'The Terai is the southern lowland adjacent to the Indo-Gangetic belt.' },
+                    { q: 'Which mountain pass is famous in Nepal?', options: ['Lumbini Pass', 'Kora La', 'Karakoram', 'Siachen'], answer: 'Kora La', explanation: 'Mountain passes like Kora La are important in high-altitude geography and trade routes.' },
+                    { q: 'The Himalayas are formed mainly by?', options: ['Volcanic action', 'Sedimentation in rivers', 'Plate tectonic collision', 'Delta growth'], answer: 'Plate tectonic collision', explanation: 'The Himalayas were formed by the collision of the Indian and Eurasian plates.' },
+                    { q: 'Which region is the highest in altitude in Nepal?', options: ['Terai', 'Hilly region', 'Mountain region', 'Inner plains'], answer: 'Mountain region', explanation: 'The mountain region has the highest altitude and includes snow-covered peaks.' },
+                    { q: 'What is the climate of most of the Himalayas?', options: ['Hot and dry', 'Cold and alpine', 'Humid tropical', 'Dense desert'], answer: 'Cold and alpine', explanation: 'High Himalayan elevations are cold, with alpine and nival climate.' },
+                    { q: 'Which is the main agricultural crop of the Terai?', options: ['Wheat and rice', 'Olive', 'Tea', 'Coconut'], answer: 'Wheat and rice', explanation: 'Rice and wheat are staple crops widely cultivated in Nepal’s fertile Terai.' },
+                    { q: 'What is the average elevation of Nepal?', options: ['1,000 m', '2,000 m', '3,000 m', '4,000 m'], answer: '2,000 m', explanation: 'Nepal has an average elevation of about 2,000 meters because of the Himalayan terrain.' },
+                    { q: 'Which is the main reason for Nepal’s rich biodiversity?', options: ['Only one climate zone', 'Diverse altitudes and climates', 'Flat topography', 'Absence of rivers'], answer: 'Diverse altitudes and climates', explanation: 'Nepal’s varied topography and climate support rich biodiversity.' },
+                    { q: 'The Mahabharat range lies in which region?', options: ['Terai', 'Himalayas', 'Hill region', 'Desert'], answer: 'Hill region', explanation: 'The Mahabharat range forms part of the middle hills of Nepal.' },
+                    { q: 'Which of the following is a trans-Himalayan region?', options: ['Kathmandu', 'Dolpa', 'Sindhuli', 'Bharatpur'], answer: 'Dolpa', explanation: 'Dolpa lies in the trans-Himalayan zone with cold, dry conditions.' },
+                    { q: 'What does climate change mainly cause?', options: ['Stable weather', 'Increased glacier melt', 'Same rainfall everywhere', 'No impact on agriculture'], answer: 'Increased glacier melt', explanation: 'Climate change accelerates glacier retreat and affects rainfall and water availability.' },
+                    { q: 'Which river forms the boundary with India in the south?', options: ['Karnali', 'Gandaki', 'Mechi', 'Trishuli'], answer: 'Mechi', explanation: 'The Mechi River is one of the eastern border rivers between Nepal and India.' },
+                    { q: 'Which soil type is most fertile in Nepal?', options: ['Sandy soil', 'Alluvial soil', 'Red soil', 'Black soil'], answer: 'Alluvial soil', explanation: 'Alluvial soils in the Terai are highly productive and suitable for agriculture.' },
+                    { q: 'The central region of Nepal is known as?', options: ['Terai', 'Himalayas', 'Hills', 'Plateau'], answer: 'Hills', explanation: 'The middle hills are central to Nepal’s topography and settlement patterns.' },
+                    { q: 'Which is the major cause of air pollution in cities?', options: ['Forest cover', 'Vehicle emissions', 'Rainwater', 'Low temperature'], answer: 'Vehicle emissions', explanation: 'Urban air pollution is often linked to smoke, dust, and vehicle emissions.' },
+                    { q: 'Which is the largest lake in Nepal?', options: ['Rara Lake', 'Phewa Lake', 'Begnas Lake', 'Tilicho Lake'], answer: 'Rara Lake', explanation: 'Rara Lake is Nepal’s largest lake by area.' },
+                    { q: 'What is the major economic activity in the Terai?', options: ['Mining only', 'Agriculture', 'Ice tourism', 'Glacier export'], answer: 'Agriculture', explanation: 'Agriculture is the dominant economic activity in the fertile southern plains.' },
+                    { q: 'What is the major reason Nepal is called a mountainous country?', options: ['It has no plain land', 'It has high Himalayas and hills', 'It is close to the sea', 'It is in Europe'], answer: 'It has high Himalayas and hills', explanation: 'Most of Nepal’s land is mountainous or hilly, with limited lowland area.' },
+                    { q: 'Which natural disaster is common in the Kathmandu Valley?', options: ['Earthquake', 'Volcanic eruption', 'Desert storm', 'Tsunami'], answer: 'Earthquake', explanation: 'The Kathmandu Valley lies in an active seismic zone, making earthquakes a major risk.' },
+                    { q: 'The main source of drinking water in many Nepalese communities is?', options: ['Snowfall', 'Groundwater and rivers', 'Ocean water', 'Desert wells'], answer: 'Groundwater and rivers', explanation: 'Groundwater, springs, and rivers are the primary sources of freshwater in Nepal.' },
+                    { q: 'Which part of Nepal is most suitable for tea cultivation?', options: ['High Himalayan belt', 'Middle hills and eastern slopes', 'Desert plain', 'Highlands only'], answer: 'Middle hills and eastern slopes', explanation: 'Tea cultivation is common in humid mid-hill regions, especially eastern Nepal.' },
+                    { q: 'Which of these is not a natural resource?', options: ['Forest', 'Mineral', 'Solar energy', 'A road network'], answer: 'A road network', explanation: 'Road networks are built infrastructure, not natural resources.' },
+                    { q: 'What is the meaning of sustainable development?', options: ['Development without planning', 'Meeting present needs without harming future generations', 'Only industrial growth', 'No population growth'], answer: 'Meeting present needs without harming future generations', explanation: 'Sustainable development balances economic progress with environmental and social responsibility.' },
+                    { q: 'Which one is a renewable resource?', options: ['Coal', 'Petroleum', 'Hydroelectricity from rivers', 'Natural gas'], answer: 'Hydroelectricity from rivers', explanation: 'Hydroelectric power from rivers is renewable when water is managed sustainably.' },
+                    { q: 'Which is the major National Park in Nepal?', options: ['Sagarmatha National Park', 'Serengeti', 'Yellowstone', 'Kruger'], answer: 'Sagarmatha National Park', explanation: 'Sagarmatha National Park is one of Nepal’s most famous protected areas and a UNESCO site.' }
+                ]
+            },
+            history: {
+                title: 'History, Culture, Current Affairs & International Relations',
+                questions: [
+                    { q: 'Who was the first king of the Shah dynasty in Nepal?', options: ['Prithvi Narayan Shah', 'Mahendra Shah', 'Gyanendra Shah', 'Birendra Shah'], answer: 'Prithvi Narayan Shah', explanation: 'Prithvi Narayan Shah founded modern Nepal by unifying small principalities.' },
+                    { q: 'In which year did Nepal become a republic?', options: ['2005', '2008', '2011', '2015'], answer: '2008', explanation: 'Nepal was declared a republic on 28 May 2008 after the monarchy was abolished.' },
+                    { q: 'What is the full form of SAARC?', options: ['South Asian Association for Regional Cooperation', 'South Asian Alliance for Regional Commerce', 'South Asian Agricultural Association', 'South Asian Agreement for Regional Cooperation'], answer: 'South Asian Association for Regional Cooperation', explanation: 'SAARC is a regional organization of South Asian nations established in 1985.' },
+                    { q: 'Which country is not a member of BIMSTEC?', options: ['Nepal', 'India', 'China', 'Thailand'], answer: 'China', explanation: 'BIMSTEC includes Bangladesh, India, Myanmar, Sri Lanka, Thailand, Bhutan, and Nepal.' },
+                    { q: 'Who is known as the “Father of Nepal” in the unification movement?', options: ['King Mahendra', 'Prithvi Narayan Shah', 'Ram Shah', 'Jaya Prakash Malla'], answer: 'Prithvi Narayan Shah', explanation: 'Prithvi Narayan Shah is remembered for unifying Nepal into a single state.' },
+                    { q: 'Which was the last Rana Prime Minister before democracy in Nepal?', options: ['B.P. Koirala', 'Mohan Shamsher', 'Tulsi Giri', 'K.P. Bhattarai'], answer: 'Mohan Shamsher', explanation: 'The Rana regime ended in 1951, and Mohan Shamsher was one of the prominent last Rana prime ministers.' },
+                    { q: 'Which festival is most widely celebrated in Nepal?', options: ['Christmas', 'Dashain', 'Eid', 'Pongal'], answer: 'Dashain', explanation: 'Dashain is one of the biggest festivals in Nepal, celebrated with ritual and family gatherings.' },
+                    { q: 'What is the national flower of Nepal?', options: ['Rhododendron', 'Rose', 'Lotus', 'Sunflower'], answer: 'Rhododendron', explanation: 'Rhododendron is the national flower of Nepal, known for its beauty and diverse species.' },
+                    { q: 'What is the national animal of Nepal?', options: ['Tiger', 'Snow Leopard', 'Cow', 'Yak'], answer: 'Cow', explanation: 'The cow is the national animal of Nepal, honoring sacred and cultural significance.' },
+                    { q: 'Who wrote the book “Mundhum”?', options: ['B.P. Koirala', 'Laxmi Prasad Devkota', 'Rishis and elders of Kirat tradition', 'Mahadev Yadav'], answer: 'Rishis and elders of Kirat tradition', explanation: 'Mundhum is part of the oral spiritual tradition of many indigenous communities in Nepal.' },
+                    { q: 'Which city is known as the cultural capital of Nepal?', options: ['Pokhara', 'Kathmandu', 'Janakpur', 'Bharatpur'], answer: 'Kathmandu', explanation: 'Kathmandu is the cultural, artistic, and historical center of Nepal.' },
+                    { q: 'Which famous temple is in Kathmandu Valley?', options: ['Pashupatinath', 'Taj Mahal', 'Swayambhunath factory', 'Kailash'], answer: 'Pashupatinath', explanation: 'Pashupatinath Temple is one of Nepal’s most revered Hindu temples.' },
+                    { q: 'Which language is widely used in the parliament of Nepal?', options: ['English only', 'Nepali', 'Hindi', 'French'], answer: 'Nepali', explanation: 'Nepali is the official language and widely used in governance and parliamentary proceedings.' },
+                    { q: 'The Constitution of Nepal was promulgated in which year?', options: ['2007', '2015', '2018', '2020'], answer: '2015', explanation: 'The Constitution of Nepal was promulgated on 20 September 2015.' },
+                    { q: 'Which international organization is headquartered in New York?', options: ['UN', 'SAARC', 'BIMSTEC', 'ASEAN'], answer: 'UN', explanation: 'The United Nations has headquarters in New York and carries out global diplomacy and cooperation.' },
+                    { q: 'Which organization is headquartered in Kathmandu?', options: ['UNESCO', 'SAARC Secretariat', 'IMF', 'WB'], answer: 'SAARC Secretariat', explanation: 'The SAARC Secretariat is headquartered in Kathmandu, Nepal.' },
+                    { q: 'Which is the largest religion in Nepal?', options: ['Christianity', 'Hinduism', 'Islam', 'Buddhism'], answer: 'Hinduism', explanation: 'Hinduism is the largest religion in Nepal, while Buddhism is also widely practiced.' },
+                    { q: 'Who is the current UN Secretary-General?', options: ['Ban Ki-moon', 'Antonio Guterres', 'Kofi Annan', 'Boutros Boutros-Ghali'], answer: 'Antonio Guterres', explanation: 'Antonio Guterres has served as the UN Secretary-General since 2017.' },
+                    { q: 'Which historical event happened in 1951 in Nepal?', options: ['Republic declared', 'Rana regime ended', 'Constitution written', 'Monarchy restored'], answer: 'Rana regime ended', explanation: 'The end of the Rana regime in 1951 opened the way for modern democracy in Nepal.' },
+                    { q: 'Which is Nepal’s national day?', options: ['Republic Day', 'Independence Day', 'Constitution Day', 'Labour Day'], answer: 'Constitution Day', explanation: 'The promulgation of the Constitution is marked in Nepal, while Republic Day is also nationally important.' },
+                    { q: 'Which festival celebrates the victory of good over evil?', options: ['Holi', 'Tihar', 'Dashain', 'Buddha Jayanti'], answer: 'Dashain', explanation: 'Dashain symbolizes the victory of good over evil and is widely celebrated across Nepal.' },
+                    { q: 'Which is the largest ethnic group in Nepal?', options: ['Brahmin', 'Chhetri', 'Janajati', 'Madhesi'], answer: 'Chhetri', explanation: 'Chhetri is one of the largest caste/ethnic groups in Nepal, with a large population.' },
+                    { q: 'What is the national bird of Nepal?', options: ['Pheasant', 'Himalayan monal', 'Peacock', 'Eagle'], answer: 'Himalayan monal', explanation: 'The Himalayan monal is Nepal’s national bird, also known as Danphe.' },
+                    { q: 'Which country shares the longest border with Nepal?', options: ['China', 'India', 'Bangladesh', 'Bhutan'], answer: 'India', explanation: 'Nepal shares a long open border with India, which is a major trade and social link.' },
+                    { q: 'What is the official name of Nepal’s army?', options: ['Nepal Armed Police', 'Nepal Army', 'Royal Guard', 'National Security Force'], answer: 'Nepal Army', explanation: 'The Nepal Army is the national military institution of Nepal.' },
+                    { q: 'Which festival is called the festival of colors?', options: ['Dashain', 'Holi', 'Tihar', 'Bisket Jatra'], answer: 'Holi', explanation: 'Holi is celebrated with colors and is known as the festival of colors.' },
+                    { q: 'Which of the following is a UNESCO World Heritage Site in Nepal?', options: ['Pashupatinath Temple', 'Lumbini', 'Bhaktapur Durbar Square', 'All of the above'], answer: 'All of the above', explanation: 'Many heritage sites in Nepal including Kathmandu Valley and Lumbini are UNESCO-listed.' },
+                    { q: 'Which international organization focuses on world peace and security?', options: ['UNESCO', 'WHO', 'UN', 'IMF'], answer: 'UN', explanation: 'The United Nations is dedicated to peace, diplomacy, development, and security.' },
+                    { q: 'Which is the first constitution in Nepal called after 2015?', options: ['Interim Constitution', 'Constitution of 1990', 'Constitution of 2015', 'Rana Constitution'], answer: 'Constitution of 2015', explanation: 'The Constitution of Nepal, 2015 is the current governing charter.' },
+                    { q: 'Nepal is divided into how many development regions?', options: ['5', '6', '7', '8'], answer: '5', explanation: 'Nepal had five development regions prior to federal restructuring.' },
+                    { q: 'Which region is famous for the birthplace of Buddha?', options: ['Kathmandu', 'Lumbini', 'Bhojpur', 'Dharan'], answer: 'Lumbini', explanation: 'Lumbini in Nepal is the birthplace of Gautam Buddha.' },
+                    { q: 'Which of these is a major national park in Nepal?', options: ['Chitwan National Park', 'Kruger National Park', 'Banff National Park', 'Yellowstone'], answer: 'Chitwan National Park', explanation: 'Chitwan National Park is a major protected area of Nepal known for rhinos and tigers.' },
+                    { q: 'Which is the northern neighbor of Nepal?', options: ['India', 'China', 'Bangladesh', 'Bhutan'], answer: 'China', explanation: 'China lies to the north of Nepal and shares the Himalayan border.' },
+                    { q: 'Which movement is associated with democratic change in Nepal?', options: ['Rana Movement', 'People’s Movement', 'Green Revolution', 'Industrial Revolution'], answer: 'People’s Movement', explanation: 'People’s Movements in Nepal played a major role in democratization and political change.' },
+                    { q: 'Who was the first female President of the UN General Assembly?', options: ['Hillary Clinton', 'Vijaya Lakshmi Pandit', 'Amina Mohammed', 'Kiran Bedi'], answer: 'Vijaya Lakshmi Pandit', explanation: 'Vijaya Lakshmi Pandit was the first woman to serve as President of the UN General Assembly.' },
+                    { q: 'Which of the following is a major Nepali newspaper?', options: ['The Guardian', 'The Himalayan Times', 'The Times of India', 'The National'], answer: 'The Himalayan Times', explanation: 'The Himalayan Times is a well-known English-language daily newspaper in Nepal.' },
+                    { q: 'Nepal’s national anthem is called?', options: ['Sayaun Thunga Phool Ka', 'Aama', 'Mero Nepal', 'Sundar Nepal'], answer: 'Sayaun Thunga Phool Ka', explanation: '“Sayaun Thunga Phool Ka” is Nepal’s national anthem.' },
+                    { q: 'Which is the famous festival of lights in Nepal?', options: ['Holi', 'Dashain', 'Tihar', 'Bisket Jatra'], answer: 'Tihar', explanation: 'Tihar is the festival of lights and is celebrated widely in Nepal.' },
+                    { q: 'Which country hosted the 2022 FIFA World Cup?', options: ['Brazil', 'Qatar', 'France', 'Japan'], answer: 'Qatar', explanation: 'Qatar hosted the 2022 FIFA World Cup, the first Arab nation to do so.' },
+                    { q: 'Which world organization deals with health?', options: ['WHO', 'UNESCO', 'IMF', 'WTO'], answer: 'WHO', explanation: 'The World Health Organization (WHO) is the specialized agency for international public health.' },
+                    { q: 'What is the “Earth Summit” known for?', options: ['Technology innovation', 'Environment and sustainable development', 'Space missions', 'Agricultural reform'], answer: 'Environment and sustainable development', explanation: 'The Earth Summit focused on environment, climate, and sustainable development issues.' },
+                    { q: 'Which is the largest country in South Asia by area?', options: ['Nepal', 'Bangladesh', 'India', 'Pakistan'], answer: 'India', explanation: 'India is the largest country in South Asia by area and population.' },
+                    { q: 'Which is one of Nepal’s major trade routes with Tibet?', options: ['Lukla route', 'Kodari route', 'Karnali route', 'Bardi route'], answer: 'Kodari route', explanation: 'The Kodari route is a key Himalayan route connecting Nepal to Tibet.' },
+                    { q: 'Which one is not a fundamental principle of democracy?', options: ['Rule of law', 'Equality', 'Monarchy privileges', 'Participation'], answer: 'Monarchy privileges', explanation: 'Democracy is based on equality, citizenship, participation, and rule of law rather than hereditary privileges.' },
+                    { q: 'Who is the patron deity of Kathmandu Valley?', options: ['Buddha', 'Shiva', 'Hanuman', 'Ganesh'], answer: 'Shiva', explanation: 'Lord Shiva is widely worshipped in Kathmandu Valley, especially at Pashupatinath.' },
+                    { q: 'Which event marks the beginning of democracy in Nepal?', options: ['1951 political change', '2015 constitution', '2008 republic', '1960 Panchayat'], answer: '1951 political change', explanation: 'The 1951 political change ended the Rana regime and opened the democratic era.' },
+                    { q: 'Which country is located to the west of Nepal?', options: ['China', 'India', 'Bhutan', 'Bangladesh'], answer: 'India', explanation: 'India lies to the east, west, and south of Nepal, while China is to the north.' }
+                ]
+            },
+            governance: {
+                title: 'Constitution, Governance, Public Service & Management',
+                questions: [
+                    { q: 'What is the nature of the Nepalese state according to the Constitution?', options: ['Unitary state', 'Federal democratic republic', 'Monarchy', 'Autocratic state'], answer: 'Federal democratic republic', explanation: 'Nepal is a federal democratic republic under the Constitution of Nepal, 2015.' },
+                    { q: 'How many levels of government are recognized in Nepal?', options: ['One', 'Two', 'Three', 'Four'], answer: 'Three', explanation: 'Nepal has three levels of government: federal, provincial, and local.' },
+                    { q: 'Who is the head of the state in Nepal?', options: ['Prime Minister', 'President', 'Chief Justice', 'Speaker'], answer: 'President', explanation: 'The President is the head of state in the federal democratic republic of Nepal.' },
+                    { q: 'Who leads the Council of Ministers in Nepal?', options: ['President', 'Prime Minister', 'Chief Justice', 'Speaker'], answer: 'Prime Minister', explanation: 'The Prime Minister leads the Council of Ministers and exercises executive authority.' },
+                    { q: 'How many provinces are there in Nepal?', options: ['5', '6', '7', '8'], answer: '7', explanation: 'The Constitution of Nepal recognizes seven provinces.' },
+                    { q: 'What is the highest court in Nepal?', options: ['High Court', 'District Court', 'Supreme Court', 'Appellate Court'], answer: 'Supreme Court', explanation: 'The Supreme Court is the apex court of Nepal.' },
+                    { q: 'Which article of the Constitution defines the basic features of the state?', options: ['Article 1', 'Article 50', 'Article 100', 'Article 276'], answer: 'Article 1', explanation: 'Article 1 of the Constitution states Nepal as a federal democratic republic.' },
+                    { q: 'Which of the following is a constitutional body?', options: ['Ministry', 'Commission', 'Police station', 'Municipality office'], answer: 'Commission', explanation: 'Constitutional bodies such as the Election Commission and Public Service Commission are established by the constitution.' },
+                    { q: 'Which body conducts elections in Nepal?', options: ['Supreme Court', 'Election Commission', 'Auditor General', 'Parliament'], answer: 'Election Commission', explanation: 'The Election Commission organizes and supervises elections in Nepal.' },
+                    { q: 'The public service is guided by which principle?', options: ['Nepotism', 'Political favoritism', 'Merit and impartiality', 'Personal interest'], answer: 'Merit and impartiality', explanation: 'Public service should be based on merit, fairness, and impartiality.' },
+                    { q: 'What is the purpose of a Public Service Commission?', options: ['To trade goods', 'To conduct recruitment and selection', 'To collect taxes', 'To build roads'], answer: 'To conduct recruitment and selection', explanation: 'Public Service Commissions recruit civil servants based on merit and competitive examination.' },
+                    { q: 'Which is the key function of planning?', options: ['Only creating rules', 'Setting goals and preparing for action', 'Firing employees', 'Fixing market prices'], answer: 'Setting goals and preparing for action', explanation: 'Planning means deciding objectives and selecting courses of action to achieve them.' },
+                    { q: 'What is the main purpose of organizing in management?', options: ['To ignore tasks', 'To arrange duties and resources', 'To increase violence', 'To privatize everything'], answer: 'To arrange duties and resources', explanation: 'Organizing includes assigning responsibilities and coordinating activities to achieve goals.' },
+                    { q: 'What does directing in management involve?', options: ['Only filing papers', 'Guiding and motivating people', 'Collecting taxes', 'Buying vehicles'], answer: 'Guiding and motivating people', explanation: 'Directing includes leadership, supervision, communication, and motivation.' },
+                    { q: 'What is controlling in management?', options: ['Ignoring performance', 'Monitoring results and correcting deviations', 'Increasing costs', 'Posting advertisements'], answer: 'Monitoring results and correcting deviations', explanation: 'Controlling compares actual performance with standards and takes corrective action.' },
+                    { q: 'Which function of management coordinates all activities?', options: ['Controlling', 'Coordinating', 'Planning', 'Budgeting'], answer: 'Coordinating', explanation: 'Coordination ensures unity of effort among different departments and activities.' },
+                    { q: 'What is the core meaning of decision making?', options: ['Ignoring options', 'Choosing the best alternative', 'Doing nothing', 'Posting notices'], answer: 'Choosing the best alternative', explanation: 'Decision making is the process of selecting the best option from alternatives.' },
+                    { q: 'What is a policy?', options: ['A daily schedule', 'A guideline for action', 'A market product', 'A road sign'], answer: 'A guideline for action', explanation: 'Public policy is a deliberate set of principles guiding government action.' },
+                    { q: 'Which of the following is a source of public revenue?', options: ['Tax', 'Donation from a friend', 'Personal savings', 'Private loan'], answer: 'Tax', explanation: 'Taxes are a major source of government revenue.' },
+                    { q: 'What is the role of the Auditor General?', options: ['To audit government accounts', 'To recruit police', 'To write curriculum', 'To design laws'], answer: 'To audit government accounts', explanation: 'The Auditor General checks and audits public financial management.' },
+                    { q: 'Federalism means?', options: ['Centralized system only', 'Division of power between levels of government', 'Only local administration', 'No constitution'], answer: 'Division of power between levels of government', explanation: 'Federalism distributes authority between the national and subnational governments.' },
+                    { q: 'Which is a local level government in Nepal?', options: ['Municipality', 'Supreme Court', 'Election Commission', 'Parliament'], answer: 'Municipality', explanation: 'Municipalities are local government units under Nepal’s federal system.' },
+                    { q: 'What is the main objective of public administration?', options: ['To maximize profit', 'To deliver public services efficiently', 'To export goods', 'To build private property'], answer: 'To deliver public services efficiently', explanation: 'Public administration ensures effective implementation of state functions and citizen services.' },
+                    { q: 'What is the purpose of budgeting?', options: ['To ignore expenditure', 'To allocate resources and plan spending', 'To reduce staff', 'To stop projects'], answer: 'To allocate resources and plan spending', explanation: 'Budgeting allocates resources according to priorities and estimated income.' },
+                    { q: 'Who is the head of a municipality?', options: ['President', 'Mayor', 'Chief Justice', 'Home Minister'], answer: 'Mayor', explanation: 'A mayor leads the executive body of a municipality.' },
+                    { q: 'What is leadership?', options: ['Following all instructions blindly', 'Influencing and guiding others toward goals', 'Avoiding responsibility', 'Only issuing orders'], answer: 'Influencing and guiding others toward goals', explanation: 'Leadership is the ability to guide individuals and teams toward common objectives.' },
+                    { q: 'Which document describes the duties, rights, and responsibilities of citizens?', options: ['Income tax file', 'Constitution', 'Budget statement', 'Traffic rulebook'], answer: 'Constitution', explanation: 'The Constitution outlines the rights, duties, and political framework of the state and citizens.' },
+                    { q: 'What is the main role of Parliament?', options: ['Only to make roads', 'To legislate and oversee the government', 'To collect donations', 'To propose sports events'], answer: 'To legislate and oversee the government', explanation: 'Parliament makes laws, approves budgets, and checks government performance.' },
+                    { q: 'What is a civil servant expected to be?', options: ['Party worker only', 'Neutral and impartial', 'Private businessman', 'Only a politician'], answer: 'Neutral and impartial', explanation: 'Civil servants are expected to be professional, neutral, and fair in service delivery.' },
+                    { q: 'The Code of Conduct for civil servants is meant to ensure?', options: ['Political advantage', 'Ethical behavior', 'Corruption', 'No accountability'], answer: 'Ethical behavior', explanation: 'The civil service code ensures ethics, discipline, and integrity in governance.' },
+                    { q: 'Which is not a function of a public service provider?', options: ['Service delivery', 'Public welfare', 'Patronage', 'Policy implementation'], answer: 'Patronage', explanation: 'Public service agencies are expected to serve the public, not favor individuals or groups unfairly.' },
+                    { q: 'What is accountability in governance?', options: ['Being answerable for actions and outcomes', 'Making no decisions', 'Avoiding duties', 'Ignoring law'], answer: 'Being answerable for actions and outcomes', explanation: 'Accountability ensures public officials answer for their performance and conduct.' },
+                    { q: 'What does decentralization mean?', options: ['Concentrating power in one office', 'Distributing authority to local levels', 'Closing local offices', 'Reducing services'], answer: 'Distributing authority to local levels', explanation: 'Decentralization transfers powers and responsibilities to lower levels of government.' },
+                    { q: 'Which is an example of a provincial body?', options: ['Province Assembly', 'School', 'Private company', 'Shopping center'], answer: 'Province Assembly', explanation: 'Province Assemblies are the legislative bodies at the provincial level.' },
+                    { q: 'What is the role of the judiciary?', options: ['To enforce taxes', 'To interpret the law and settle disputes', 'To make the budget', 'To supervise markets'], answer: 'To interpret the law and settle disputes', explanation: 'The judiciary interprets laws and adjudicates disputes in a fair and independent manner.' },
+                    { q: 'What is a public policy charter?', options: ['A public record of commitments', 'A railway ticket', 'A permit', 'A court verdict'], answer: 'A public record of commitments', explanation: 'A public service charter outlines the commitments and responsibilities of service providers to the public.' },
+                    { q: 'The term “rule of law” means?', options: ['Law is above everyone', 'People can ignore legal norms', 'Only judges rule', 'Only police make law'], answer: 'Law is above everyone', explanation: 'Rule of law means that everyone, including the government, is subject to the law.' },
+                    { q: 'What is the purpose of the Civil Service Act and Regulations?', options: ['To define service rules and conduct', 'To build roads', 'To open banks', 'To collect donations'], answer: 'To define service rules and conduct', explanation: 'Civil service laws define recruitment, duties, service conditions, and conduct standards.' },
+                    { q: 'What is the basic role of the executive?', options: ['To implement laws and policies', 'To write poetry', 'To judge cases', 'To print currency'], answer: 'To implement laws and policies', explanation: 'The executive implements laws, runs administration, and delivers services.' },
+                    { q: 'What does a budget estimate show?', options: ['Only salaries', 'Expected income and planned expenditure', 'Number of roads only', 'Only tax rates'], answer: 'Expected income and planned expenditure', explanation: 'A budget shows projected revenue and expenditure for a defined period.' },
+                    { q: 'Which principle is most important in public service ethics?', options: ['Profit only', 'Integrity', 'Political party loyalty', 'Ignoring rules'], answer: 'Integrity', explanation: 'Integrity ensures responsible, ethical, and trustworthy public service.' },
+                    { q: 'What does “impartiality” mean in public administration?', options: ['Acting without bias', 'Favoring one group', 'Ignoring complaints', 'Working alone'], answer: 'Acting without bias', explanation: 'Impartiality means fairness and neutrality without favoritism or personal prejudice.' },
+                    { q: 'Which of the following is a key government planning instrument?', options: ['Strategy', 'Tax book', 'Private contract', 'Parking plan'], answer: 'Strategy', explanation: 'Planning involves strategies, programs, and resource allocation to achieve stated objectives.' },
+                    { q: 'The concept of “motivation” in management refers to?', options: ['Punishing staff', 'Encouraging effort and performance', 'Reducing work', 'Stopping communication'], answer: 'Encouraging effort and performance', explanation: 'Motivation drives people to work effectively and achieve goals.' },
+                    { q: 'What is a ministry?', options: ['A central public administrative department', 'A court', 'A school', 'A private company'], answer: 'A central public administrative department', explanation: 'A ministry is a government department responsible for a specific policy area.' },
+                    { q: 'Which body keeps the national accounts and financial statements?', options: ['Ministry of Education', 'Office of the Auditor General', 'Municipality', 'Commercial bank'], answer: 'Office of the Auditor General', explanation: 'The Auditor General audits government finances and ensures financial accountability.' },
+                    { q: 'Which of the following is a democratic value?', options: ['Suppression', 'Participatory governance', 'Autocracy', 'Arbitrary rule'], answer: 'Participatory governance', explanation: 'Democratic values emphasize participation, accountability, equality, and rights.' },
+                    { q: 'Which section of the Constitution provides human rights protections?', options: ['Preamble', 'Fundamental rights provisions', 'Budget section', 'Tax section'], answer: 'Fundamental rights provisions', explanation: 'Fundamental rights provisions guarantee protection of civil and political rights.' },
+                    { q: 'What is the key role of local government?', options: ['Only national defense', 'Service delivery and local development', 'Only criminal law', 'Only tax collection'], answer: 'Service delivery and local development', explanation: 'Local governments manage community services, local infrastructure, and development priorities.' },
+                    { q: 'What is the meaning of “public service charter” in governance?', options: ['A statement of citizen service commitments', 'A private contract', 'A police order', 'A budget book'], answer: 'A statement of citizen service commitments', explanation: 'A public service charter sets commitments to standards, quality, and accountability.' },
+                    { q: 'Which concept deals with fairness in public management?', options: ['Nepotism', 'Impartiality', 'Discrimination', 'Favoritism'], answer: 'Impartiality', explanation: 'Impartiality is essential for fairness, neutrality, and principle-based governance.' }
+                ]
+            }
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 0.8s ease forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+        const syllabusTopics = [
+            ['topic-1-1', '1.1 Physical, socio-cultural and economic geography and demography of Nepal', 'geography'],
+            ['topic-1-2', '1.2 Major natural resources of Nepal', 'geography'],
+            ['topic-1-3', '1.3 Geographical diversity, climate, livelihood and lifestyle', 'geography'],
+            ['topic-1-4', '1.4 Modern history, notable events and personalities of Nepal', 'history'],
+            ['topic-1-5', '1.5 Current Periodical Plan of Nepal', 'governance'],
+            ['topic-1-6', '1.6 Sustainable development, environment, science and technology', 'geography'],
+            ['topic-1-7', '1.7 International affairs, UNO, SAARC and BIMSTEC', 'history'],
+            ['topic-1-8', '1.8 Constitution of Nepal: Parts 1 to 5 and Schedules', 'governance'],
+            ['topic-1-9', '1.9 Federal, provincial and local governance', 'governance'],
+            ['topic-1-10', '1.10 Civil Service Act, structure, vacancies and code of conduct', 'governance'],
+            ['topic-1-11', '1.11 Functional scope of public services', 'governance'],
+            ['topic-1-12', '1.12 Public Service Charter', 'governance'],
+            ['topic-1-13', '1.13 Public policy: concept, objectives and importance', 'governance'],
+            ['topic-1-14', '1.14 Management fundamentals', 'governance'],
+            ['topic-1-15', '1.15 Government planning, budgeting and accounting', 'governance'],
+            ['topic-1-16', '1.16 National and international current affairs', 'history']
+        ];
 
-        document.querySelectorAll('.card, .stat-card').forEach(el => {
-            observer.observe(el);
+        const topicSeeds = {
+            'topic-1-5': [
+                { q: 'What is the main purpose of a national periodic plan?', options: ['To set medium-term development priorities', 'To replace the Constitution', 'To conduct elections', 'To issue passports'], answer: 'To set medium-term development priorities', explanation: 'A periodic plan sets medium-term objectives, strategies, programs, and resource priorities for national development.' },
+                { q: 'Which is essential for implementing a periodic plan?', options: ['Unplanned spending', 'Clear targets and monitoring', 'Abolishing local government', 'Stopping public services'], answer: 'Clear targets and monitoring', explanation: 'Targets, indicators, budgets, and monitoring help convert a periodic plan into measurable results.' }
+            ],
+            'topic-1-6': [
+                { q: 'Which principle connects development with protection of future generations?', options: ['Sustainable development', 'Rapid consumption', 'Uncontrolled extraction', 'Urban expansion'], answer: 'Sustainable development', explanation: 'Sustainable development meets present needs while protecting the ability of future generations to meet theirs.' },
+                { q: 'Which technology helps monitor land cover and environmental change?', options: ['Remote sensing and GIS', 'Typewriter', 'Mechanical clock', 'Cash register'], answer: 'Remote sensing and GIS', explanation: 'Remote sensing and GIS support mapping, monitoring, planning, and environmental analysis.' }
+            ],
+            'topic-1-7': [
+                { q: 'What is the principal purpose of the United Nations?', options: ['International peace and cooperation', 'Controlling national elections', 'Operating private banks', 'Managing local roads'], answer: 'International peace and cooperation', explanation: 'The United Nations promotes peace, cooperation, human rights, and collective action among states.' },
+                { q: 'BIMSTEC connects countries around which two regions?', options: ['Bay of Bengal and South/Southeast Asia', 'North Atlantic and Europe', 'West Africa and South America', 'Arctic and Pacific islands'], answer: 'Bay of Bengal and South/Southeast Asia', explanation: 'BIMSTEC promotes cooperation among countries around the Bay of Bengal and in South and Southeast Asia.' }
+            ],
+            'topic-1-8': [
+                { q: 'What is the supreme law of Nepal?', options: ['The Constitution', 'A ministerial directive', 'A municipal notice', 'A private contract'], answer: 'The Constitution', explanation: 'The Constitution is the fundamental and supreme law that structures the state and protects rights.' },
+                { q: 'Which part of a constitution commonly states the guiding values of the state?', options: ['Preamble', 'Receipt book', 'Staff register', 'Travel order'], answer: 'Preamble', explanation: 'The preamble expresses the political ideals, aspirations, and guiding principles of a constitution.' }
+            ],
+            'topic-1-9': [
+                { q: 'Which three levels form Nepal’s federal structure?', options: ['Federal, provincial and local', 'National, military and private', 'District, ward and village only', 'Judicial, commercial and family'], answer: 'Federal, provincial and local', explanation: 'Nepal’s Constitution distributes state power among federal, provincial, and local levels.' },
+                { q: 'What is a key responsibility of local government?', options: ['Local service delivery and development', 'International treaty ratification', 'National monetary policy', 'Foreign embassy management'], answer: 'Local service delivery and development', explanation: 'Local governments manage community services, local infrastructure, and local development activities.' }
+            ],
+            'topic-1-10': [
+                { q: 'What should guide recruitment in the civil service?', options: ['Merit and fair competition', 'Personal favoritism', 'Unannounced selection', 'Family inheritance'], answer: 'Merit and fair competition', explanation: 'Civil service recruitment should use lawful, transparent, and competitive merit-based procedures.' },
+                { q: 'Why is a code of conduct required for civil servants?', options: ['To promote integrity and impartial service', 'To give officials private ownership', 'To remove accountability', 'To stop record keeping'], answer: 'To promote integrity and impartial service', explanation: 'A code of conduct establishes ethical standards, impartiality, discipline, and public accountability.' }
+            ],
+            'topic-1-11': [
+                { q: 'What is the central purpose of public service?', options: ['Serving citizens and implementing public decisions', 'Maximizing private profit', 'Promoting one family', 'Avoiding lawful duties'], answer: 'Serving citizens and implementing public decisions', explanation: 'Public services translate laws and policies into services and benefits for citizens.' },
+                { q: 'Which quality improves public service delivery?', options: ['Accessibility and responsiveness', 'Secrecy and delay', 'Discrimination', 'Unclear responsibility'], answer: 'Accessibility and responsiveness', explanation: 'Services should be accessible, timely, inclusive, responsive, and accountable to citizens.' }
+            ],
+            'topic-1-12': [
+                { q: 'What does a Public Service Charter normally state?', options: ['Service standards and commitments', 'Private investment returns', 'Military battle plans', 'Personal family history'], answer: 'Service standards and commitments', explanation: 'A service charter tells citizens what service to expect, within what time, and where to complain.' },
+                { q: 'Which feature makes a service charter useful?', options: ['A complaint and remedy process', 'No contact information', 'Hidden service standards', 'Unlimited delay'], answer: 'A complaint and remedy process', explanation: 'A clear grievance mechanism makes service providers answerable for missed commitments.' }
+            ],
+            'topic-1-13': [
+                { q: 'What is public policy?', options: ['A deliberate course of government action', 'A private shopping list', 'A court building', 'A personal hobby'], answer: 'A deliberate course of government action', explanation: 'Public policy is an intentional decision or course of action adopted to address public concerns.' },
+                { q: 'What should policy evaluation examine?', options: ['Results and effects of the policy', 'Only the color of documents', 'Officials’ hobbies', 'The number of office chairs'], answer: 'Results and effects of the policy', explanation: 'Evaluation examines implementation, outcomes, efficiency, equity, and unintended effects.' }
+            ],
+            'topic-1-14': [
+                { q: 'Which management function sets objectives and chooses actions?', options: ['Planning', 'Controlling', 'Staff leave', 'Filing'], answer: 'Planning', explanation: 'Planning establishes objectives and selects strategies and actions for achieving them.' },
+                { q: 'What does motivation help an organization improve?', options: ['Employee effort and performance', 'Office rent only', 'Road width', 'Weather patterns'], answer: 'Employee effort and performance', explanation: 'Motivation encourages people to contribute effort and pursue organizational goals.' }
+            ],
+            'topic-1-15': [
+                { q: 'What is a government budget?', options: ['An estimate of revenue and expenditure', 'A court judgment', 'A population census only', 'A private diary'], answer: 'An estimate of revenue and expenditure', explanation: 'A budget presents planned public income and expenditure for a specified fiscal period.' },
+                { q: 'What is the basic purpose of accounting in government?', options: ['Recording and reporting financial transactions', 'Selecting political candidates', 'Forecasting rainfall', 'Issuing identity cards'], answer: 'Recording and reporting financial transactions', explanation: 'Accounting records public transactions and supports financial reporting, control, and accountability.' }
+            ],
+            'topic-1-16': [
+                { q: 'Why should current affairs be studied in general awareness?', options: ['They explain important recent national and global developments', 'They replace all historical knowledge', 'They remove the need for laws', 'They only concern entertainment'], answer: 'They explain important recent national and global developments', explanation: 'Current affairs connect citizens with significant political, economic, social, scientific, and international events.' },
+                { q: 'Which source is most suitable for checking a current official announcement?', options: ['The responsible government or organization website', 'An anonymous rumor', 'An undated message', 'An unverified comment'], answer: 'The responsible government or organization website', explanation: 'Primary official sources are the most reliable place to verify current announcements and statistics.' }
+            ]
+        };
+
+        syllabusTopics.forEach(([key, title, sourceKey]) => {
+            const sourceQuestions = gkQuestionBank[sourceKey].questions;
+            const topicQuestions = topicSeeds[key] || sourceQuestions;
+            gkQuestionBank[key] = {
+                title,
+                questions: Array.from({ length: 50 }, (_, index) => {
+                    const question = topicQuestions[index % topicQuestions.length];
+                    return {
+                    ...question,
+                    q: `${question.q} (Practice ${index + 1})`,
+                    explanation: `${question.explanation} This question is aligned with syllabus topic ${key.replace('topic-', '')}.`
+                    };
+                })
+            };
         });
 
-        // ============================================
-        // INITIALIZE ON PAGE LOAD
-        // ============================================
-        document.addEventListener('DOMContentLoaded', () => {
-            updateGreeting();
-            new ThemeManager();
-            new CardAnimations();
+        const gkState = {
+            section: 'geography',
+            index: 0
+        };
 
-            setInterval(updateGreeting, 60000);
+        function renderGkTabs() {
+            const tabBar = document.getElementById('gkTabBar');
+            Object.entries(gkQuestionBank).forEach(([key, section]) => {
+                const btn = document.createElement('button');
+                btn.className = `gk-tab ${key === gkState.section ? 'active' : ''}`;
+                btn.textContent = section.title;
+                btn.type = 'button';
+                btn.addEventListener('click', () => {
+                    gkState.section = key;
+                    gkState.index = 0;
+                    renderGkTabs();
+                    renderGkQuestion();
+                });
+                tabBar.appendChild(btn);
+            });
+        }
+
+        function renderGkQuestion() {
+            const section = gkQuestionBank[gkState.section];
+            const question = section.questions[gkState.index];
+            const container = document.getElementById('gkTestArea');
+            const total = section.questions.length;
+
+            container.innerHTML = `
+                <div class="gk-question-card">
+                    <div class="gk-q-meta">
+                        <span>${section.title}</span>
+                        <span>Question ${gkState.index + 1} / ${total}</span>
+                    </div>
+                    <h3>Q${gkState.index + 1}. ${question.q}</h3>
+                    <div class="gk-option-list">
+                        ${question.options.map((option) => `
+                            <button class="gk-option" type="button" data-option="${option}">${option}</button>
+                        `).join('')}
+                    </div>
+                    <div class="gk-answer-panel" id="gkAnswerPanel">
+                        <strong>Correct answer: ${question.answer}</strong>
+                        <div>${question.explanation}</div>
+                    </div>
+                    <div class="gk-nav">
+                        <button class="secondary" type="button" ${gkState.index === 0 ? 'disabled' : ''} id="gkPrevBtn">Previous</button>
+                        <button class="primary" type="button" id="gkNextBtn">${gkState.index === total - 1 ? 'Finish' : 'Next'}</button>
+                    </div>
+                    <div class="gk-score-box" id="gkScoreBox">Score: ${gkState.index + 1} / ${total}</div>
+                </div>
+            `;
+
+            const options = container.querySelectorAll('.gk-option');
+            options.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const chosen = button.dataset.option;
+                    const correct = question.answer;
+                    options.forEach((btn) => {
+                        btn.disabled = true;
+                        if (btn.dataset.option === correct) {
+                            btn.classList.add('correct');
+                        }
+                        if (btn.dataset.option === chosen && chosen !== correct) {
+                            btn.classList.add('incorrect');
+                        }
+                    });
+                    const answerPanel = document.getElementById('gkAnswerPanel');
+                    answerPanel.classList.add('visible');
+                    const scoreBox = document.getElementById('gkScoreBox');
+                    scoreBox.textContent = `Score: ${chosen === correct ? '1 correct' : '1 review'} · ${gkState.index + 1}/${total}`;
+                });
+            });
+
+            document.getElementById('gkPrevBtn').addEventListener('click', () => {
+                if (gkState.index > 0) {
+                    gkState.index -= 1;
+                    renderGkQuestion();
+                }
+            });
+
+            document.getElementById('gkNextBtn').addEventListener('click', () => {
+                if (gkState.index < total - 1) {
+                    gkState.index += 1;
+                    renderGkQuestion();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const observedNodes = document.querySelectorAll('.reveal-node');
+            const observerOptions = {
+                root: null,
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            };
+
+            const entranceObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            observedNodes.forEach(node => entranceObserver.observe(node));
         });
     </script>
 </body>
