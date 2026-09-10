@@ -7,6 +7,35 @@ const modelTestState = {
     timerHandle: null,
     currentBank: null
 };
+function applyModelTestPortalAccess() {
+    const pinStage = document.getElementById('pinStage');
+    const pinInput = document.getElementById('pinInput');
+    const pinSubmit = document.getElementById('pinSubmit');
+    const pinError = document.getElementById('pinError');
+
+    if (!pinStage || !pinInput || !pinSubmit || !pinError) return;
+
+    const submitPin = () => {
+        if (pinInput.value.trim() === '2059') {
+            pinError.textContent = '';
+            sessionStorage.setItem('modelTestAccessGranted', 'true');
+            window.location.href = 'technical-model-test.html';
+        } else {
+            pinError.textContent = 'The access code is not valid. Please try again.';
+        }
+    };
+
+    pinSubmit.addEventListener('click', submitPin);
+    pinInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') submitPin();
+    });
+}
+
+function requireModelTestAccess() {
+    if (sessionStorage.getItem('modelTestAccessGranted') !== 'true') {
+        window.location.replace('modeltest-portal.html');
+    }
+}
 
 function applyTheme(theme) {
     document.body.dataset.theme = theme;
@@ -130,6 +159,14 @@ function renderModelTestTabs(bank) {
             renderModelTestQuestion(bank);
         });
     });
+}
+
+if (document.getElementById('modeltestAccessGate')) {
+    applyModelTestPortalAccess();
+}
+
+if (document.body.dataset.modelTestProtected === 'true') {
+    requireModelTestAccess();
 }
 
 function renderModelTestQuestion(bank) {

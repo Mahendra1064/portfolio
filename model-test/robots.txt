@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /technical-model-test.html
+Disallow: /technical-objective.html
+Disallow: /technical-question-bank.js
+
+Sitemap: https://modeltest.mahendrakumarsijapati.com.np/sitemap.xml

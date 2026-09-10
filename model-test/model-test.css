@@ -50,6 +50,134 @@ body[data-theme='dark'] {
     background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.18), transparent 30%), linear-gradient(180deg, #020817 0%, #0f172a 100%);
 }
 
+.hidden { display: none !important; }
+
+.portal-main {
+    width: min(960px, 92%);
+    margin: 0 auto;
+    padding: 48px 0 80px;
+}
+
+.portal-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: clamp(24px, 4vw, 38px);
+}
+
+.portal-header {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.portal-header h1 {
+    margin: 12px 0 8px;
+    font-size: clamp(34px, 4vw, 46px);
+}
+
+.portal-header p {
+    color: var(--muted);
+    font: 16px/1.7 Arial, sans-serif;
+}
+
+.access-gate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gate-card {
+    width: min(620px, 100%);
+    padding: clamp(22px, 3vw, 34px);
+    background: var(--panel-alt);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+}
+
+.gate-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+}
+
+.gate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold-deep);
+    font: 700 12px Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.gate-step {
+    color: var(--muted);
+    font: 700 12px Arial, sans-serif;
+}
+
+#pinStage,
+#loginStage {
+    margin-top: 20px;
+}
+
+.gate-label {
+    display: block;
+    margin: 16px 0 8px;
+    color: var(--muted);
+    font: 700 12px Arial, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#pinStage input,
+#loginStage input {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    color: var(--ink);
+    font: 15px Arial, sans-serif;
+}
+
+.gate-input-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.gate-input-row input {
+    flex: 1;
+}
+
+.primary-btn {
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--gold);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    color: var(--white);
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+}
+
+#loginStage .primary-btn {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.error-message {
+    color: var(--red);
+    min-height: 20px;
+    font: 700 12px Arial, sans-serif;
+    margin-top: 10px;
+}
+
 .topbar {
     display: flex;
     align-items: center;

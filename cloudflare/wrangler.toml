@@ -1,0 +1,7 @@
+name = "modeltest-redirect"
+main = "modeltest-redirect.js"
+compatibility_date = "2026-09-10"
+
+routes = [
+    { pattern = "modeltest.mahendrakumarsijapati.com.np/*", custom_domain = true }
+]

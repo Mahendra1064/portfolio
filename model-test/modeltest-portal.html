@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Test Portal | Modeltest</title>
+    <meta name="description" content="Enter the access code to open the PSC Civil Engineering model tests.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://modeltest.mahendrakumarsijapati.com.np/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="model-test.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand"><i class="fa-solid fa-shield-halved"></i> PSC Civil Engineering 7th Level</div>
+        <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i>Model test menu</a>
+    </header>
+    <main class="portal-main">
+        <section class="portal-card">
+            <div class="portal-header">
+                <span class="eyebrow">Model Test Access</span>
+                <h1>PSC Civil Engineering 7th Level</h1>
+                <p>Enter the access code to continue to the PSC Civil Engineering model tests.</p>
+            </div>
+
+            <div class="access-gate" id="modeltestAccessGate">
+                <div class="gate-card">
+                    <div class="gate-card-head">
+                        <span class="gate-badge"><i class="fa-solid fa-lock"></i> Protected Access</span>
+                        <span class="gate-step">Access code required</span>
+                    </div>
+
+                    <div id="pinStage">
+                        <label class="gate-label" for="pinInput">Model test access code</label>
+                        <div class="gate-input-row">
+                            <input type="password" id="pinInput" inputmode="numeric" autocomplete="one-time-code" placeholder="Enter access code">
+                            <button type="button" id="pinSubmit" class="primary-btn"><i class="fa-solid fa-unlock"></i> Continue</button>
+                        </div>
+                        <div id="pinError" class="error-message" role="alert"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="model-test.js"></script>
+</body>
+</html>
